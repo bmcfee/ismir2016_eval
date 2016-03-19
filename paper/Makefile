@@ -1,10 +1,9 @@
-SRC = ismir2016_music
+SRC = ismir2016_eval
 
 all: $(SRC).tex
-	latex $<
+	pdflatex $<
 	bibtex $(SRC)
-	latex $<
-	latex $<
+	pdflatex $<
 	pdflatex $<
 
 check: $(SRC).tex

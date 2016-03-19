@@ -96,168 +96,127 @@ release of large, open datasets for improving both MIR techniques and evaluation
 
 \end{abstract}
 %
-\section{Introduction}\label{sec:introduction}
 
-This template includes all the information about formatting manuscripts for the ISMIR \conferenceyear\ Conference.
-Please follow these guidelines to give the final proceedings a uniform look.
-Most of the required formatting is achieved automatically by using the supplied
-style file (\LaTeX) or template (Word).
-If you have any questions, please contact the Program Committee
-(\texttt{ismir\conferenceyear-papers@ismir.net}).
-This template can be downloaded from the ISMIR \conferenceyear\ web site (\texttt{http://ismir\conferenceyear.ismir.net}).
-%
-\section{Paper Length \& File Size}
-Instead of the strict limit of six pages (last used in ISMIR 2014), we adopt 
-a ``(6+1)-page policy'' from ISMIR 2015 for ISMIR 2016. This means, the paper may have a 
-maximum of 6 pages for technical content including figures and possible references 
-with one additional optional 7th page containing only references.
-Note that this is a strict requirement. 
-\textcolor{red}{The seventh page (if used at all) must
-not contain any other material except for references.} 
+\section{Introduction}
 
-Paper should be submitted as PDFs and the \textcolor{red}{file size is limited to 2MB}. Please compress images and figures as necessary before submitting.
+MIREX has run for several years, and serves a valuable purpose for the community.  It also has a few drawbacks and problems of sustainability.  This document will lay out the goals, benefits, and limitations of MIREX.  We’ll then propose an alternative system which should be more sustainable.
 
-\section{Page Size}\label{sec:page_size}
 
-The proceedings will be printed on
- \underline{portrait A4-size paper} \underline{(21.0cm x 29.7cm)}.
-All material on each page should fit within a rectangle of 17.2cm x 25.2cm,
-centered on the page, beginning 2.0cm
-from the top of the page and ending with 2.5cm from the bottom.
-The left and right margins should be 1.9cm.
-The text should be in two 8.2cm columns with a 0.8cm gutter.
-All text must be in a two-column format.
-Text must be fully justified.
+\section{MIREX}
 
-\section{Typeset Text}\label{sec:typeset_text}
+MIREX provides a platform for common evaluation of music annotation algorithms.  The general strategy operates as follows:
+Define some task of interest.  Say, chord recognition.
+Collect human-annotated data for the task.
+Release a small set of the data for development purposes.  Retain the rest as private data for evaluation.
+Invite authors to submit code, which is executed on a private server.  Report the results.
+Repeat step 4.  Intermittently repeat step 2.
 
-\subsection{Normal or Body Text}\label{subsec:body}
+(Note: this ignores some tasks, such as audio music similarity, which require human annotators to rate the outputs of each algorithm.  We’ll come back to that later.)
 
-Please use a 10pt (point) Times font. Sans-serif or non-proportional fonts
-can be used only for special purposes, such as distinguishing source code text.
+MIREX retains private data sets to stave off the effects of over-fitting to the evaluation set. (If participants don’t see the data, it’s harder to overfit.  In theory.)
 
-The first paragraph in each section should not be indented, but all other paragraphs should be.
+It has been argued that retaining private data is more cost-effective, since Step 2. above is typically the most expensive.  If data sets are not released, they can be reused year upon year.  (There is also the issue of dealing with obtaining distribution licenses for musical content, which we’ll return to below.)  However, systems will still eventually over-fit by trial and error, so there is no avoiding the data collection issue in the long run.  Moreover, step 4 requires a considerable amount of volunteer effort to maintain, through the so-called “task captains”, as well as various administration and maintenance issues.  This results in a system that is ultimately unsustainable, as the costs are proportional to participation (which we should hope would grow), rather than data (which would be constant with respect to the number of participants).
 
-\subsection{Title and Authors}
 
-The title is 14pt Times, bold, caps, upper case, centered.
-Authors' names are omitted when submitting for double-blind reviewing.
-The following is for making a camera-ready version.
-Authors' names are centered.
-The lead author's name is to be listed first (left-most), and the co-authors' names after.
-If the addresses for all authors are the same, include the address only once, centered.
-If the authors have different addresses, put the addresses, evenly spaced, under each authors' name.
+\section{Open music evaluation}
 
-\subsection{First Page Copyright Notice}
+An alternative to the MIREX framework is Kaggle.  In Kaggle, all input data is made publicly available, and participants submit only the outputs of their systems.  Here, the major cost bottleneck is distributed to the participants, rather than centralized, thus reducing the maintenance and administration costs.  However, there is a greater risk of overfit (and the potential for cheating), since the input data is now public.
 
-Please include the copyright notice exactly as it appears here in the lower left-hand corner of the page.
-It is set in 8pt Times.
+Let’s temporarily assume that participants are honest, and do not cheat.  There is still the matter of over-fitting the data.  Within a single run, this problem can be partially dealt with in a couple of ways:
+use large test collections, so that it’s impossible (or impractical) to manually fit to the test
+only evaluate on a random subset of the test data
+After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting.  To counteract this, different test collections should be introduced each year.  At first, this seems to get us nowhere: we still need to acquire annotated data, which is presumably expensive.  I argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the mirex participants for any given year.
 
-\subsection{Page Numbering, Headers and Footers}
+There are some remaining issues to deal with here:
+annotation acquisition
+content selection and sharing
+participation / honesty
 
-Do not include headers, footers or page numbers in your submission.
-These will be added when the publications are assembled.
+\subsection{Data acquisition}
 
-\section{First Level Headings}
+Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.  To facilitate this, I propose a data credit system.
 
-First level headings are in Times 10pt bold,
-centered with 1 line of space above the section head, and 1/2 space below it.
-For a section header immediately followed by a subsection header, the space should be merged.
+To participate in an evaluation, each participant must “pay” some nominal amount of data credits.  In the first year, all participants start with a balance of 0, so by participating, they are now in “data debt”.  Data credits can be earned by providing annotations to be used in the following year’s campaign.  A participant is eligible for evaluation in year X when their data credit reaches a non-negative value.
 
-\subsection{Second Level Headings}
+Data credits can be retained across years, and transferred across tasks.
 
-Second level headings are in Times 10pt bold, flush left,
-with 1 line of space above the section head, and 1/2 space below it.
-The first letter of each significant word is capitalized.
 
-\subsubsection{Third and Further Level Headings}
+The credits earned can be task-dependent.  Chord annotations might be worth more than beat timings or tempo estimations, for instance.
 
-Third level headings are in Times 10pt italic, flush left,
-with 1/2 line of space above the section head, and 1/2 space below it.
-The first letter of each significant word is capitalized.
+Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We’ll need a system in place to authenticate annotators and force independence.
 
-Using more than three levels of headings is highly discouraged.
+Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, “i’ll trade three beat annotations for one chord annotation”.
 
-\section{Footnotes and Figures}
 
-\subsection{Footnotes}
+\subsection{Content selection}
 
-Indicate footnotes with a number in the text.\footnote{This is a footnote.}
-Use 8pt type for footnotes. Place the footnotes at the bottom of the page on which they appear.
-Precede the footnote with a 0.5pt horizontal rule.
+There are several competing interests in selecting content for inclusion in evaluation:
+availability and distributability of content
+quality control
+utility of having the annotation
+coverage and representation bias
 
-\subsection{Figures, Tables and Captions}
+The first point can be addressed by using only creative commons licensed music.  Luckily, a wealth of this data is available through the http://freemusicarchive.org/.
 
-All artwork must be centered, neat, clean, and legible.
-All lines should be very dark for purposes of reproduction and art work should not be hand-drawn.
-The proceedings are not in color, and therefore all figures must make sense in black-and-white form.
-Figure and table numbers and captions always appear below the figure.
-Leave 1 line space between the figure or table and the caption.
-Each figure or table is numbered consecutively. Captions should be Times 10pt.
-Place tables/figures in text as close to the reference as possible.
-References to tables and figures should be capitalized, for example:
-see \figref{fig:example} and \tabref{tab:example}.
-Figures and tables may extend across both columns to a maximum width of 17.2cm.
+The second point is a difficult one, though FMA does provide some curation.  It might be interesting to partner with them in helping to guide the selection
 
-\begin{table}
- \begin{center}
- \begin{tabular}{|l|l|}
-  \hline
-  String value & Numeric value \\
-  \hline
-  Hello ISMIR  & \conferenceyear \\
-  \hline
- \end{tabular}
-\end{center}
- \caption{Table captions should be placed below the table.}
- \label{tab:example}
-\end{table}
+The third point raises an interesting technical challenge.  Which tracks is it worth annotating? Several recent studies have investigated the use of algorithm disagreement for detecting “hard” examples, be it for beat tracking, structural analysis, or chord recognition.
 
-\begin{figure}
- \centerline{\framebox{
- \includegraphics[width=\columnwidth]{figure.png}}}
- \caption{Figure captions should be placed below the figure.}
- \label{fig:example}
-\end{figure}
+In the proposed framework, we’re in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!  It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it’s helpful to cloud the space with data that are not included in testing.  If we’re careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are “interesting”: if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.  If the systems disagree, then we should definitely solicit a strong annotation for the track.  This is essentially the point made by Urbano et al., 2012.
 
-\section{Equations}
+Each track marked as “interesting” should be annotated by at least two humans to determine whether there’s actual disagreement.  It can then be annotated in year 2, and enter the evaluation in year 3.  By having multiple reference annotations for the “interesting” tracks, we can compare algorithm agreement to annotator agreement, and distinguish “difficult” tracks from “ambiguous” tracks.
 
-Equations should be placed on separate lines and numbered.
-The number should be on the right side, in parentheses, as in \eqnref{relativity}.
+Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
 
-\begin{equation}\label{relativity}
-E=mc^{2}
-\end{equation}
+\section{Incremental evaluation}
 
-\section{Citations}
 
-All bibliographical references should be listed at the end,
-inside a section named ``REFERENCES,'' numbered and in alphabetical order.
-All references listed should be cited in the text.
-When referring to a document, type the number in square brackets
-\cite{Author:00}, or for a range \cite{Author:00,Someone:10,Someone:04}.
+\section{Discussion}
+
+No free lunch theorem holds.
+
+Participation and Honesty
+
+We ultimately rely on participants to be honest in their methods and reporting.  What’s to prevent a participant from manually annotating all potential test tracks?
+
+I expect that this situation is unlikely.  (However, if people do cheat, we at least get the annotation data, so we still win.)
+
+We may also encourage (require?) participants to release source code to reproduce their methods.  This is in keeping with the spirit of open science and reproducible methods.  I doubt there will be any way to enforce this systematically, but it could be used to audit systems post-hoc.
+
+There’s also the matter of selecting which tracks to use in each task.  It may make sense to release a single, large dataset, and require participants to submit annotations for all tracks and for all tasks in which they wish to compete.  If we start getting into the business of slicing down to subsets per task, it will become much easier to determine which tracks are used for which task, and we don’t want that.  This all, of course, incurs a greater computational overhead on the participants, but this is A) worth it, from a data collection perspective, and B) how these systems should be used in practice anyway.
+
+We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.  This may help ease the burden of going fully open source, and encourage submissions from industry.  I think this is a bad idea though.  If it isn’t open, it isn’t science.
+
+Coverage, or “What tasks are left out?”
+
+The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.  This includes basically everything except for AMS/SMS, where outputs are scored directly.  I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
+
+Alternately, we can treat these left-out tasks as a way to pivot traditional mirex to focus on things that require direct human evaluation, eg, annual grand challenge tasks.  This way, Downie’s crew gets to keep their current job, and everyone else is happy.
+
+Content Validity
+
+Music is a unique information signal in that its perception is impacted by cultural significance and how this influences expectation and novelty in a listener. Musical content from the Free Music Archive, or other creative commons sources, are likely to be outside of the gamut of commonly studied music, e.g., popular Western music, and differences in compositional style, instrumentation, or production, may lead to difficulties in validation and generalization. While this is unlikely to affect tasks such as onset detection or instrument identification, higher level tasks that place greater demand on cognitive aspects of music perception, such as chord estimation or structural analysis, are more sensitive to biased collections. 
+
+Hosting
+
+We’ll need some infrastructure to actually run the campaign in the new setup.  I think CodaLab might have solved a good chunk of this problem for us.
+
+To-do
+
+To get this off the ground, we’ll need a few things:
+Evaluation services (already mostly provided by mir_eval)
+An initial seed pool of data (can be inherited from the existing mirex)
+A pool of candidate data for evaluation
+Infrastructure for managing the exchange
+some math / stats to determine how much data we need for each task, each year
+some way to work out the data credit rates for different tasks
+
+Misc Refs
+Separate “labels” for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf 
+Previous proposals (section 8): http://julian-urbano.info/files/publications/051-evaluation-music-information-retrieval.pdf
+
 
 % For bibtex users:
 \bibliography{ISMIRtemplate}
-
-% For non bibtex users:
-%\begin{thebibliography}{citations}
-%
-%\bibitem {Author:00}
-%E. Author.
-%``The Title of the Conference Paper,''
-%{\it Proceedings of the International Symposium
-%on Music Information Retrieval}, pp.~000--111, 2000.
-%
-%\bibitem{Someone:10}
-%A. Someone, B. Someone, and C. Someone.
-%``The Title of the Journal Paper,''
-%{\it Journal of New Music Research},
-%Vol.~A, No.~B, pp.~111--222, 2010.
-%
-%\bibitem{Someone:04} X. Someone and Y. Someone. {\it Title of the Book},
-%    Editorial Acme, Porto, 2012.
-%
-%\end{thebibliography}
 
 \end{document}
