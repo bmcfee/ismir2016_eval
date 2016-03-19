@@ -1,4 +1,4 @@
-SRC = ismir2016_eval
+SRC = ismir2016_mirex
 
 all: $(SRC).tex
 	pdflatex $<
