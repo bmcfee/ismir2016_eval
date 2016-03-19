@@ -99,111 +99,180 @@ release of large, open datasets for improving both MIR techniques and evaluation
 
 \section{Introduction}
 
-MIREX has run for several years, and serves a valuable purpose for the community.  It also has a few drawbacks and problems of sustainability.  This document will lay out the goals, benefits, and limitations of MIREX.  We‚Äôll then propose an alternative system which should be more sustainable.
+MIREX has run for several years, and serves a valuable purpose for the community. 
+It also has a few drawbacks and problems of sustainability.  
+This document will lay out the goals, benefits, and limitations of MIREX.  
+We'ôll then propose an alternative system which should be more sustainable.
 
 
 \section{MIREX}
 
-MIREX provides a platform for common evaluation of music annotation algorithms.  The general strategy operates as follows:
-Define some task of interest.  Say, chord recognition.
-Collect human-annotated data for the task.
-Release a small set of the data for development purposes.  Retain the rest as private data for evaluation.
-Invite authors to submit code, which is executed on a private server.  Report the results.
-Repeat step 4.  Intermittently repeat step 2.
+MIREX provides a platform for common evaluation of music annotation algorithms.  
+The general strategy operates as follows:
+\begin{enumerate}
+\item Define some task of interest.  Say, chord recognition.
+\item Collect human-annotated data for the task.
+\item Release a small set of the data for development purposes; retain the rest as private data for evaluation.
+\item Invite authors to submit code, which is executed on a private server.  Report the results.
+\item Repeat step 4.  Intermittently repeat step 2.
+\end{enumerate}
+(Note: this ignores some tasks, such as audio music similarity, which require human annotators to rate the outputs of each algorithm.  We'Äôll come back to that later.)
 
-(Note: this ignores some tasks, such as audio music similarity, which require human annotators to rate the outputs of each algorithm.  We‚Äôll come back to that later.)
+MIREX retains private data sets to stave off the effects of over-fitting to the evaluation set. 
+The theory goes, if participants don't see the data, it'Äôs harder to overfit.
 
-MIREX retains private data sets to stave off the effects of over-fitting to the evaluation set. (If participants don‚Äôt see the data, it‚Äôs harder to overfit.  In theory.)
+It has been argued that retaining private data is more cost-effective, since Step 2. above is typically the most expensive.  
+If data sets are not released, they can be reused year upon year.  
+(There is also the issue of dealing with obtaining distribution licenses for musical content, which we'll return to below.)  
+However, systems will still eventually over-fit by trial and error, so there is no avoiding the data collection issue in the long run.  
+Moreover, step 4 requires a considerable amount of volunteer effort to maintain, through the so-called ``útask captains''Äù, as well as various administration and maintenance issues.  
+This results in a system that is ultimately unsustainable, as the costs are proportional to participation (which we should hope would grow), rather than data (which would be constant with respect to the number of participants).
 
-It has been argued that retaining private data is more cost-effective, since Step 2. above is typically the most expensive.  If data sets are not released, they can be reused year upon year.  (There is also the issue of dealing with obtaining distribution licenses for musical content, which we‚Äôll return to below.)  However, systems will still eventually over-fit by trial and error, so there is no avoiding the data collection issue in the long run.  Moreover, step 4 requires a considerable amount of volunteer effort to maintain, through the so-called ‚Äútask captains‚Äù, as well as various administration and maintenance issues.  This results in a system that is ultimately unsustainable, as the costs are proportional to participation (which we should hope would grow), rather than data (which would be constant with respect to the number of participants).
 
+\section{Open Evaluation of MIR Systems}
 
-\section{Open music evaluation}
+An alternative to the MIREX framework is Kaggle.  
+In Kaggle, all input data is made publicly available, and participants submit only the outputs of their systems.  
+Here, the major cost bottleneck is distributed to the participants, rather than centralized, thus reducing the maintenance and administration costs.  
+However, there is a greater risk of overfit (and the potential for cheating), since the input data is now freely available.
 
-An alternative to the MIREX framework is Kaggle.  In Kaggle, all input data is made publicly available, and participants submit only the outputs of their systems.  Here, the major cost bottleneck is distributed to the participants, rather than centralized, thus reducing the maintenance and administration costs.  However, there is a greater risk of overfit (and the potential for cheating), since the input data is now public.
+Let's temporarily assume that participants are honest, and do not cheat.  
+There is still the matter of over-fitting the data.  
+Within a single run, this problem can be partially dealt with in a couple of ways:
+\begin{itemize}
+\item Use large test collections, so that it'Äôs impossible (or impractical) to manually fit to the test
+\item Only evaluate on a random subset of the test data
+\end{itemize}
 
-Let‚Äôs temporarily assume that participants are honest, and do not cheat.  There is still the matter of over-fitting the data.  Within a single run, this problem can be partially dealt with in a couple of ways:
-use large test collections, so that it‚Äôs impossible (or impractical) to manually fit to the test
-only evaluate on a random subset of the test data
-After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting.  To counteract this, different test collections should be introduced each year.  At first, this seems to get us nowhere: we still need to acquire annotated data, which is presumably expensive.  I argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the mirex participants for any given year.
+After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
+To counteract this, different test collections should be introduced each year.  
+At first, this seems to get us nowhere: we still need to acquire annotated data, which is presumably expensive.  
+We argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the MIREX participants for any given year.
 
 There are some remaining issues to deal with here:
-annotation acquisition
-content selection and sharing
-participation / honesty
+\begin{itemize}
+\item annotation acquisition
+\item content selection and sharing
+\item participation / honesty
+\end{itemize}
 
-\subsection{Data acquisition}
+\subsection{Annotated Data Acquisition}
 
-Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.  To facilitate this, I propose a data credit system.
+Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.  
+To facilitate this, we propose a data credit system.
 
-To participate in an evaluation, each participant must ‚Äúpay‚Äù some nominal amount of data credits.  In the first year, all participants start with a balance of 0, so by participating, they are now in ‚Äúdata debt‚Äù.  Data credits can be earned by providing annotations to be used in the following year‚Äôs campaign.  A participant is eligible for evaluation in year X when their data credit reaches a non-negative value.
+To participate in an evaluation, each participant must ``Äúpay''Äù some nominal amount of data credits.  
+In the first year, all participants start with a balance of 0, so by participating, they are now in ``Äúdata debt''Äù.  
+Data credits can be earned by providing annotations to be used in the following year's campaign.  
+A participant is eligible for evaluation in year $X$ when their data credit reaches a non-negative value.
 
 Data credits can be retained across years, and transferred across tasks.
 
-
 The credits earned can be task-dependent.  Chord annotations might be worth more than beat timings or tempo estimations, for instance.
 
-Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We‚Äôll need a system in place to authenticate annotators and force independence.
+Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We'Äôll need a system in place to authenticate annotators and force independence.
 
-Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ‚Äúi‚Äôll trade three beat annotations for one chord annotation‚Äù.
+%Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ‚Äúi‚Äôll trade three beat annotations for one chord annotation‚Äù.
 
+There are other concerns here:
 
-\subsection{Content selection}
+\begin{itemize}
+\item Standardization and the enforcement of it / them
+\item User-facing tools for performing annotations
+\item Backend infrastructure for hosting, serving, and collecting submitted annotations (common repository)
+\item Would it be possible to leverage citizen science platforms, Mechanical Turk, etc
+\end{itemize}
+
+\subsection{Open Source Content Selection}
 
 There are several competing interests in selecting content for inclusion in evaluation:
-availability and distributability of content
-quality control
-utility of having the annotation
-coverage and representation bias
+\begin{itemize}
+\item availability and distributability of content
+\item quality control
+\item utility of having the annotation
+\item coverage and representation bias
+\end{itemize}
 
-The first point can be addressed by using only creative commons licensed music.  Luckily, a wealth of this data is available through the http://freemusicarchive.org/.
+The first point can be addressed by using only creative commons licensed music.  
+Luckily, a wealth of this data is available through the http://freemusicarchive.org/.
+Is jamendo still a thing that can be used?
+Do we even try to mention youtube?
+Partnerships with YouTube, Spotify, SoundCloud?
 
-The second point is a difficult one, though FMA does provide some curation.  It might be interesting to partner with them in helping to guide the selection
+The second point is a difficult one, though FMA does provide some curation.  
+It might be interesting to partner with them in helping to guide the selection.
 
-The third point raises an interesting technical challenge.  Which tracks is it worth annotating? Several recent studies have investigated the use of algorithm disagreement for detecting ‚Äúhard‚Äù examples, be it for beat tracking, structural analysis, or chord recognition.
+The third point raises an interesting technical challenge.  
+Which tracks are worth annotating? 
+Several recent studies have investigated the use of algorithm disagreement for detecting ``Äúhard''Äù examples, be it for beat tracking \cite{}, structural analysis \cite{}, or chord recognition \cite{}.
 
-In the proposed framework, we‚Äôre in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!  It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it‚Äôs helpful to cloud the space with data that are not included in testing.  If we‚Äôre careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ‚Äúinteresting‚Äù: if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.  If the systems disagree, then we should definitely solicit a strong annotation for the track.  This is essentially the point made by Urbano et al., 2012.
+In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!  
+It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.  
+If we aÄôre careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``Äúinteresting''Äù: if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.  
+If the systems disagree, then we should definitely solicit a strong annotation for the track.  
+This is essentially the point made by Urbano et al. \cite{2012UrbanoXYZ}.
 
-Each track marked as ‚Äúinteresting‚Äù should be annotated by at least two humans to determine whether there‚Äôs actual disagreement.  It can then be annotated in year 2, and enter the evaluation in year 3.  By having multiple reference annotations for the ‚Äúinteresting‚Äù tracks, we can compare algorithm agreement to annotator agreement, and distinguish ‚Äúdifficult‚Äù tracks from ‚Äúambiguous‚Äù tracks.
+Each track marked as ``interesting''Äù should be annotated by at least two humans to determine whether there is actual disagreement.  
+It can then be annotated in year 2, and enter the evaluation in year 3.  
+By having multiple reference annotations for the ``Äúinteresting''Äù tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult''Äù tracks from ``Äúambiguous''Äù tracks.
 
 Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
 
+
 \section{Incremental evaluation}
 
+Where does this fit into the proposed ``Open Evaluation Framework'' narrative? Is it a core tenet that comes first, or part of the framework? Or truly an afterthought?
 
 \section{Discussion}
 
 No free lunch theorem holds.
 
-Participation and Honesty
+\subsection{Human Logistics}
 
-We ultimately rely on participants to be honest in their methods and reporting.  What‚Äôs to prevent a participant from manually annotating all potential test tracks?
+How do we get people to participate / contribute (all jump at once).
+
+At the evaluation level, how do we prevent people from cheating, encourage integrity and the like. 
+Scale is a good answer for this, but difficult (impossible) to have out of the gate. 
+
+We ultimately rely on participants to be honest in their methods and reporting.  What's to prevent a participant from manually annotating all potential test tracks?
 
 I expect that this situation is unlikely.  (However, if people do cheat, we at least get the annotation data, so we still win.)
 
 We may also encourage (require?) participants to release source code to reproduce their methods.  This is in keeping with the spirit of open science and reproducible methods.  I doubt there will be any way to enforce this systematically, but it could be used to audit systems post-hoc.
 
-There‚Äôs also the matter of selecting which tracks to use in each task.  It may make sense to release a single, large dataset, and require participants to submit annotations for all tracks and for all tasks in which they wish to compete.  If we start getting into the business of slicing down to subsets per task, it will become much easier to determine which tracks are used for which task, and we don‚Äôt want that.  This all, of course, incurs a greater computational overhead on the participants, but this is A) worth it, from a data collection perspective, and B) how these systems should be used in practice anyway.
+There's also the matter of selecting which tracks to use in each task.  
+It may make sense to release a single, large dataset, and require participants to submit annotations for all tracks and for all tasks in which they wish to compete.  
+If we start getting into the business of slicing down to subsets per task, it will become much easier to determine which tracks are used for which task, and we don'Äôt want that.  
+This all, of course, incurs a greater computational overhead on the participants, but this is A) worth it, from a data collection perspective, and B) how these systems should be used in practice anyway.
 
-We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.  This may help ease the burden of going fully open source, and encourage submissions from industry.  I think this is a bad idea though.  If it isn‚Äôt open, it isn‚Äôt science.
+We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.  
+This may help ease the burden of going fully open source, and encourage submissions from industry.  
+I think this is a bad idea though.  
+If it isn'Äôt open, it isn'Äôt science. 
+(Just make it cost money then. Which would require the org to NPO-ize).
 
-Coverage, or ‚ÄúWhat tasks are left out?‚Äù
+\subsection{Coverage, or ``ÄúWhat tasks are left out?''}
 
-The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.  This includes basically everything except for AMS/SMS, where outputs are scored directly.  I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
+The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.  
+This includes basically everything except for AMS/SMS, where outputs are scored directly.  
+I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
 
-Alternately, we can treat these left-out tasks as a way to pivot traditional mirex to focus on things that require direct human evaluation, eg, annual grand challenge tasks.  This way, Downie‚Äôs crew gets to keep their current job, and everyone else is happy.
+Alternately, we can treat these left-out tasks as a way to pivot traditional MIREX to focus on things that require direct human evaluation, eg, annual grand challenge tasks.  
+This way, the MIREX crew gets to keep their current job, and everyone else is happy.
 
-Content Validity
+\subsection{Content Validity}
 
-Music is a unique information signal in that its perception is impacted by cultural significance and how this influences expectation and novelty in a listener. Musical content from the Free Music Archive, or other creative commons sources, are likely to be outside of the gamut of commonly studied music, e.g., popular Western music, and differences in compositional style, instrumentation, or production, may lead to difficulties in validation and generalization. While this is unlikely to affect tasks such as onset detection or instrument identification, higher level tasks that place greater demand on cognitive aspects of music perception, such as chord estimation or structural analysis, are more sensitive to biased collections. 
+Music is a unique information signal in that its perception is impacted by cultural significance and how this influences expectation and novelty in a listener. 
+Musical content from the Free Music Archive, or other creative commons sources, are likely to be outside of the gamut of commonly studied music, e.g., popular Western music, and differences in compositional style, instrumentation, or production, may lead to difficulties in validation and generalization. 
+While this is unlikely to affect tasks such as onset detection or instrument identification, higher level tasks that place greater demand on cognitive aspects of music perception, such as chord estimation or structural analysis, are more sensitive to biased collections. 
 
-Hosting
+\subsection{Hosting}
 
-We‚Äôll need some infrastructure to actually run the campaign in the new setup.  I think CodaLab might have solved a good chunk of this problem for us.
+We'll need some infrastructure to actually run the campaign in the new setup.  I think CodaLab might have solved a good chunk of this problem for us.
 
-To-do
+\subsection{Next Steps}
 
-To get this off the ground, we‚Äôll need a few things:
+To get this off the ground, we'ôll need a few things:
 Evaluation services (already mostly provided by mir\_eval)
 An initial seed pool of data (can be inherited from the existing mirex)
 A pool of candidate data for evaluation
@@ -211,7 +280,7 @@ Infrastructure for managing the exchange
 some math / stats to determine how much data we need for each task, each year
 some way to work out the data credit rates for different tasks
 
-Misc Refs
+\section{Misc Refs}
 Separate ‚Äúlabels‚Äù for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf 
 Previous proposals (section 8): http://julian-urbano.info/files/publications/051-evaluation-music-information-retrieval.pdf
 
