@@ -222,8 +222,9 @@ and three, the unavoidable, recurring need for freshly annotated data requires a
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
 \begin{itemize}
 \item Distributed computation reduces operating costs to a participant-invariant constant.
-\item Open-source content selection enables visibility into the data used for evaluation,
-\item Incremental evaluation encourages that results are scientifically meaningful by keeping hold-out data fresh, while steadily increasing the size of datasets available for development and evaluation.
+\item Using freely available audio facilitates reproducibility.
+\item Incremental evaluation encourages that results are scientifically meaningful by
+    keeping test data fresh, while steadily increasing the size of datasets available for development and evaluation.
 \end{itemize}
 
 % After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
@@ -234,19 +235,34 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 
 \subsection{Distributed Computation}
 % TODO(bmcfee)
+The primary difficulty in running an evaluation campaign is computing the outputs of all participating methods.
+This difficulty stems from two sources.
+First is the obvious computational complexity of running $m$ algorithms over $n$ inputs.
+Second is the less obvious ``human'' complexity of getting the $m$ algorithms to execute properly in a foreign environment: a task that falls on the small number of ``task captains'' each year.
+While the computational issues can be ameliorated by executing algorithms in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
 
-An alternative to the MIREX framework is Kaggle.
-In Kaggle, all input data is made publicly available, and participants submit only the outputs of their systems.
-Here, the major cost bottleneck is distributed to the participants, rather than centralized, thus reducing the maintenance and administration costs.
-However, there is a greater risk of overfit (and the potential for cheating), since the input data is now freely available.
+An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
+In Kaggle challenges, all input data is made publicly available, and participants submit only the outputs of their systems.
+This paradigm effectively resolves the challenges listed above: both computation and manual effort are distributed to the participants, rather than centralized at the evaluation site and task captains, thus reducing the maintenance and administration costs.
 
-Let's temporarily assume that participants are honest, and do not cheat.
-There is still the matter of over-fitting the data.
-Within a single run, this problem can be partially dealt with in a couple of ways:
-\begin{itemize}
-\item Use large test collections, so that it's impossible (or impractical) to manually fit to the test
-\item Only evaluate on a random subset of the test data
-\end{itemize}
+However, we note two potential drawbacks to this approach.
+First, the test (input) data are openly available to participants, so there is some increased risk of cheating (or honest over-fitting) if participants tune their algorithms to the test set.
+To mitigate this problem, we propose to use a large and diverse set of common tracks which are shared across \emph{all tasks}, but only compare participants on hidden, task-dependent subsets.
+For a submission to be included in the evaluation, it must cover all common tracks, which reduces the feasibility of participants hand-tuning performance to a specific test set.
+Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
+
+The second potential drawback is reduced transparency on behalf of the participants.
+While MIREX forces some form of transparency by requiring that submissions execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement.
+However, since MIREX does not require participants to release the source code for their methods, this hardly amounts to a loss of transparency from the perspective of anyone but the task captains, who currently enjoy a somewhat privileged position of access.  
+
+
+%Let's temporarily assume that participants are honest, and do not cheat.
+%There is still the matter of over-fitting the data.
+%Within a single run, this problem can be partially dealt with in a couple of ways:
+%\begin{itemize}
+%\item Use large test collections, so that it's impossible (or impractical) to manually fit to the test
+%\item Only evaluate on a random subset of the test data
+%\end{itemize}
 
 
 \subsection{Open Source Content Selection}
