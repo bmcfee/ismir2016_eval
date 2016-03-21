@@ -11,10 +11,13 @@
 
 \documentclass{article}
 \usepackage{ismir,amsmath,cite}
+\usepackage{url}
+\usepackage{cleveref}
 \usepackage{graphicx}
 \usepackage{color}
 % \usepackage{hyperref}
 \graphicspath{{figs/}}
+\usepackage{booktabs}
 
 % Title.
 % ------
@@ -234,7 +237,7 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 
 
 \subsection{Distributed Computation}
-% TODO(bmcfee)
+\label{distributed}
 The primary difficulty in running an evaluation campaign is computing the outputs of all participating methods.
 This difficulty stems from two sources.
 First is the obvious computational complexity of running $m$ algorithms over $n$ inputs.
@@ -254,10 +257,10 @@ The identity of evaluation sets remains hidden from participants at submission t
 This implies that each submission must span the entire corpus, which reduces the feasibility of participants tuning their algorithms to a specific subset of examples.
 Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
 
-The second potential drawback is reduced transparency on behalf of the participants.
-While MIREX forces some form of transparency by requiring that submissions execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement.
+The second challenge stems from reduced transparency on behalf of the participants.
+While MIREX forces some mild form of transparency by requiring that submissions execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of data transparency.
 However, since MIREX does not require participants to release the source code for their methods, this hardly amounts to a loss of transparency from the perspective of anyone but the task captains, who currently enjoy a somewhat privileged position of access.  
-
+We argue that this trade-off benefits the community at large, since the availability of open data will serve a broader set of interests over time than the description of methods.
 
 %Let's temporarily assume that participants are honest, and do not cheat.
 %There is still the matter of over-fitting the data.
@@ -269,8 +272,7 @@ However, since MIREX does not require participants to release the source code fo
 
 
 \subsection{Open Content}
-% TODO(bmcfee)
-
+\label{open}
 
 There are several competing interests in selecting content for inclusion in evaluation:
 \begin{itemize}
@@ -289,13 +291,13 @@ It might be interesting to partner with them in helping to guide the selection.
 
 The third point raises an interesting technical challenge.
 Which tracks are worth annotating?
-Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking \cite{}, structural analysis \cite{}, or chord recognition \cite{}.
+Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
 
 In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
 It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
 If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting'': if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
 If the systems disagree, then we should definitely solicit a strong annotation for the track.
-This is essentially the point made by Urbano et al. \cite{2012UrbanoXYZ}.
+This is essentially the point made by Urbano et al. %\cite{2012UrbanoXYZ}.
 
 Each track marked as ``interesting'' should be annotated by at least two humans to determine whether there is actual disagreement.
 It can then be annotated in year 2, and enter the evaluation in year 3.
