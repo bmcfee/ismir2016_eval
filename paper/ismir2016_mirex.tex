@@ -154,12 +154,24 @@ Not only is this rate unsustainable, but the combined operating costs only \emph
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
 % Hard to do science
+% ------------------
+Operating costs aside, MIREX has afforded some valuable insight into the research of MIR systems\cite{2008DownieMIREX}.
+Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
+To illustrate this reality, consider the standard approach to benchmarking MIR systems, diagrammed in Figure \ref{fig:system_eval}.
+An input, $X$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y$.
+Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z$.
+One or more comparison functions, $\mathcal{C}$, are applied on these two representations, yielding a number of performance measures, $M$.
+This process is repeated over a collection of input-output pairs, $\mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally increases with $N$.
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
-At the same time, the practice of witholding input data from participants comes at the expense of many forms of scientific progress.
-Granted, as detailed in a review of MIREX \cite{2008DownieMIREX}, some insights into evaluation, methodology, or problem formulation have been gleaned in the lifetime of MIREX.
-That said, these advances are bottlenecked through the organization, whereas the participants are largely blind to the inner-workings of the framework and the data used therein.
-As outlined by Urbano et al, there are a number of valuable research dimensions, being problem definition, algorithm development, evaluation machinery, interpretation, and learning \cite{2013UrbanoEval}.
-Each of these are impeded or, at worst, obfuscated by the algorithm-to-data model, because conclusions cannot be reached in the absence of perspective of the input.
+A lack of transparency renders participants blind in a number of detrimental ways.
+They do not have access to $X$, making it impossible to diagnose why an algorithm produced $Z$, or determine what should be done to make the system better.
+Furthermore, $Y$ is meaningless without $X$, and must be trivially taken on face value.
+They also have limited insight into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
+As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
+Traditionally $C$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
+% This is harsh conjecture. Definitely revise to something justifiable, but I've seem to hit a wall.
+And finally, there is little visibility into the evaluation machinery or its use, and there is ample anecdotal evidence surrounding questionable scientific practices.
+
 
 % Data Replenishing
 Ironically, due in part to the high operating costs of the algorithm-to-data model, MIREX also suffers from a lack of data.
