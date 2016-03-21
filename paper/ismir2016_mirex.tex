@@ -138,22 +138,21 @@ The rationale for this decision is understandable.
 In contrast to other machine perceptions domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
 Due to a history of litigation from the Recording Industry Artists of America (RIAA), there is a pervasive sense of fear in the MIR community that sharing audio data would almost certainly result in crippling lawsuits \cite{2008DownieMIREX}.
 
-
 % Deficiencies
 % Operating costs are significant
 Experience with MIREX over the last decade has more than demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
 First, as a matter of practicality, doing so incurs remarkably steep costs the community cannot hope to support indefinitely.
 Running hundreds of research algorithms demands state of the art technology, and adequate compute cycles must either rented or purchased outright to achieve this.
 More often than not, these algorithms are research prototypes, seldom optimized for efficiency.
-While task-dependent runtime limits are placed on algorithm runtime, varying between 6 and 72 hours, MIREX is responsible for months of compute time annually;
+While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months of compute time annually.
 % there's a better way to say this, but gotta scram.
-note that these ceilings cannot be decoupled from dataset size, and are indicative of the small datasets traditionally used.
-The financial burden of computation is a rounding error, however, when compared with the human effort involved.
+Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
+The financial burden of computation amounts to a rounding error, however, when compared with the human effort involved.
 As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams to completion \cite{2008DownieMIREX};
-participation in 2015 was comparable, with 145 algorithms from 61 teams.
-Extrapolating, the last decade has easily consumed roughly \emph{10,000} person-hours and millions of dollars just bringing algorithms to data.
-Not only is this rate unsustainable, but the operating costs only \emph{increase} the more successful the endeavor becomes.
-Said differently, the worst thing that could happen to MIREX is growth.
+in the years since, average participation has climbed slightly ($\mu\approx145$, $\sigma \approx 14$).
+Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
+Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
+Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
 % Hard to do science
 At the same time, the practice of witholding input data from participants comes at the expense of many forms of scientific progress.
