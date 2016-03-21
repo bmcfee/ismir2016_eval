@@ -244,11 +244,14 @@ While the computational issues can be ameliorated by executing algorithms in par
 An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
 In Kaggle challenges, all input data is made publicly available, and participants submit only the outputs of their systems.
 This paradigm effectively resolves the challenges listed above: both computation and manual effort are distributed to the participants, rather than centralized at the evaluation site and task captains, thus reducing the maintenance and administration costs.
+However, we note two potential challenges to the distributed computation approach.
 
-However, we note two potential drawbacks to this approach.
-First, the test (input) data are openly available to participants, so there is some increased risk of cheating (or honest over-fitting) if participants tune their algorithms to the test set.
-To mitigate this problem, we propose to use a large and diverse set of common tracks which are shared across \emph{all tasks}, but only compare participants on hidden, task-dependent subsets.
-For a submission to be included in the evaluation, it must cover all common tracks, which reduces the feasibility of participants hand-tuning performance to a specific test set.
+First, the test (input) data must be made openly available to participants.
+This may increase the risk of bias if participants (unintentionally) tune their algorithms to the evaluation set.
+To mitigate bias, we propose to use a large and diverse corpus of common tracks which are shared across \emph{all tasks}, rather than a collection of small, task-specific datasets as is done in MIREX.
+For any given task, only a subset of examples need to be considered when comparing methods, and the evaluation set may be independently selected for each task.
+The identity of evaluation sets remains hidden from participants at submission time.
+This implies that each submission must span the entire corpus, which reduces the feasibility of participants tuning their algorithms to a specific subset of examples.
 Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
 
 The second potential drawback is reduced transparency on behalf of the participants.
@@ -265,39 +268,38 @@ However, since MIREX does not require participants to release the source code fo
 %\end{itemize}
 
 
-\subsection{Open Source Content Selection}
+\subsection{Open Content}
 % TODO(bmcfee)
+
 
 There are several competing interests in selecting content for inclusion in evaluation:
 \begin{itemize}
-\item availability and distributability of content
-\item quality control
-\item utility of having the annotation
-\item coverage and representation bias
+\item availability and distribution of content,
+\item quality control, and
+\item coverage and representation bias.
 \end{itemize}
 
 The first point can be addressed by using only creative commons licensed music.
-Luckily, a wealth of this data is available through the http://freemusicarchive.org/.
-Is jamendo still a thing that can be used?
-Do we even try to mention youtube?
-Partnerships with YouTube, Spotify, SoundCloud?
+Luckily, a wealth of this data is available through the Free Music Archive
+(FMA),\footnote{\url{http://freemusicarchive.org/}} which hosts a variety of music
+content under either public domain or creative commons licenses.\footnote{\url{https://creativecommons.org/licenses/}}
 
 The second point is a difficult one, though FMA does provide some curation.
 It might be interesting to partner with them in helping to guide the selection.
 
 The third point raises an interesting technical challenge.
 Which tracks are worth annotating?
-Several recent studies have investigated the use of algorithm disagreement for detecting ``hard''ù examples, be it for beat tracking \cite{}, structural analysis \cite{}, or chord recognition \cite{}.
+Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking \cite{}, structural analysis \cite{}, or chord recognition \cite{}.
 
 In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
 It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
-If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting''ù: if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
+If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting'': if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
 If the systems disagree, then we should definitely solicit a strong annotation for the track.
 This is essentially the point made by Urbano et al. \cite{2012UrbanoXYZ}.
 
-Each track marked as ``interesting''ù should be annotated by at least two humans to determine whether there is actual disagreement.
+Each track marked as ``interesting'' should be annotated by at least two humans to determine whether there is actual disagreement.
 It can then be annotated in year 2, and enter the evaluation in year 3.
-By having multiple reference annotations for the ``interesting''ù tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult''ù tracks from ``ambiguous''ù tracks.
+By having multiple reference annotations for the ``interesting'' tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult'' tracks from ``ambiguous'' tracks.
 
 Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
 
