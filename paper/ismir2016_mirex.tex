@@ -164,17 +164,17 @@ One or more comparison functions, $\mathcal{C}$, are applied on these two repres
 This process is repeated over a collection of input-output pairs, $\mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally increases with $N$.
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 A lack of transparency renders participants blind in a number of detrimental ways.
-They do not have access to $X$, making it impossible to diagnose why an algorithm produced $Z$, or determine what should be done to make the system better.
+There is no public access to $X$, making it impossible to diagnose why an algorithm produced $Z$, or determine what should be done to make the system better.
 Furthermore, $Y$ is meaningless without $X$, and must be trivially taken on face value.
-They also have limited insight into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
+By the same token, while $N$ varies from task to task, there is no way to guage the distribution of the data, or identify any incidental biases.
+Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
 Traditionally $C$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
 % This is harsh conjecture. Definitely revise to something justifiable, but I've seem to hit a wall.
 And finally, there is little visibility into the evaluation machinery or its use, and there is ample anecdotal evidence surrounding questionable scientific practices.
 
-
 % Data Replenishing
-Ironically, due in part to the high operating costs of the algorithm-to-data model, MIREX also suffers from a lack of data.
+Ironically, due in no small part to the high financial and human costs of the algorithm-to-data model, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 The current datasets are insufficient for benchmarking algorithms, and there is no viable plan in place to grow the size of these datasets over time.
 By and large, MIREX has relied on the generosity of external resources to expand the size of its evaluation datasets.
 In some cases, like automatic chord estiamtion, the testing set largely lives in the light of day, evidenced by one team who effectively submitted a fingerprinting system and achieved near perfect scores\footnote{sneaky McVicar...}.
