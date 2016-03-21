@@ -1,0 +1,355 @@
+MIREX 2015 Evaluation Results
+Classical Composer Identification
+SubID Participants Accuracy
+LK2 Gyuha Lee, Moo Young Kim 0.6876
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.5992
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.5920
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.5664
+LK3 Gyuha Lee, Moo Young Kim 0.5213
+LP3 Leopoldo Pla 0.3460
+LP4 Leopoldo Pla 0.3283
+LP1 Leopoldo Pla 0.2684
+LP2 Leopoldo Pla 0.2590
+Latin Classification - MIREX08 Dataset
+SubID Participants Accuracy
+LK2 Gyuha Lee, Moo Young Kim 0.6821
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.6690
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.6681
+LK3 Gyuha Lee, Moo Young Kim 0.6291
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.6111
+TL2 Thomas Lidy 0.5469
+Mood Classification - MIREX08 Dataset
+SubID Participants Accuracy
+LK2 Gyuha Lee, Moo Young Kim 0.6617
+LK3 Gyuha Lee, Moo Young Kim 0.6250
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.5917
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.5850
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.5383
+TL2 Thomas Lidy 0.5050
+Genre Classification (Mixed) - MIREX08 Dataset
+SubID Participants Accuracy
+WFJ1 Ming-Ju Wu, Zhe-Cheng Fan, Jyh-Shing Roger Jang 0.7627
+LK2 Gyuha Lee, Moo Young Kim 0.7477
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.7147
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.7119
+LK3 Gyuha Lee, Moo Young Kim 0.7020
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.6919
+TL2 Thomas Lidy 0.6441
+KPOP Genre Classification (Annotated by Korean Annotators)
+SubID Participants Accuracy
+LK2 Gyuha Lee, Moo Young Kim 0.6346
+LK3 Gyuha Lee, Moo Young Kim 0.6125
+KPOP Genre Classification (Annotated by American Annotators)
+SubID Participants Accuracy
+LK3 Gyuha Lee, Moo Young Kim 0.6051
+LK2 Gyuha Lee, Moo Young Kim 0.5993
+KPOP Mood Classification (Annotated by Korean Annotators)
+SubID Participants Accuracy
+LK3 Gyuha Lee, Moo Young Kim 0.6040
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.5839
+LK2 Gyuha Lee, Moo Young Kim 0.5811
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.5776
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.5630
+KPOP Mood Classification (Annotated by American Annotators)
+SubID Participants Accuracy
+LK2 Gyuha Lee, Moo Young Kim 0.6395
+CYC1 Kang Cai, Deshun Yang, Xiaoou Chen 0.6068
+CYC2 Kang Cai, Deshun Yang, Xiaoou Chen 0.6047
+LK3 Gyuha Lee, Moo Young Kim 0.6033
+CYC3 Kang Cai, Deshun Yang, Xiaoou Chen 0.5804
+Onset Detection
+SubID Participants Avg. F-measure
+SB2 Sebastian Böck 0.8589
+CC7 ChunTa Chen 0.8551
+SB3 Sebastian Böck 0.8508
+SB5 Sebastian Böck 0.8392
+SB4 Sebastian Böck 0.8388
+BK7 Sebastian Böck, Florian Krebs 0.8370
+LSY1 Che-Yuan Liang, Li Su, Yi-Hsuan Yang 0.8181
+CC6 Chris Cannam 0.7345
+CS2 Chris Cannam, Dan Stowell 0.6763
+Audio Tempo Estimation
+SubID Participants P-Score
+SB8 Sebastian Böck 0.8977
+SB9 Sebastian Böck 0.8647
+SB10 Sebastian Böck 0.8539
+CD1 Chris Cannam, Matthew Davies 0.7386
+FW4 Fu-Hai Frank Wu 0.6527
+FW5 Fu-Hai Frank Wu 0.6249
+Real-time Audio to Score Alignment (a.k.a. Score Following) Results
+SubID Participants Total Precision
+RVC6 Francisco Jose Rodriguez-Serrano, Pedro
+Vera-Candeas, Julio Jose Carabias-Orti 0.9570
+RVC5 Francisco Jose Rodriguez-Serrano, Pedro
+Vera-Candeas, Julio Jose Carabias-Orti 0.9553
+RVC4 Francisco Jose Rodriguez-Serrano, Pedro
+Vera-Candeas, Julio Jose Carabias-Orti 0.9299
+Symbolic Melodic Similarity Results
+SubID Participants Avg. Fine Score
+ (0-1)
+JU2 Julián Urbano 0.4593
+JU1 Julián Urbano 0.4541
+JU3 Julián Urbano 0.4443
+SNT2 Shiho Sugimoto,Yuto Nakashima,
+Masayuki Takeda 0.4061
+SNT1 Shiho Sugimoto,Yuto Nakashima,
+Masayuki Takeda 0.3912
+SNT3 Shiho Sugimoto,Yuto Nakashima,
+Masayuki Takeda 0.3698
+Structure Segmentation
+SubID Participants MIREX '09
+F-measure
+MIREX ‘10
+ RWC/Quaero SB@3sec
+MIREX ‘10
+ RWC/RWC F-measure
+Salami
+F-measure
+MC1 Matthias Mauch, Chris Cannam 0.6063 0.4915 0.5762 0.5512
+GS1 Thomas Grill, Jan Schlüter 0.5678 0.7934 0.542 0.5053
+GS3 Thomas Grill, Jan Schlüter 0.5671 0.729 0.5421 0.5053
+CC1 Chris Cannam 0.513 0.5995 0.5064 0.4492
+Discovery of Repeated Themes & Sections Results
+SubID Participants Task Version R_est P_est R_occ P_occ Log
+ Runtime
+PLM1 Matevž Pesek, Urša Medvešek, Aleš Leonardis, Matija Marolt Symbolic, Monophonic 0.4140 0.5334 0.5981 0.8133 4.3745
+OL1'14 Olivier Lartillot Symbolic, Monophonic 0.5610 0.6166 0.7596 0.8790 4.5503
+VM2'14 Gissel Velarde, David Meredith Symbolic, Monophonic 0.6315 0.6514 0.5844 0.6006 1.3072
+WHD1 Cheng-i Wang, Jennifer Hsu, Shlomo Dubnov Audio, Monophonic 0.4823 0.4838 0.4734 0.6020 2.5913
+WDH1 Cheng-i Wang, Jennifer Hsu, Shlomo Dubnov Audio, Monophonic 0.6091 0.4103 0.4614 0.8212 2.5942
+NF1'14 Oriol Nieto, Morwaread Farbood Audio, Monophonic 0.5349 0.5852 0.2286 0.4316 2.7024
+WHD1 Cheng-i Wang, Jennifer Hsu, Shlomo Dubnov Audio, Polyphonic 0.4087 0.5734 0.6463 0.6900 2.3499
+WDH1 Cheng-i Wang, Jennifer Hsu, Shlomo Dubnov Audio, Polyphonic 0.4528 0.4258 0.7168 0.7168 2.3345
+NF1'14 Oriol Nieto, Morwaread Farbood Audio, Polyphonic 0.3356 0.4918 0.3043 0.3235 2.4615
+Cover Song Identification
+SubID Participants Total Number of Covers in Top 10
+Mixed Collection Sapp's Mazuraka Collection
+CT1 Christopher Tralie 624 3698
+CYWW1 Chuan-Yau Chan, Ming-Chi Yen, Ju-Chiang Wang, Hsin-Min Wang 1354 4968
+Audio Key Detection
+SubID Participants Weighted Key Score
+MIREX 2015 Dataset GiantSteps Dataset
+CN2 Chris Cannam, Katy Noland 0.8683 0.4697
+Audio Melody Extraction Results
+SubID Participants Overall Accuracy
+ADC04 Dataset MIREX05 Dataset INDIAN08 Dataset MIREX09 0dB Dataset MIREX09 -5dB Dataset MIREX09 +5dB Dataset Orcheset15 Dataset
+ZCY1 Weiwei Zhang, Zhe Chen, Fuliang Yin 0.6062 0.4563 0.5048 0.4623 0.3469 0.5374 0.3400
+IIY2 Yukara Ikemiya, Katsutoshi Itoyama, Kazuyoshi Yoshii 0.6348 0.6549 0.7034 0.6807 0.5311 0.7942 0.3273
+IIY1 Yukara Ikemiya, Katsutoshi Itoyama, Kazuyoshi Yoshii 0.5843 0.6074 0.6962 0.6627 0.5084 0.7791 0.2571
+ZCY2 Weiwei Zhang, Zhe Chen, Fuliang Yin 0.6024 0.4563 0.5048 0.4618 0.3464 0.5369 0.3401
+BG1 Juan J. Bosch, Emilia Gómez 0.6930 0.6274 0.7407 0.5397 0.4306 0.6236 0.5709
+FYJ3 Zhe-Cheng Fan, Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.5561 0.5441 0.6906 0.7442 0.5512 0.8687 0.1190
+FYJ4 Zhe-Cheng Fan, Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.6169 0.5619 0.6897 0.7622 0.5804 0.8690 0.1344
+FYJ1 Zhe-Cheng Fan, Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.6007 0.5852 0.6768 0.7613 0.6050 0.8602 0.1390
+FYJ2 Zhe-Cheng Fan, Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.5617 0.5436 0.6897 0.7467 0.5532 0.8690 0.1208
+Audio Fingerprinting Results
+SubID Participants Size of Database (MB) Top-1 Hit Rate (%)
+CZ3 ChuanYi Chen, Chaogang Zhang 560 88.77
+CZ4 ChuanYi Chen, Chaogang Zhang 560 88.77
+CZ5 ChuanYi Chen, Chaogang Zhang 1156 90.78
+SW3 Steve Wang 1513 91.85
+SW4 Steve Wang 2212 91.88
+YCP4 Guangchao Yao,Yiqian Pan, Wei Chen 2012 84.72
+YCP5 Guangchao Yao,Yiqian Pan, Wei Chen 2121 85.17
+YCP6 Guangchao Yao,Yiqian Pan, Wei Chen 2176 85.28
+ZW1 Zhichao Wang 1786 65.18
+ZW2 Zhichao Wang 1438 68.11
+MIREX 2015 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Audio Chord Estimation (MIREX 2009)
+SubID Participants Root MajMin MajMinBass Sevenths SeventhsBass Avg. Combined
+Hamming Measure
+Avg.
+Under-Segmentation
+Avg.
+Over-Segmentation
+CM3 Chris Cannam, Matthias Mauch 65.8121 54.6482 47.7323 19.2939 16.1668 81.9962 85.2722 80.5241
+DK4 Junqi Deng, Yu-Kwong Kwok 69.4543 67.6560 64.6086 59.5555 56.9235 85.2077 82.1289 90.6942
+DK5 Junqi Deng, Yu-Kwong Kwok 75.7288 73.5091 68.8684 63.7431 59.7160 85.2992 81.5129 91.5720
+DK6 Junqi Deng, Yu-Kwong Kwok 78.2594 75.5320 63.5616 64.6973 54.0065 85.6574 82.9533 90.5605
+DK7 Junqi Deng, Yu-Kwong Kwok 78.6497 75.8907 70.3832 58.3722 53.5268 85.6898 82.9814 90.5769
+DK8 Junqi Deng, Yu-Kwong Kwok 78.6497 75.8907 64.7733 66.8867 56.9393 85.6591 82.9537 90.5607
+DK9 Junqi Deng, Yu-Kwong Kwok 79.0314 76.8501 74.4712 68.1057 66.0784 85.4746 81.8317 91.5158
+KO1 Maksim Khadkevich, Maurizio Omologo 82.9252 82.1911 79.6069 76.0404 73.4264 87.6932 85.6588 91.2429
+Audio Chord Estimation (Billboard 2012)
+SubID Participants Root MajMin MajMinBass Sevenths SeventhsBass Avg. Combined
+ Hamming Measure
+Avg.
+Under-Segmentation
+Avg.
+Over-Segmentation
+CM3 Chris Cannam, Matthias Mauch 59.7692 47.8553 42.0235 19.7232 16.6233 78.7848 83.3521 76.4983
+DK4 Junqi Deng, Yu-Kwong Kwok 66.7161 65.4942 62.5781 51.5851 49.4209 83.2149 80.5190 87.8457
+DK5 Junqi Deng, Yu-Kwong Kwok 71.1192 69.9827 66.5142 55.4274 52.4835 82.9731 79.2466 88.9966
+DK6 Junqi Deng, Yu-Kwong Kwok 73.5148 71.3724 61.4473 56.3577 48.6743 83.3755 80.9088 87.7125
+DK7 Junqi Deng, Yu-Kwong Kwok 73.9039 71.7697 66.8183 54.4178 50.6402 83.4322 80.8940 87.8270
+DK8 Junqi Deng, Yu-Kwong Kwok 73.9039 71.7697 62.5494 54.5091 47.6137 83.3728 80.8185 87.7997
+DK9 Junqi Deng, Yu-Kwong Kwok 74.2509 73.0310 71.6407 55.7798 54.5837 83.0972 79.4885 88.8726
+KO1 Maksim Khadkevich, Maurizio Omologo 77.4518 75.5775 73.5128 57.6839 55.8240 84.1639 82.8014 87.4403
+Audio Chord Estimation (Billboard 2013)
+SubID Participants Root MajMin MajMinBass Sevenths SeventhsBass Avg. Combined
+ Hamming Measure
+Avg.
+Under-Segmentation
+Avg.
+Over-Segmentation
+CM3 Chris Cannam, Matthias Mauch 57.8444 44.8706 39.3656 17.0360 14.4199 77.8689 81.2144 77.3906
+DK4 Junqi Deng, Yu-Kwong Kwok 61.0702 57.9787 55.8521 45.8774 44.1657 80.5100 77.6090 87.4128
+DK5 Junqi Deng, Yu-Kwong Kwok 66.7507 63.1651 60.3928 49.6908 47.3737 79.8573 75.7545 88.7410
+DK6 Junqi Deng, Yu-Kwong Kwok 70.3249 65.3729 55.9933 51.7253 44.5079 80.7499 78.1023 87.2461
+DK7 Junqi Deng, Yu-Kwong Kwok 70.7622 65.8009 61.0438 49.3957 45.7221 80.8241 78.1507 87.3094
+DK8 Junqi Deng, Yu-Kwong Kwok 70.7622 65.8009 57.0567 50.2429 43.5285 80.7085 78.0954 87.2211
+DK9 Junqi Deng, Yu-Kwong Kwok 70.0150 66.0777 64.6556 50.0070 48.8044 80.2390 76.2507 88.6020
+KO1 Maksim Khadkevich, Maurizio Omologo 75.3641 71.3919 69.4261 53.5686 51.7788 81.6268 79.6089 87.7516
+Audio Chord Estimation (JayChou)
+SubID Participants Root MajMin MajMinBass Sevenths SeventhsBass Avg. Combined
+ Hamming Measure
+Avg.
+Under-Segmentation
+Avg.
+Over-Segmentation
+CM3 Chris Cannam, Matthias Mauch 54.3170 43.8191 34.9239 20.5650 16.5406 81.4307 84.4028 79.1912
+DK4 Junqi Deng, Yu-Kwong Kwok 75.6982 76.0591 72.8565 63.6571 61.3296 86.8527 83.3147 91.2842
+DK5 Junqi Deng, Yu-Kwong Kwok 76.7882 77.0330 73.0989 64.4315 61.3944 87.0353 83.2418 91.7794
+DK6 Junqi Deng, Yu-Kwong Kwok 72.7132 72.4378 64.6577 57.6450 51.3291 86.7990 83.6485 90.8313
+DK7 Junqi Deng, Yu-Kwong Kwok 73.3777 73.1521 66.7756 53.5860 48.5892 86.8223 83.6747 90.8382
+DK8 Junqi Deng, Yu-Kwong Kwok 73.3777 73.1521 65.4305 55.2012 48.9607 86.8285 83.7033 90.8290
+DK9 Junqi Deng, Yu-Kwong Kwok 75.7770 75.2298 70.2906 61.4822 57.5500 86.8009 82.9620 91.6387
+KO1 Maksim Khadkevich, Maurizio Omologo 78.7320 77.6870 66.8695 54.1637 44.5527 88.4633 87.1152 90.1075
+Query-by-Singing/Humming Results
+SubID Participants Hidden Jang Dataset
+(MRR)
+Jang Dataset
+ (MRR)
+ThinkIt Dataset
+(MRR)
+IOACAS Dataset
+(MRR)
+Subtask2 Dataset
+ (Simple Count)
+JL1 Yam Jin, di liu, ke li, Rongrong Ji, Littleken Wu 0.8576 0.8950 0.9344 0.8221 -
+BS2 Bartłomiej Stasiak 0.8655 0.9160 0.8324 0.6754 9.6647
+BS1 Bartłomiej Stasiak 0.8577 0.9140 0.8914 0.6422 9.6549
+TYCX4 Wenqi Tang, Guangchao Yao, Wei Chen, Limin Xiao 0.9281 0.9697 0.9228 0.8204 9.5044
+TYCX3 Wenqi Tang, Guangchao Yao, Wei Chen, Limin Xiao 0.8806 0.9060 0.9261 0.8232 9.5044
+JS2 Yam Jin, Yunhang Shen, ke li, Littleken Wu, Rongrong Ji 0.7612 0.8112 0.9035 0.7505 -
+ZH1 Bilei Zhu, Liu Hong 0.8898 0.9095 0.4449 0.3713 -
+Audio Beat Tracking
+SubID Participants F-measure
+SMC Dataset MAZ Dataset MCK Dataset
+BK1 Sebastian Böck, Florian Krebs 0.5685 0.5752 0.6361
+BK2 Sebastian Böck, Filip Korzeniowski 0.5283 0.7385 0.6253
+BK3 Sebastian Böck, Florian Krebs 0.5633 0.5489 0.6205
+BK4 Sebastian Böck, Florian Krebs 0.5785 0.5598 0.6163
+BK5 Sebastian Böck, Filip Korzeniowski 0.5819 0.7428 0.5991
+BK6 Sebastian Böck, Florian Krebs 0.5633 0.5489 0.6205
+CD4 Chris Cannam, Simon Dixon 0.3034 0.4195 0.5266
+CD5 Chris Cannam, Matthew Davies 0.3366 0.4962 0.5288
+FK1 Florian Krebs 0.4516 0.5511 0.5893
+FK5 Florian Krebs 0.4428 0.5427 0.5982
+FW6 Fu-Hai Frank Wu 0.3600 0.6653 0.4429
+FW7 Fu-Hai Frank Wu 0.3753 0.5783 0.5063
+FW8 Fu-Hai Frank Wu 0.3777 0.5863 0.5040
+JZ1 Jose R. Zapata 0.3728 0.5093 0.5232
+JZ2 Jose R. Zapata 0.3667 0.4838 0.5270
+SB6 Sebastian Böck 0.5211 0.5895 0.6390
+SB7 Sebastian Böck 0.4983 0.5233 0.6384
+Singing Voice Separation
+SubID Participants
+Singing Voice
+ (GNSDR, dB)
+Music
+ (GNSDR, dB)
+FJ1 Zhe-Cheng Fan, Jyh-Shing Roger Jang 6.8236 10.135
+FJ2 Zhe-Cheng Fan, Jyh-Shing Roger Jang 6.3487 9.8678
+IIY3 Yukara Ikemiya, Katsutoshi Itoyama, Kazuyoshi Yoshii 4.9862 8.2138
+IIY4 Yukara Ikemiya, Katsutoshi Itoyama, Kazuyoshi Yoshii 5.3953 8.77
+MD3 Matt McVicar, Tijl De Bie 2.9831 6.3671
+MD4 Matt McVicar, Tijl De Bie 3.1022 7.4657
+Set List Identification
+SubID Participants Avg. ED Avg. sBD Avg. eBD
+YWYW1 Ming-Chi Yen, Ju-Chiang Wang, Yi-Hsuan Yang, Hsin-Min Wang 11.350 131.147 160.695
+YWYW2 Ming-Chi Yen, Ju-Chiang Wang, Yi-Hsuan Yang, Hsin-Min Wang 10.350 131.147 160.695
+YWYW3 Ming-Chi Yen, Ju-Chiang Wang, Yi-Hsuan Yang, Hsin-Min Wang 11.500 322.845 313.188
+Audio Downbeat Estimation Results
+SubID Participants F-measure
+Ballroom Beatles Carnatic Turkish Cretan Hjdb
+DBDR2 Simon Durand, Juan Bello, Bertrand David, Gael Richard 0.7630 0.8550 0.2210 0.4720 0.4150 0.6910
+DBDR3 Simon Durand, Juan Bello, Bertrand David, Gael Richard 0.8020 0.8470 0.2160 0.4460 0.4490 0.6820
+FK2 Florian Krebs, Sebastian Böck 0.5030 0.7130 0.1540 0.2890 0.1510 0.7940
+FK3 Florian Krebs, Sebastian Böck 0.5950 0.7090 0.1660 0.2980 0.1670 0.8240
+FK4 Florian Krebs, Sebastian Böck 0.1790 0.1780 0.4740 0.1420 0.2330 0.1200
+FK6 Florian Krebs, Sebastian Böck 0.7560 0.6420 0.1970 0.2840 0.5290 0.6260
+MIREX 2015 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+Email: jdownie@illinois.edu
+Special Thanks to:
+The Andrew W. Mellon Founda tion, the National Science Foundation (Grant No. NSF IIS-0327371 and No. NSF IIS-0328471), task captains, IMIRSEL members (K. Choi, J. Downie, Y. Hao, C. Maden, P. Organisciak, B. Owen), the
+content providers, Evalutron graders, the MIR community, and the ISMIR 2015 organizing committee.
+Multi-F0 Note Tracking - Mixed Dataset
+SubID Participants
+MIREX Dataset Su Dataset
+Avg. F-measure
+ Onset Only Avg. Overlap Avg. F-measure
+Onset Only Avg. Overlap
+BW2 Emmanouil Benetos, Tillman Weyde 0.6013 0.8820 0.3190 0.7640
+BW3 Emmanouil Benetos, Tillman Weyde 0.5413 0.8800 0.2855 0.7620
+CB1 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.5032 0.8650 0.2267 0.7520
+CB2 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.3737 0.8610 0.1572 0.8360
+SY1 Li Su, Yi-Hsuan Yang 0.4786 0.8820 0.2338 0.7550
+SY2 Li Su, Yi-Hsuan Yang 0.4605 0.8810 0.2278 0.8370
+SY3 Li Su, Yi-Hsuan Yang 0.4616 0.8760 0.2248 0.8360
+SY4 Li Su, Yi-Hsuan Yang 0.4552 0.8740 0.2223 0.8300
+Multi-F0 Note Traking - Piano Only
+SubID Participants
+MIREX Dataset Su Dataset
+Avg. F-measure
+ Onset Only Avg. Overlap Avg. F-measure
+Onset Only Avg. Overlap
+BW2 Emmanouil Benetos, Tillman Weyde 0.6406 0.8380 0.5000 0.8470
+BW3 Emmanouil Benetos, Tillman Weyde 0.6924 0.8100 0.4751 0.8440
+CB1 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.6667 0.8130 0.3582 0.8620
+CB2 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.4941 0.7960 0.2305 0.8220
+SY1 Li Su, Yi-Hsuan Yang 0.4802 0.8090 0.3026 0.8370
+SY2 Li Su, Yi-Hsuan Yang 0.4293 0.8140 0.2840 0.8310
+SY3 Li Su, Yi-Hsuan Yang 0.5327 0.8150 0.2823 0.8430
+SY4 Li Su, Yi-Hsuan Yang 0.4875 0.8140 0.2730 0.8350
+Multi-F0 Estimation
+SubID Participants Accuracy
+MIREX Dataset Su Dataset
+BW1 Emmanouil Benetos, Tillman Weyde 0.654 0.354
+CB1 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.498 0.233
+CB2 Chris Cannam, Emmanouil Benetos, Matthias Mauch, Matthew E. P. Davies, Simon Dixon, Christian Landone, Katy Noland, and Dan Stowell 0.420 0.237
+SY1 Li Su, Yi-Hsuan Yang 0.588 0.390
+SY2 Li Su, Yi-Hsuan Yang 0.584 0.375
+SY3 Li Su, Yi-Hsuan Yang 0.571 0.369
+SY4 Li Su, Yi-Hsuan Yang 0.567 0.359
+Music/Speech Classification and Detection
+SubID Participants Classification Detection
+Accuracy Frame-based F-measure eb_F_500ms eb_Foff_500ms eb_F_1s eb_Foff_1s
+GWDS1 Vikaskumar Ghodasara, Daimi Syed Naser, Shefali Waldekar, Goutam Saha 0.9866 - - - - -
+JS2 Jan Schlüter - 0.8233 0.1754 0.1212 0.2387 0.1639
+JS3 Jan Schlüter 0.9946 - - - - -
+MM1 Matija Marolt 0.9869 - - - - -
+MM2 Matija Marolt 0.9754 - - - - -
+MM3 Matija Marolt - 0.8941 0.4037 0.2911 0.4419 0.3085
+RHM1 Jimena Royo-Letelier, Romain Hennequin, Manuel Moussallam 0.9954 - - - - -
+RS2 Reinhard Sonnleitner 0.9962 - - - - -
+TL1 (15) Thomas Lidy 0.9927 - - - - -
+TL1 (80) Thomas Lidy 0.9973 0.8849 0.2129 0.1129 0.2556 0.1498
+UK1 Aiko Uemura, Jiro Katto - 0.5483 0.0324 0.0037 0.0623 0.0070
+ZC1 Chaogang Zhang, Chuan-Yi Chen - 0.7517 0.2168 0.1956 0.2700 0.2101
+ZC2 Chaogang Zhang, Chuan-Yi Chen - 0.2079 0.0434 0.0434 0.0434 0.0434
+ZC3 Chaogang Zhang, Chuan-Yi Chen - 0.7517 0.2168 0.1956 0.2700 0.2101
+ZC4 Chaogang Zhang, Chuan-Yi Chen 0.9429 0.7517 0.2168 0.1956 0.2700 0.2101
+ZC5 Chaogang Zhang, Chuan-Yi Chen 0.9429 0.7517 0.2168 0.1956 0.2700 0.2101
+ZY1 Wei-Qiang Zhang, Xu-Kui Yang - 0.5104 0.1670 0.0874 0.2164 0.1177
+TVDP1 Nikolaos Tsipas, Lazaros Vrysis, Charalampos Dimoulas, George Papanikolaou - 0.8314 0.1490 0.1146 0.2233 0.1718
+TVDP2 Nikolaos Tsipas, Lazaros Vrysis, Charalampos Dimoulas, George Papanikolaou - 0.8346 0.1250 0.1231 0.2042 0.1741
+TVDP3 Nikolaos Tsipas, Lazaros Vrysis, Charalampos Dimoulas, George Papanikolaou - 0.8209 0.0699 0.0068 0.1299 0.0306
+NT1 Nikolaos Tsipas, Lazaros Vrysis, Charalampos Dimoulas, George Papanikolaou 0.9835 - - - - -
+NT2 Nikolaos Tsipas, Lazaros Vrysis, Charalampos Dimoulas, George Papanikolaou 0.9935 - - - - -
+YZ1 Wei-Qiang Zhang, Xu-Kui Yang 0.9835 - - - - -

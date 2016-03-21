@@ -1,0 +1,436 @@
+MIREX 2013 Evaluation Results
+Audio Train/Test: Mood Classification - MIREX08 Dataset
+SubID Participants Accuracy
+JJ1 Ming-Ju Wu, Jyh-Shing Roger Jang 0.68
+PP1 Renato Panda, Rui Pedro Paiva 0.68
+CJ1 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.68
+JJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.68
+PRP3 Renato Panda, Bruno Rocha, Rui Pedro
+Paiva 0.68
+PP2 Renato Panda, Rui Pedro Paiva 0.67
+PRP4 Renato Panda, Bruno Rocha, Rui Pedro
+Paiva 0.67
+BBLJK4
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.66
+BBLJK2
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.66
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+ Knees, Reinhard Sonnleitner 0.66
+PRP1 Renato Panda, Bruno Rocha, Rui Pedro
+Paiva 0.65
+CJ2 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.65
+BBLJK1
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.65
+KDKA2 Patrick Kramer, Christian Dittmar,
+Johannes Krasser, Jakob Abesser 0.64
+KDKA1 Patrick Kramer, Christian Dittmar,
+Johannes Krasser, Jakob Abesser 0.62
+BBLJK3
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.60
+BBLJK5
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.58
+DS1 Dan Stowell 0.49
+DM3 Franz de Leon, Kirk Martinez 0.49
+DM4 Franz de Leon, Kirk Martinez 0.49
+RPP1 Bruno Rocha, Renato Panda, Rui Pedro
+Paiva 0.48
+PRP2 Renato Panda, Bruno Rocha, Rui Pedro
+Paiva 0.47
+RPP2 Bruno Rocha, Renato Panda, Rui Pedro
+Paiva 0.29
+Audio Train/Test: Composer Classification - MIREX08 Dataset
+SubID Participants Accuracy
+JJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.65
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner 0.67
+JJ1 Ming-Ju Wu, Jyh-Shing Roger Jang 0.65
+BBLJK4
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.51
+BBLJK3
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.40
+DM3 Franz de Leon, Kirk Martinez 0.68
+BBLJK2
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.65
+DM4 Franz de Leon, Kirk Martinez 0.70
+BBLJK1
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.70
+DS1 Dan Stowell 0.44
+CJ1 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.65
+AP1 Aggelos Pikrakis 0.50
+CJ2 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.67
+BBLJK5 Karam Byun, Seung Ryoel Baek, Jong-S
+eol Lee, Sei-jin Jang, Moo Young Kim 0.41
+Audio Train/Test: Latin Classification - MIREX08 Dataset
+SubID Participants Accuracy
+AP1 Aggelos Pikrakis 0.78
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+ Knees, Reinhard Sonnleitner 0.76
+JJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.72
+JJ1 Ming-Ju Wu, Jyh-Shing Roger Jang 0.72
+CJ2 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.72
+BBLJK2
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.68
+CJ1 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.68
+BBLJK1
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.66
+BBLJK4
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.62
+BBLJK5
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang, Moo Young
+Kim
+0.60
+BBLJK3
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.58
+DS1 Dan Stowell 0.57
+Audio Train/Test: Genre Classification(Mixed)-MIREX08 Dataset
+SubID Participants Accuracy
+JJ1 Ming-Ju Wu, Jyh-Shing Roger Jang 0.76
+JJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.76
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+ Knees, Reinhard Sonnleitner 0.75
+BBLJK1
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.74
+BBLJK2
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.73
+BBLJK4
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.70
+BBLJK5
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.66
+BBLJK3
+Karam Byun, Seung Ryoel Baek,
+Jong-Seol Lee, Sei-jin Jang,
+Moo Young Kim
+0.63
+DS1 Dan Stowell 0.58
+CJ2 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.31
+CJ1 Pei-Hsuan Chou, Jyh-Shing Roger Jang 0.31
+Audio Tempo Estimation
+SubID Participants P-Score
+CDF3 Chris Cannam, Matthew Davies, Luis
+Figueira 0.74
+GKC4 Aggelos Gkiokas, Vassilis Katsouros,
+George Carayannis 0.82
+SB7 Sebastian Böck 0.80
+FW3 Fu-Hai Frank Wu 0.83
+ES4 Florian Eyben, Felix Weninger, Giacomo
+Ferroni, Björn Schuller 0.58
+OL1 Olivier Lartillot 0.82
+ES2 Florian Eyben, Björn Schuller 0.36
+EWFS2 Florian Eyben, Felix Weninger, Giacomo
+ Ferroni, Björn Schuller 0.48
+EF1 Anders Elowsson, Anders Friberg 0.86
+CB2 Chris Baume 0.61
+HS1 Hendrik Schreiber 0.76
+Real-time Audio to Score Alignment
+SubID Participants Total Precision
+CVRCR1
+Julio Jose Carabias-Orti, Francisco
+Jose Rodriguez-Serrano, Pedro
+Vera-Candeas, Pablo
+Cabañas-Molero, Nicolas Ruiz-Reyes
+0.87
+CJ5 ChunTa Chen, Jyh-Shing Roger Jang 0.67 Audio Music Similarity
+SubID Participants Avg. Fine
+Score
+SS2 Klaus Seyerlehner, Markus Schedl 55.21
+SSPK Klaus Seyerlehner, Markus Schedl, Tim
+Pohle, Peter Knees 54.10
+PS1 Tim Pohle, Dominik Schnitzer 53.81
+DM2 Franz de Leon, Kirk Martinez 48.07
+GKC2 Aggelos Gkiokas, Vassilis Katsouros,
+George Carayannis 48.05
+DM1 Franz de Leon, Kirk Martinez 46.26
+GKC1 Aggelos Gkiokas, Vassilis Katsouros,
+George Carayannis 43.80
+RA1 Roman Aliyev 18.86
+Audio Key detection
+SubID Participants
+Weighted
+Key Score
+CF3 Chris Cannam, Luis Figueira 0.87
+GP4 Geoffroy Peeters 0.82
+PP5 Johan Pauwels, Geoffroy Peeters 0.81
+Symbolic Music Similarity
+SubID Participants Avg. Fine
+Score (0-1)
+JU1 Julián Urbano 0.61
+JU2 Julián Urbano 0.61
+JU3 Julián Urbano 0.61
+RTBB1 Carles Roig, Lorenzo J. Tardón,Ana
+María Barbancho, Isabel Barbancho 0.34
+YHKH1 Sakurako Yazawa, Yuhei Hasegawa ,
+Kouhei Kanamori, Masatoshi Hamanaka 0.21
+Multi-F0 Estimation
+SubID Participants Accuracy
+BW1 Emmanouil Benetos, Tillman Weyde 0.66
+CDM1 Tian Cheng, Simon Dixon, Matthias Mauch 0.62
+CDM2 Tian Cheng, Simon Dixon, Matthias Mauch 0.62
+Multi-F0 Note Tracking - Mixed Dataset
+SubID Participants Avg. F-measure
+Onset Only
+Avg.
+Overlap
+BW2
+Emmanouil Benetos,
+Tillman Weyde 0.55 0.88
+CDM3
+Tian Cheng, Simon Dixon,
+Matthias Mauch 0.51 0.86
+BW3
+Emmanouil Benetos,
+Tillman Weyde 0.48 0.88
+Multi-F0 Note Tracking - Piano Only
+SubID Participants
+Avg. F-measure
+Onset Only
+Avg.
+Overlap
+BW3
+Emmanouil Benetos,
+Tillman Weyde 0.61 0.83
+CDM3
+Tian Cheng, Simon Dixon,
+Matthias Mauch 0.57 0.79
+BW2
+Emmanouil Benetos,
+Tillman Weyde 0.54 0.83
+Query By Singing/Humming
+SubID Participants
+Task1A
+Hidden MRR Task1A MRR Task1B MRR Task1C MRR Task2 SC
+BS1 Bartłomiej Stasiak NA NA NA NA 8.91
+BS2 Bartłomiej Stasiak 0.55 0.59 NA NA NA
+BS3 Bartłomiej Stasiak NA NA 0.91 0.71 NA
+BS4 Bartłomiej Stasiak NA NA 0.93 0.71 NA
+BS5 Bartłomiej Stasiak NA NA 0.56 0.45 NA
+MR1 Music Radar 0.93 0.96 0.97 0.72 9.52
+LNL1 Peng Li, Yuan Nie, Xiaoyan Li 0.86 0.90 0.93 0.81 NA
+YJ1 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.91 0.93 0.88 0.40 7.00
+YJ2 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.88 0.92 0.47 0.20 6.84
+Audio Onset Detection
+SubID Participants Avg.
+F-measure
+SB2 Sebastian Böck 0.87
+SB1 Sebastian Böck 0.87
+SB4 Sebastian Böck 0.81
+SB3 Sebastian Böck 0.80
+CSF1 Chris Cannam, Dan Stowell, Luis
+Figueira 0.66
+ZHZD1 Zhengchen Zhang, Dong-yan Huang,
+Renbo Zhao, Minghui Dong 0.82
+FMEGS1
+Giacomo Ferroni, Erik Marchi, Florian
+Eyben, Leonardo Gabrielli, Stefano
+Squartini, Björn Schuller
+0.80
+CF4 Chris Cannam, Luis Figueira 0.73
+FMESS1 Giacomo Ferroni, Erik Marchi, Florian
+Eyben, Stefano Squartini, Björn Schuller 0.81
+CB1 Chris Baume 0.63
+MTB1
+Emilio Molina Martínez, Lorenzo J.
+Tardón, Isabel Barbancho, Ana María
+Barbancho
+0.38
+MIREX 2013 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Audio Melody Extraction
+ Overall Accuracy
+SubID Participants MIREX'05 ADC'04 INDIAN'08
+SL1 Liming Song, Ming Li 0.54 0.58 0.63
+CF1 Chris Cannam, Luis Figueira 0.47 0.67 0.58
+YJ3 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.36 0.42 0.51
+YJ4 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.52 0.46 0.70
+Audio Melody Extraction
+ Overall Accuracy
+SubID Participants MIREX'09 0db MIREX'09 +5db MIREX'09 -5db
+SL1 Liming Song, Ming Li 0.64 0.73 0.50
+CF1 Chris Cannam, Luis Figueira 0.46 0.54 0.39
+YJ3 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.52 0.55 0.44
+YJ4 Tzu-chun Yeh, Jyh-Shing Roger Jang 0.54 0.58 0.44
+Structural Segmentation - MIREX '09
+SubID Participants MIREX 09
+F-measure
+MIREX 10
+RWC/Quaero
+SB@3sec
+MIREX 10
+RWC/RWC
+F-measure
+Salami
+F-measure
+RBH3 Bruno Rocha, Niels Bogaards,
+Aline Honingh 0.47 0.54 0.48 0.49
+RBH2 Bruno Rocha, Niels Bogaards,
+Aline Honingh 0.46 0.67 0.48 0.47
+RBH1 Bruno Rocha, Niels Bogaards,
+Aline Honingh 0.46 0.67 0.47 0.47
+MP1 Brian McFee, Danile P.W. Ellis 0.47 0.57 0.42 0.40
+RBH4 Bruno Rocha, Niels Bogaards,
+Aline Honingh 0.47 0.54 0.48 0.47
+MP2 Brian McFee, Danile P.W. Ellis 0.46 0.59 0.42 0.37
+CF5 Chris Cannam, Luis Figueira 0.51 0.61 0.52 0.45
+CF6 Chris Cannam, Luis Figueira,
+Matthias Mauch 0.61 0.49 0.58 0.55
+Audio Beat Tracking
+ F-Measure
+SubID Participants MCK MAZ SMC
+FW4 Fu-Hai Frank Wu 49.88 42.24 31.00
+ZDBG1 Jose Zapata, Matthew Davies, Dmitry
+Bogdanov, Emilia Gómez 52.00 53.00 37.95
+FW2 Fu-Hai Frank Wu 50.18 41.16 31.30
+FW1 Fu-Hai Frank Wu 44.07 66.99 35.19
+KFRO1 Maksim Khadkevich, Thomas Fillon, Gaël
+Richard, Maurizio Omologo 51.50 34.88 32.48
+CDF2 Chris Cannam, Simon Dixon, Luis Figueira 52.88 49.62 33.66
+CDF1 Chris Cannam, Simon Dixon, Luis Figueira 52.45 41.95 30.34
+GP3 Geoffroy Peeters 50.32 47.02 35.17
+DP1 Brian McFee, Danile P.W. Ellis 27.86 34.39 21.03
+SB6 Sebastian Böck 59.04 60.15 52.44
+GKC3 Aggelos Gkiokas, Vassilis Katsouros, George Carayannis 51.43 36.24 33.41
+GP1 Geoffroy Peeters 49.61 55.56 36.89
+SB5 Sebastian Böck 58.21 49.07 47.12
+GP2 Geoffroy Peeters 50.09 49.12 36.36
+ES3 Florian Eyben, Björn Schuller 45.18 37.73 27.83
+ES1 Florian Eyben, Björn Schuller 40.85 43.25 29.49
+EWFS1 Florian Eyben, Felix Weninger, Giacomo
+Ferroni, Björn Schuller 26.22 26.17 21.75
+FK1 Florian Krebs 57.68 52.86 41.56
+Discovery of Repeated Themes and Sections
+SubID Participants Task Version R_est P_est R_occ P_occ Log Runtime
+NF2 Oriol Nieto, Morwaread Farbood Symbolic, Polyphonic 0.37 0.49 0.48 0.61 2.46
+DM10 David Meredith Symbolic, Polyphonic 0.58 0.57 0.81 0.53 2.96
+DM9 David Meredith Symbolic, Polyphonic 0.34 0.20 0.17 0.22 2.95
+DM8 David Meredith Symbolic, Polyphonic 0.61 0.42 0.72 0.51 2.95
+DM7 David Meredith Symbolic, Polyphonic 0.49 0.59 0.59 0.46 4.05
+DM6 David Meredith Symbolic, Polyphonic 0.25 0.18 0.00 0.00 4.09
+DM5 David Meredith Symbolic, Polyphonic 0.41 0.33 0.48 0.36 4.06
+NF1 Oriol Nieto, Morwaread Farbood Symbolic, Monophonic 0.42 0.47 0.41 0.59 2.03
+DM10 David Meredith Symbolic, Monophonic 0.65 0.55 0.77 0.54 2.21
+DM9 David Meredith Symbolic, Monophonic 0.45 0.29 0.36 0.57 2.25
+DM8 David Meredith Symbolic, Monophonic 0.56 0.42 0.57 0.66 2.29
+DM7 David Meredith Symbolic, Monophonic 0.53 0.57 0.76 0.68 3.21
+DM6 David Meredith Symbolic, Monophonic 0.37 0.32 0.40 0.49 3.19
+DM5 David Meredith Symbolic, Monophonic 0.44 0.38 0.59 0.66 3.20
+NF4 Oriol Nieto, Morwaread Farbood Audio, Polyphonic 0.22 0.28 0.01 0.07 1.56
+NF3 Oriol Nieto, Morwaread Farbood Audio, Monophonic 0.38 0.49 0.11 0.41 1.79
+Special Thanks to: The Andrew W. Mellon Foundation, the National Science Foundation (Grant
+No. NSF IIS-0327371 and No. NSF IIS-0328471), IMIRSEL members (C. Maden, K. Choi, Y.
+Hao, R. Aktar, J. Downie, A. Ehmann, M. Bay, P. Organisciak, & C. Willis), the content providers,
+Evalutron graders, the MIR community, and the ISMIR 2013 organizing committee
+Audio Chord Esitimation - MirexChord2009
+SubID Participants Root MajMin MajMin
+Bass Sevenths Sevenths
+Bass
+Mean directional
+Hamming measure
+Mean
+under-segmentation
+Mean
+over-segmentation
+CB3 Taemin Cho, Juan P. Bello 84.47 81.78 79.12 68.95 66.46 0.85 0.13 0.08
+CB4 Taemin Cho, Juan P. Bello 83.74 82.19 79.39 68.72 66.21 0.84 0.14 0.08
+CF2 Chris Cannam, Luis Figueira 78.56 75.41 72.48 54.67 52.26 0.82 0.13 0.14
+KO1 Maksim Khadkevich, Maurizio Omologo 82.93 82.19 79.61 76.04 73.43 0.84 0.14 0.09
+KO2 Maksim Khadkevich, Maurizio Omologo 84.26 83.95 81.38 80.17 77.38 0.86 0.13 0.08
+NG1 Nikolay Glazyrin 77.19 75.28 72.44 65.70 63.14 0.79 0.18 0.12
+NG2 Nikolay Glazyrin 72.84 70.93 68.12 43.00 41.35 0.79 0.17 0.16
+NMSD1 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 82.53 80.72 78.14 66.08 63.77 0.83 0.15 0.10
+NMSD2 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 83.00 81.49 78.66 68.84 66.21 0.83 0.14 0.10
+PP3 Johan Pauwels, Geoffroy Peeters 76.67 75.14 72.09 66.51 63.72 0.81 0.16 0.12
+PP4 Johan Pauwels, Geoffroy Peeters 75.32 72.81 69.92 61.02 58.29 0.80 0.18 0.11
+SB8 Nikolaas Steenbergen, John Ashley Burgoyne 9.37 7.47 7.06 6.60 6.22 0.40 0.08 0.60
+Audio Chord Esitimation - BillboardTest2012
+SubID Participants Root MajMin MajMin
+Bass Sevenths Sevenths
+Bass
+Mean directional
+Hamming measure
+Mean
+under-segmentation
+Mean
+over-segmentation
+CB3 Taemin Cho, Juan P. Bello 78.72 76.75 74.72 65.17 63.11 0.81 0.16 0.11
+CF2 Chris Cannam, Luis Figueira 74.08 72.22 70.21 55.35 53.39 0.80 0.15 0.17
+KO1 Maksim Khadkevich, Maurizio Omologo 77.38 75.58 73.51 57.68 55.82 0.80 0.17 0.13
+KO2 Maksim Khadkevich, Maurizio Omologo 77.81 76.25 74.33 62.18 60.24 0.80 0.18 0.11
+NG1 Nikolay Glazyrin 72.68 71.22 68.97 51.70 49.80 0.79 0.18 0.14
+NG2 Nikolay Glazyrin 68.67 67.09 64.99 48.32 46.75 0.78 0.17 0.17
+NMSD1 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 77.70 76.10 74.22 64.18 62.28 0.79 0.18 0.14
+NMSD2 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 77.32 76.26 74.38 64.70 62.64 0.78 0.18 0.14
+PP3 Johan Pauwels, Geoffroy Peeters 74.00 72.77 70.44 52.72 50.77 0.79 0.16 0.16
+PP4 Johan Pauwels, Geoffroy Peeters 72.66 70.39 68.14 54.72 52.61 0.79 0.18 0.13
+SB8 Nikolaas Steenbergen, John Ashley Burgoyne 8.52 6.35 6.15 4.81 4.73 0.36 0.08 0.64
+Audio Chord Esitimation - BillboardTest2013
+SubID Participants Root MajMin MajMin
+Bass Sevenths Sevenths
+Bass
+Mean directional
+Hamming measure
+Mean
+under-segmentation
+Mean
+over-segmentation
+CB3 Taemin Cho, Juan P. Bello 75.75 72.14 70.07 58.13 56.16 0.78 0.19 0.11
+CF2 Chris Cannam, Luis Figueira 71.05 67.40 65.33 49.06 47.25 0.77 0.17 0.17
+NG1 Nikolay Glazyrin 70.87 67.08 64.76 48.70 46.63 0.75 0.21 0.14
+NG2 Nikolay Glazyrin 67.05 63.11 61.08 43.78 42.74 0.75 0.19 0.17
+NMSD1 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 74.50 71.29 69.20 58.51 56.56 0.76 0.21 0.14
+NMSD2 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 74.62 71.54 69.47 59.46 57.53 0.75 0.21 0.14
+PP3 Johan Pauwels, Geoffroy Peeters 70.52 67.97 65.58 50.48 48.39 0.76 0.18 0.16
+PP4 Johan Pauwels, Geoffroy Peeters 69.59 66.26 63.94 51.62 49.61 0.75 0.22 0.13
+SB8 Nikolaas Steenbergen, John Ashley Burgoyne 9.12 6.61 6.44 5.25 5.11 0.35 0.08 0.65
