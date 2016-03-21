@@ -276,17 +276,35 @@ While the majority of current MIREX tasks do fit into this framework, it preclud
 \label{open}
 
 For the distributed computation model to be practical, we first need a source of diverse, representative, and freely distributable audio content.
-There are several competing interests in selecting content for inclusion in evaluation:
-\begin{itemize}
-\item availability and distribution of content,
-\item quality control, and
-\item coverage and representation bias.
-\end{itemize}
+Luckily, a wealth of data can be obtained from Jamendo~\footnote{\url{http://jamendo.com}} and the Free Music Archive (FMA),\footnote{\url{http://freemusicarchive.org/}} both of which host a variety of music content under either public domain or Creative Commons (CC) licenses.\footnote{\url{https://creativecommons.org/licenses/}}
+Since CC-licensed music can be freely redistributed (with attribution), it is (legally) possible to create and share persistent data archives.
 
-The first point can be addressed by using only creative commons licensed music.
-Luckily, a wealth of this data is available through the Free Music Archive
-(FMA),\footnote{\url{http://freemusicarchive.org/}} which hosts a variety of music
-content under either public domain or creative commons licenses.\footnote{\url{https://creativecommons.org/licenses/}}
+% How are jamendo and FMA simliar, different?
+% jamendo: already in dbtune \cite{raimond2008web}
+% fma: linked via echo nest
+% both have curation
+% jamendo is about 5x larger
+% fma has public domain as well as cc
+% fma features some content by well-known commercial artists
+
+% provide a snapshot torrent for each year's data set
+% including for each track:
+%   audio
+%   metadata (via musicbrainz ids)
+%   cc attribution
+
+% what can we say about quality control?
+%   maybe do something similar to how MSD was constructed
+%       1/3 popular stuff (by play count)
+%       1/3 uniform sampling by genre
+%       1/3 some random dregs
+%   each year, add a sampling of tracks added within the last year
+
+% QC can also happen in evaluation set selection
+%   look for disagreements per method
+%   when soliciting annotations, allow annotators to flag tracks which are bad for the
+%   given task (under an appropriate definition of ``bad'')
+%   also solicit confidence ratings in the annotations
 
 The second point is a difficult one, though FMA does provide some curation.
 It might be interesting to partner with them in helping to guide the selection.
