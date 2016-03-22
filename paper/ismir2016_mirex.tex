@@ -158,37 +158,47 @@ Said differently, the worst thing that could happen to MIREX in its current form
 \label{eq:systematic_eval}
 Y_i = \mathcal{A}(X_i)\\
 Z_i = \mathcal{F}(X_i)\\
-M_i = \mathcal{C}(Y_i, Z_i)
+M_i^R = \mathcal{C}^R(Y_i, Z_i)
 \end{align}
 
 % Hard to do science
 % ------------------
-Operating costs aside, MIREX has afforded some valuable insight into the research of MIR systems\cite{2008DownieMIREX}.
+Operating costs aside, MIREX has indeed afforded some valuable insight into the research of MIR systems\cite{2008DownieMIREX}.
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
-To illustrate this reality, consider the standard approach to benchmarking MIR systems,
+To illustrate, consider the standard approach to benchmarking MIR systems,
 given in Eq \ref{eq:systematic_eval}.
 % diagrammed in Figure \ref{fig:system_eval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
 Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z_i$.
 One or more comparison functions, $\mathcal{C}^R$, are applied on these two representations, yielding a number of performance measures, $M_i^R$.
-This process is repeated over a collection of input-output pairs, $\mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally increases with $N$.
+This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally increases with $N$.
+
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
-A lack of transparency renders participants blind in a number of detrimental ways.
-There is no public access to $X$, making it impossible to diagnose why an algorithm produced $Z$, or determine what should be done to make the system better.
-Furthermore, $Y$ is meaningless without $X$, and must be trivially taken on face value.
+In the current formulation though, a lack of transparency renders participants blind in a number of ways.
+There is no access to any $X_i$, making it impossible to diagnose why an algorithm produced $Z_i$, or determine what should be done to make $\mathcal{F}$ better.
+Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
 By the same token, while $N$ varies from task to task, there is no way to guage the distribution of the data, or identify any incidental biases.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
-Traditionally $C$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
+Traditionally $\mathcal{C}^R$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
 % This is harsh conjecture. Definitely revise to something justifiable, but I've seem to hit a wall.
 And finally, there is little visibility into the evaluation machinery or its use, and there is ample anecdotal evidence surrounding questionable scientific practices.
 
-% Data Replenishing
-Ironically, due in no small part to the high financial and human costs of the algorithm-to-data model, the MIR community, and thus MIREX, suffers from a lack of annotated data.
-The current datasets are insufficient for benchmarking algorithms, and there is no viable plan in place to grow the size of these datasets over time.
-By and large, MIREX has relied on the generosity of external resources to expand the size of its evaluation datasets.
-In some cases, like automatic chord estiamtion, the testing set largely lives in the light of day, evidenced by one team who effectively submitted a fingerprinting system and achieved near perfect scores\footnote{sneaky McVicar...}.
-As a result, the community has begun to develop systems that are over-fitting by trial and error, proving that we cannot avoid data collection in the long run.
+% Dearth Data
+% MIREX is preoccupied with just keeping the ship afloat.
+Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
+While this is certainly detrimental for system development, it is absolutely critical to routinely replace the data used for evaluation.
+Unsurprisingly, in lieu of a fresh source of annotated data, the community is beginning to over-fit MIREX datasets.
+In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission that achieved near perfect scores in chord estiamtion via fingerprinting \footnote{sneaky McVicar...}.
+In others, the ``hold-out'' data used for evaluation is simply being over-fit by trial and error.
+Often, when evaluation datasets are updated, algorithm scores drop precipitously.
+% There's no short-term plan to get new data; there's no long-term plan to get new data.
+To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
+By and large, MIREX has relied on the generosity of the community to expand the size of its evaluation datasets.
+This approach suffers from the same lack of transparency as MIREX itself, often quietly introducing issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
+Data collection is a harsh, unavoidable reality, and one that a demands a viable plan going forward.
+
+% The current datasets are insufficient for benchmarking algorithms, and there is no viable plan in place to grow the size of these datasets over time.
 
 
 % Some of the single biggest issues are caused by witholding data used for evaluation from participants.
@@ -215,10 +225,11 @@ As a result, the community has begun to develop systems that are over-fitting by
 
 \section{Open Evaluation of MIR Systems}
 
-In summary, MIREX suffers from a few terminal deficiencies.
-One, the financial cost and burden on human effort is large enough that it requires significant external investment.
-Two, the recurring need for freshly annotated data is in addition to normal operating costs.
-And three, the lack of transparency into the data and metrics used limits the value of the exercise.
+Summarizing the previous section, MIREX suffers from three deficiencies that render the situation terminal:
+one, the financial and human cost is far too great to be sustainable indefinitely;
+two, a lack of transparency undermines the scientific value of the endeavor;
+and three, the unavoidable, recurring need for freshly annotated data requires a feasible, long-term strategy.
+
 
 % Here we outline the concrete details of our proposal.
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
