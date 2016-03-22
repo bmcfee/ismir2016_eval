@@ -174,13 +174,13 @@ given in Eq \ref{eq:systematic_eval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
 Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z_i$.
 One or more comparison functions, $\mathcal{C}^R$, are applied on these two representations, yielding a number of performance measures, $M_i^R$.
-This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally increases with $N$.
+This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally, although not necessarily, increases with $N$.
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
-In the current formulation though, a lack of transparency renders participants blind in a number of ways.
+In the current formulation though, a lack of transparency renders participants scientifically blind in a number of ways.
 There is no access to any $X_i$, making it impossible to diagnose why an algorithm produced $Z_i$, or determine what should be done to make $\mathcal{F}$ better.
 Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
-By the same token, while $N$ varies from task to task, there is no way to guage the distribution of the data, or identify any incidental biases.
+By the same token, while $N$ varies from task to task, there is no way to guage the distribution of the data or how representative it may or may not be.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
 Traditionally $\mathcal{C}^R$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
