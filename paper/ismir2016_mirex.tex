@@ -198,48 +198,23 @@ And finally, it is only fair to admit that large scale evaluation is a considera
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 While this is certainly detrimental to system development, it is absolutely critical to routinely replace the data used for evaluation.
 % TODO: soften or justify
-Unsurprisingly, in lieu of a fresh source of annotated data, initial concerns about the community over-fitting datasets are beginning to manifest.
+Unsurprisingly, in lieu of a fresh source of annotated data, early concerns about the community eventually over-fitting datasets are beginning to manifest.
 In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission in 2011 that achieved near perfect scores in chord estiamtion having been pretrained on the same data\footnote{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}.
 % TODO: More detail, converge over multiple iterations.
-In others, the ``hold-out'' data used for evaluation is simply being over-fit by trial and error.
-% TODO: Results are misleading due to a fixed / unknown bias, which manifests when datasets expand.
-It is widely expected that updating evaluation datasets will cause algorithm scores to drop significantly.
+In others, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
+These results are misleading due to a fixed, unknown bias in the distribution, which becomes apparent when datasets are expanded, like the introduction of the Billboard dataset to the chord estimation task in 2012\cite{2012BurgoyneExpert}.
 % There's no short-term plan to get new data; there's no long-term plan to get new data.
 To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
 By and large, MIREX has relied on the generosity of the community to both curate and donate data for the purposes of evaluation.
 This approach suffers from the same lack of transparency as MIREX itself, often quietly introducing issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
 Data collection is a challenging, unavoidable reality, and one that a demands a viable plan going forward.
 
-% The current datasets are insufficient for benchmarking algorithms, and there is no viable plan in place to grow the size of these datasets over time.
-
-
-% Some of the single biggest issues are caused by witholding data used for evaluation from participants.
-% To be fair, the rationale for doing so is understandable.
-% It has been argued that private data sets should help stave off the effects of over-fitting, which in turn slows the velocity at which ``good'' data becomes stale, and must be replaced.
-% This is desirable, as (2) above is typically the most expensive stage in the cycle.
-% The decision to maintain closed data sets is thus viewed as cost-effective, allowing the same data to be reused year upon year.
-% Furthermore, this also helps circumvent the issue of dealing with obtaining distribution licenses for musical content, an oft raised concern in the field.
-% However, experience has demonstrated that the disadvantages outweigh the benefits.
-% For one, systems will still eventually over-fit by trial and error, so there is no avoiding data collection in the long run.
-% Moreover, (4) requires a considerable amount of volunteer effort to maintain, through the so-called ``task captains''ù, as well as various administration and maintenance issues.
-% Given the overwhelming diversity of tools and technologies available for use in scientific computing, this task borders on Sisyphisean.
-
-% Deficiencies
-
-% Closed input data means that participants submit not results, but \emph{algorithms}, resulting in a number of negative repercussions.
-% Practically speaking, task captains are responsible for getting these myriad solutions up and running on different system configurations than the one on which it was developed.
-
-% What's more, this challenge becomes more difficult as the number of submissions increases.
-% Participants have no insight into the content used for benchmarking or perspective on why their algorithm performed the way it did.
-
-% Requires volunteers
-
 
 \section{Open Evaluation of MIR Systems}
 
 Summarizing the previous section, MIREX suffers from three deficiencies that render the situation terminal:
 one, the financial and human cost is far too great to be sustainable indefinitely;
-two, a lack of transparency undermines the scientific value of the endeavor;
+two, limited transparency undermines the scientific value of the endeavor;
 and three, the unavoidable, recurring need for freshly annotated data requires a feasible, long-term strategy.
 
 
