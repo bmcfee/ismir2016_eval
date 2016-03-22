@@ -287,6 +287,28 @@ Since CC-licensed music can be freely redistributed (with attribution), it is (l
 % fma has public domain as well as cc
 % fma features some content by well-known commercial artists
 
+The Jamendo and FMA collections are both large and diverse, and both can be linked to meta-data: Jamendo via DBTune to MusicBrainz~\cite{raimond2008web} and FMA to Echo Nest identifiers.
+Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
+FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.  
+These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
+While there is undoubtedly a strong western bias in these corpora, this is also (almost certainly) the case in private MIREX data as well, but using open content at least permits practitioners to quantify the bias.
+
+% How do we select a representative, high-quality corpus?
+% 1. use curators
+% 2. use the charts
+% 3. spider out from pre-selected examples ala musiclef or msd
+
+This now leads us to the question of representation.
+A common criticism of basing research on CC-licensed music is that it is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
+This point is obviously valid for high-level tasks such as recommendation, which depend on a variety of factors beyond the raw acoustic content of a track.
+However, for the majority of MIREX tasks, in particular the low-level tasks such as beat-tracking or key estimation, this is a much more tenuous case.
+We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free\_Music\_Archive#Notable\_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
+
+To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation services, in addition to the previously mentioned genre categories.
+Taken in combination, these indices can be sampled to pre-emptively filter the source collections down to subsets of track which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
+This approach is similar in spirit to previous work using chart-based sampling (typically
+Billboard)~\cite{burgoyne2011expert}.
+
 % provide a snapshot torrent for each year's data set
 % including for each track:
 %   audio
@@ -306,24 +328,23 @@ Since CC-licensed music can be freely redistributed (with attribution), it is (l
 %   given task (under an appropriate definition of ``bad'')
 %   also solicit confidence ratings in the annotations
 
-The second point is a difficult one, though FMA does provide some curation.
-It might be interesting to partner with them in helping to guide the selection.
+%The second point is a difficult one, though FMA does provide some curation.
+%It might be interesting to partner with them in helping to guide the selection.
 
-The third point raises an interesting technical challenge.
-Which tracks are worth annotating?
+This now leads us to the final point in data collection: which tracks are worth annotating?
 Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
 
-In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
-It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
-If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting'': if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
-If the systems disagree, then we should definitely solicit a strong annotation for the track.
-This is essentially the point made by Urbano et al. %\cite{2012UrbanoXYZ}.
+%In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
+%It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
+%If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting'': if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
+%If the systems disagree, then we should definitely solicit a strong annotation for the track.
+%This is essentially the point made by Urbano et al. %\cite{2012UrbanoXYZ}.
 
-Each track marked as ``interesting'' should be annotated by at least two humans to determine whether there is actual disagreement.
-It can then be annotated in year 2, and enter the evaluation in year 3.
-By having multiple reference annotations for the ``interesting'' tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult'' tracks from ``ambiguous'' tracks.
+%Each track marked as ``interesting'' should be annotated by at least two humans to determine whether there is actual disagreement.
+%It can then be annotated in year 2, and enter the evaluation in year 3.
+%By having multiple reference annotations for the ``interesting'' tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult'' tracks from ``ambiguous'' tracks.
 
-Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
+%Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
 
 
 \subsection{Incremental Evaluation}
