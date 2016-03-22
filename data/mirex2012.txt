@@ -1,0 +1,489 @@
+MIREX 2012 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Audio Train/Test: Mood Classification - MIREX08 Dataset
+SubID Participants Accuracy
+PP5 Renato Panda, Rui Pedro Paiva 0.68
+WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.68
+RW2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.67
+JR1 Jia-Min Ren, Jyh-Shing Roger Jang 0.67
+WJ1 Ming-Ru Wu, Jyh-Shing Roger Jang 0.67
+RW1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.67
+PP2 Renato Panda, Rui Pedro Paiva 0.66
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner 0.66
+LBLJK1
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.65
+PP1 Renato Panda, Rui Pedro Paiva 0.65
+LBLJK2
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.65
+PP3 Renato Panda, Rui Pedro Paiva 0.64
+YCP1 Deshun Yang, Xiaoou Chen, Liqun Peng 0.64
+RW3 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.63
+PP4 Renato Panda, Rui Pedro Paiva 0.62
+PP6 Renato Panda, Rui Pedro Paiva 0.61
+GT1 George Tzanetakis 0.60
+PH1 Philippe Hamel 0.57
+DM3 Franz de Leon, Kirk Martinez 0.47
+DM4 Franz de Leon, Kirk Martinez 0.46
+Audio Train/Test: Composer Classification - MIREX08
+Dataset
+SubID Participants Accuracy
+LBLJK1
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.70
+JR1 Jia-Min Ren, Jyh-Shing Roger Jang 0.69
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner 0.67
+LBLJK2
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.66
+WJ1 Ming-Ru Wu, Jyh-Shing Roger Jang 0.66
+WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.65
+DM3 Franz de Leon, Kirk Martinez 0.64
+PH1 Philippe Hamel 0.62
+PP1 Renato Panda, Rui Pedro Paiva 0.61
+RW2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.61
+RW1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.59
+DM4 Franz de Leon, Kirk Martinez 0.57
+PP2 Renato Panda, Rui Pedro Paiva 0.51
+RW3 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang 0.50
+GT1 George Tzanetakis 0.47
+Audio Tempo Estimation
+SubID Participants P-Score
+FW1 Fu-Hai Frank Wu 0.78
+FW2 Fu-Hai Frank Wu 0.76
+GP1 Geoffroy Peeters 0.75
+FK2 Florian Krebs 0.75
+Audio Train/Test: Latin Classification - MIREX08 Dataset
+SubID Participants Accuracy
+RW2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.77
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner
+0.76
+WJ1 Ming-Ru Wu, Jyh-Shing Roger Jang 0.73
+WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.72
+JR1 Jia-Min Ren, Jyh-Shing Roger Jang 0.70
+RW1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.69
+PH1 Philippe Hamel 0.67
+LBLJK1
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.66
+LBLJK2
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.64
+RW3 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.62
+PP1 Renato Panda, Rui Pedro Paiva 0.61
+PP2 Renato Panda, Rui Pedro Paiva 0.61
+GT1 George Tzanetakis 0.60
+DM3 Franz de Leon, Kirk Martinez 0.56
+DM4 Franz de Leon, Kirk Martinez 0.53
+Audio Train/Test: Genre Classification (Mixed)- MIREX08
+Dataset
+SubID Participants Accuracy
+WJ1 Ming-Ru Wu, Jyh-Shing Roger Jang 0.76
+WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.76
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner
+0.75
+PP1 Renato Panda, Rui Pedro Paiva 0.74
+JR1 Jia-Min Ren, Jyh-Shing Roger Jang 0.74
+RW1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.74
+LBLJK1
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.74
+LBLJK2
+Shin-Cheol Lim, Karam Byun,
+Jong-Seol Lee, SEI-JIN JANG, Moo
+Young Kim
+0.74
+RW2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.73
+PH1 Philippe Hamel 0.72
+RW3 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing
+Roger Jang
+0.69
+GT1 George Tzanetakis 0.68
+PP2 Renato Panda, Rui Pedro Paiva 0.68
+YCP2 Deshun Yang, Xiaoou Chen, Liqun Peng 0.67
+DM3 Franz de Leon, Kirk Martinez 0.61
+DM4 Franz de Leon, Kirk Martinez 0.58
+Real-time Audio to Score Alignment
+SubID Participants
+Total
+Precision
+CRVCC1
+Julio Jose Carabias Orti, Francisco Jose
+Rodriguez Serrano, Pedro Vera
+Candeas,Pablo Cabanas Molero, ˜
+Francisco Jesus Canadas Quesada,Pablo
+Nicolas Ruiz Reyes
+0.83
+CC1 ChunTa Chen 0.67
+YSK1 Ryuichi Yamamoto, Shinji Sako, Tadashi
+Kitamura
+0.53
+Audio Music Similarity
+SubID Participants
+Avg. Fine
+Score
+DM6 Franz de Leon, Kirk Martinez 36.18
+DM7 Franz de Leon, Kirk Martinez 36.33
+GT3 George Tzanetakis 44.87
+JR2 Jia-Min Ren, Jyh-Shing Roger Jang 47.02
+NHHL1
+Byeong-jun Han, Kyogu Lee,Juhan
+Nam,Jorge Herrera
+45.94
+NHHL2
+Byeong-jun Han, Kyogu Lee,Juhan
+Nam,Jorge Herrera
+45.94
+PS1 Dominik Schnitzer, Tim Pohle 53.14
+RW4
+Jia-Min Ren,Ming-Ju Wu,Jyh-Shing
+Roger Jang
+50.00
+SSKP1
+Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Tim Pohle
+52.64
+SSKS2
+Klaus Seyerlehner, Markus Schedl, Peter
+Knees, Reinhard Sonnleitner
+53.19
+Audio Onset Detection
+SubID Participants
+Avg.
+F-measure
+SB1 Sebastian Bock 0.85 ¨
+SB2 Sebastian Bock 0.83 ¨
+BK1 Sebastian Bock, Florian Krebs 0.82 ¨
+BK2 Sebastian Bock, Florian Krebs 0.82 ¨
+CK6
+Chang-hyun Kim, Sang-Hoon Oh,
+Soo-Young Lee, Wonil Chang
+0.70
+ME1 Martin Eckart 0.67
+CK5
+Chang-hyun Kim, Soo-Young Lee,
+Sang-Hoon Oh, Wonil Chang
+0.64
+CK3
+Chang-hyun Kim, Wonil Chang,
+Sang-Hoon Oh, Soo-Young Lee
+0.62
+CK4
+Chang-hyun Kim, Sang-Hoon Oh,
+Soo-Young Lee, Wonil Chang
+0.58
+CK2 Chang-hyun Kim 0.57
+Audio Key detection
+SubID Participants
+Weighted
+Key Score
+GP5 Geoffroy Peeters 0.82
+PMP6
+Johan Pauwels, Jean-Pierre Martens,
+Geoffroy Peeters
+0.81
+JW1 Andreas Jansson, Tillman Weyde 0.80
+PMP5
+Johan Pauwels, Jean-Pierre Martens,
+Geoffroy Peeters
+0.78
+PMP4
+Johan Pauwels, Jean-Pierre Martens,
+Geoffroy Peeters
+0.75
+GT4 George Tzanetakis 0.36
+Symbolic Music Similarity
+SubID Participants
+Avg. Fine
+Score (0-1)
+DB1
+Antonio de Carvalho Junior, Leonardo
+Batista
+0.26
+ULMS1
+Julian Urbano, Juan Llor ´ ens, Jorge ´
+Morato, Sonia Sanchez-Cuadrado ´
+0.58
+ULMS2
+Julian Urbano, Juan Llor ´ ens, Jorge ´
+Morato, Sonia Sanchez-Cuadrado ´
+0.48
+ULMS3
+Julian Urbano, Juan Llor ´ ens, Jorge ´
+Morato, Sonia Sanchez-Cuadrado ´
+0.49
+ULMS4
+Julian Urbano, Juan Llor ´ ens, Jorge ´
+Morato, Sonia Sanchez-Cuadrado ´
+0.59
+ULMS5
+Julian Urbano, Juan Llor ´ ens, Jorge ´
+Morato, Sonia Sanchez-Cuadrado ´
+0.60
+Multi-F0 Estimation
+SubID Participants Accuracy
+KD2 Karin Dressler 0.64
+KD1 Karin Dressler 0.64
+BD1 Emmanouil Benetos, Simon Dixon 0.58
+FBR1 Benoit Fuentes, Roland Badeau Gael Richard 0.56
+CPG1 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.27
+CPG2 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.27
+CPG3 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.27
+Multi-F0 Note Tracking - Mixed Dataset
+SubID Participants
+Avg.
+F-measure
+Onset Only
+Avg.
+Overlap
+KD3 Karin Dressler 0.45 0.89
+FBR2 Benoit Fuentes, Roland Badeau Gael Richard 0.39 0.89
+BD2 Emmanouil Benetos, Simon Dixon 0.23 0.86
+BD3 Emmanouil Benetos, Simon Dixon 0.23 0.85
+CPG1 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.13 0.89
+CPG2 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.13 0.86
+CPG3 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.11 0.68
+SB5 Sebastian Bock 0.09 0.80 ¨
+Ft 1 Tiago Fernandes Tavares, George Tzanetakis 0.02 0.36
+MIREX 2012 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Multi-F0 Note Tracking - Piano Only
+SubID Participants
+Avg.
+F-measure
+Onset Only
+Avg.
+Overlap
+KD3 Karin Dressler 0.27 0.84
+BD3 Emmanouil Benetos, Simon Dixon 0.19 0.80
+FBR2 Benoit Fuentes, Roland Badeau Gael Richard 0.16 0.83
+CPG3 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.16 0.80
+CPG1 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.14 0.82
+CPG2 Zhuo Chen, Danile P.W. Ellis Graham Grindlay 0.14 0.80
+BD2 Emmanouil Benetos, Simon Dixon 0.13 0.79
+Ft 1 Tiago Fernandes Tavares, George Tzanetakis 0.07 0.57
+SB5 Sebastian Bock 0.04 0.57 ¨
+Query By Singing/Humming
+SubID Participants Task1A
+MRR
+Task1B
+MRR
+Task2 SC
+JJ1
+Dalwon Jang, Chai-Jong Song, Saim Shin,
+Jong-Seol Lee, SUNG JOO PARK, SEI-JIN
+JANG, Seok-Pil Lee, Kyeung Hak Seo
+0.91 0.92 9.16
+LW1 Lei Wang 0.96 0.97 9.69
+LW2 Lei Wang 0.96 NA 9.68
+YJL1 Tzu-Chun Yeh, Jyh-Shing Roger Jang, Chun-Jen
+Lee 0.89 0.88 8.74
+YJL2 Tzu-Chun Yeh, Jyh-Shing Roger Jang, Chun-Jen
+Lee 0.88 0.85 8.74
+Query By Tapping
+SubID Participants Task 1A
+MRR
+Task1B
+MRR
+Task 2
+MRR
+CC2 ChunTa Chen, Roger Jang 0.84 0.70 0.83
+CJ1 ChunTa Chen, Roger Jang 0.82 0.75 0.81
+Audio Tag Classification - Major Minor
+SubID Participants Class.
+F-Measure
+Affinity
+AUC-ROC
+PH2 Philippe Hamel 0.50 0.88
+SSKSS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard
+Sonnleitner, Jan Schluter ¨
+0.49 0.89
+BA2 Simon Bourguigne, Pablo Daniel Aguero 0.49 0.77 ¨
+BA1 Simon Bourguigne, Pablo Daniel Aguero 0.49 0.78 ¨
+GT2 George Tzanetakis 0.47 0.89
+RWJ1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing Roger Jang 0.46 0.85
+RWJ2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing Roger Jang 0.46 0.84
+RJ1 Jia-Min Ren, Jyh-Shing Roger Jang 0.44 0.83
+HN1 Jorge Herrera, Juhan Nam 0.34 0.70
+Audio Tag Classification - Mood
+SubID Participants Class.
+F-Measure
+Affinity
+AUC-ROC
+SSKSS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard
+Sonnleitner, Jan Schluter ¨
+0.49 0.87
+PH2 Philippe Hamel 0.46 0.84
+RWJ1 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing Roger Jang 0.45 0.76
+RJ1 Jia-Min Ren, Jyh-Shing Roger Jang 0.43 0.74
+RWJ2 Jia-Min Ren, Ming-Ju Wu, Jyh-Shing Roger Jang 0.43 0.77
+BA1 Simon Bourguigne, Pablo Daniel Aguero 0.42 0.78 ¨
+BA2 Simon Bourguigne, Pablo Daniel Aguero 0.41 0.77 ¨
+GT2 George Tzanetakis 0.37 0.86
+HN1 Jorge Herrera, Juhan Nam 0.37 0.69
+Audio Chord Estimation
+Weighted overlap ratio
+SubID Participants MRX MGC
+CCSS1 Weibin Shen, Ruofeng Chen, Ajay Srinivasamurthy, Parag
+Chordia 0.78 0.66
+DMW1 Bas de Haas, Jose Pedro Magalh ´ aes, Frans Wiering 0.72 0.62 ˜
+KO1 Maksim Khadkevich, Maurizio Omologo 0.82 0.70
+NG1 Nikolay Glazyrin 0.74 0.62
+NMSD1 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 0.83 0.71
+NMSD2 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 0.80 0.72
+NMSD3 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 0.81 0.72
+NMSD4 Yizhao Ni, Matt Mcvicar, Raul Santos-Rodriguez, Tijl De Bie 0.82 0.72
+PMP1 Johan Pauwels, Jean-Pierre Martens, Geoffroy Peeters 0.73 0.66
+PMP2 Johan Pauwels, Jean-Pierre Martens, Geoffroy Peeters 0.72 0.65
+PMP3 Johan Pauwels, Jean-Pierre Martens, Geoffroy Peeters 0.72 0.64
+Audio Melody Extraction
+Overall Accuracy
+SubID Participants MIREX’05 ADC’04 INDIAN’08
+AB1 Laxmidhar Behera, Vipul Arora 0.63 0.69 0.68
+SM1 Sam Myer 0.60 0.60 0.50
+YJL4 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.52 0.46 0.70
+YJL3V2 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.36 0.42 0.51
+YJL3V3 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.36 0.42 0.51
+Audio Melody Extraction
+Overall Accuracy
+SubID Participants
+MIREX’09
+0db
+MIREX’09
++5db
+MIREX’09
+-5db
+AB1 Laxmidhar Behera, Vipul Arora 0.69 0.50 0.80
+SM1 Sam Myer 0.66 0.48 0.77
+YJL4 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.54 0.44 0.58
+YJL3V2 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.52 0.44 0.55
+YJL3V3 I-Bin Liao, Jyh-Shing Roger Jang, Tzu-chun Yeh 0.52 0.44 0.55
+Structural Segmentation - MIREX ’09
+SubID Participants
+MIREX 09
+F-measure
+MIREX 10
+RWC/Quaero
+SB@3sec
+MIREX 10
+RWC/RWC
+F-measure
+Salami
+F-measure
+SMGA1
+Joan Serra, Meinard M ` uller, Peter ¨
+Grosche, Josep Lluis Arcos
+0.65 0.77 0.68 0.58
+SMGA2
+Joan Serra, Meinard M ` uller, Peter ¨
+Grosche, Josep Lluis Arcos
+0.63 0.76 0.69 0.53
+KSP3
+Florian Kaiser, Thomas Sikora,
+Geoffroy Peeters
+0.57 0.66 0.60 0.53
+MHRAF1
+Benjamin Martin, Pierre Hanna,
+Matthias Robine, Julien Allali,
+Pascal Ferraro
+0.56 0.54 0.58 0.57
+KSP1
+Florian Kaiser, Thomas Sikora,
+Geoffroy Peeters
+0.55 0.66 0.60 0.50
+SP1
+Florian Kaiser, Thomas Sikora,
+Geoffroy Peeters
+0.55 0.66 0.56 0.55
+KSP2
+Florian Kaiser, Thomas Sikora,
+Geoffroy Peeters
+0.54 0.66 0.58 0.53
+SBV1
+Gabriel Sargent, Fred´ eric Bimbot, ´
+Emmanuel Vincent
+0.51 0.63 0.54 0.46
+OYZS1
+Nobutaka Ono, Shinya Yaku, Yuko
+Zou, Shigeki Sagayama
+0.46 0.53 0.51 0.50
+Audio Beat Tracking
+F-Measure
+SubID Participants MCK MAZ SMC
+FK1 Florian Krebs 0.57 0.58 0.40
+FW3 Fu-Hai Frank Wu, Jyh-Shing Roger Jang 0.52 0.49 0.34
+FW4 Fu-Hai Frank Wu, Jyh-Shing Roger Jang 0.52 0.48 0.34
+FW5 Fu-Hai Frank Wu 0.43 0.67 0.35
+GKC2
+Aggelos Gkiokas, Vassilis Katsouros, George
+Carayannis
+0.50 0.42 0.37
+GP2 Geoffroy Peeters 0.50 0.49 0.36
+GP3 Geoffroy Peeters 0.50 0.47 0.35
+GP4 Geoffroy Peeters 0.50 0.56 0.37
+KB1 Florian Krebs, Sebastian Bock 0.54 0.52 0.41 ¨
+KFRO1
+Maksim Khadkevich, Thomas Fillon, Gael¨
+Richard, Maurizio Omologo
+0.51 0.35 0.33
+ODGR1
+Joao Lobato Oliveira, Matthew Davies, Fabien ˜
+Gouyon, Luis Paulo Reis
+0.51 0.42 0.31
+ODGR2
+Joao Lobato Oliveira, Matthew Davies, Fabien ˜
+Gouyon, Luis Paulo Reis
+0.50 0.41 0.32
+ODGR3
+Joao Lobato Oliveira, Matthew Davies, Fabien ˜
+Gouyon, Luis Paulo Reis
+0.50 0.44 0.32
+ODGR4
+Joao Lobato Oliveira, Matthew Davies, Fabien ˜
+Gouyon, Luis Paulo Reis
+0.48 0.28 0.27
+SB3 Sebastian Bock 0.53 0.41 0.33 ¨
+SB4 Sebastian Bock 0.51 0.52 0.34 ¨
+SB6 Sebastian Bock 0.53 0.41 0.35 ¨
+SB7 Sebastian Bock 0.53 0.50 0.37 ¨
+ZDG1 Jose Zapata, Matthew Davies, Emilia Gomez 0.52 0.51 0.36 ´
+ZDG2 Jose Zapata, Matthew Davies, Emilia Gomez 0.53 0.50 0.37 ´

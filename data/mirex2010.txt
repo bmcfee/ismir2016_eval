@@ -1,0 +1,338 @@
+MIREX 2010 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Audio Music Similarity
+SubID Participants Avg. Fine
+Score
+BWL1 Bogdanov, Wack, Laurier 49.70
+PS1 Pohle, Schnitzer 55.08
+PSS1 Pohle, Seyerlehner, Schnitzer 54.98
+RZ1 Zufall 16.67
+SSPK2 Seyerlehner, Schedl, Pohle, Knees 56.64
+TLN1 Tzanetakis, Lagrange, Ness 45.84
+TLN2 Tzanetakis, Lagrange, Ness 46.54
+TNL1 Tzanetakis, Ness, Lagrange 46.60
+Audio Onset Detection
+SubID Participants Avg.
+F-measure
+BES1 Bock, Eyben, Schuller 0.79 ¨
+AR3 Roebel 0.78
+AR2 Roebel 0.77
+AR4 Roebel 0.77
+AR5 Roebel 0.76
+TZC1 Tan, Zhu, Chaisorn 0.74
+TZC2 Tan, Zhu, Chaisorn 0.73
+BT2 Thoshkahna 0.73
+BT3 Thoshkahna 0.73
+BT1 Thoshkahna 0.73
+BT4 Thoshkahna 0.73
+TZC5 Tan, Zhu, Chaisorn 0.73
+TZC3 Tan, Zhu, Chaisorn 0.70
+TZC4 Tan, Zhu, Chaisorn 0.69
+ME1 Eckart 0.67
+TGGL1 Tzanetakis, Gouyon, Gustavo Martins,
+Lobato Oliveira 0.59
+RVCCR1
+Rodriguez Serrano, Vera-Candeas,
+Cabanas-Molero, Carabias-Orti, Ruiz ˜
+Reyes
+0.44
+RVCCR2
+Rodriguez Serrano, Vera-Candeas,
+Cabanas-Molero, Carabias-Orti, Ruiz ˜
+Reyes
+0.30
+Audio Cover Song Identification
+SubID Participants Avg. Prec.
+MHRAF1 Martin, Hanna, Robine, Allali, Ferraro 0.24
+MOD1 Montecchio, Orio, Di Buccio 0.15
+RMHAR1 Rocher, Martin, Hanna, Allali, Robine,
+Ferraro 0.29
+Audio Chord Estimation
+SubID Participants
+Weighted
+overlap
+ratio
+CWB1 Cho, Weiss, Bello 0.78
+EW1* Ellis, Weller 0.73
+EW2* Ellis, Weller 0.72
+EW3 Ellis, Weller 0.76
+EW4 Ellis, Weller 0.77
+KO1 Khadkevich, Omologo 0.78
+MD1 Mauch, Dixon 0.79
+MK1* Khadkevich, Omologo 0.74
+MM1 Mauch 0.79
+OFG1 Oudre, Fevotte, Grenier 0.74 ´
+PP1 Papadopoulos, Peeters 0.68
+PVM1 Pauwels, Varewyck, Martens 0.73
+RRHS1 Rocher, Robine, Hanna, Strandh 0.71
+RRHS2 Rocher, Robine, Hanna, Strandh 0.57
+UUOS1 Ueda, Uchiyama, Ono, Sagayama 0.76
+Symbolic Music Similarity
+SubID Participants
+Avg. Fine
+Score (0-1)
+HFRA1 Hanna, Ferraro, Robine, Allali 0.56
+JU1 Urbano 0.58
+JU2 Urbano 0.58
+JU3 Urbano 0.58
+JU4 Urbano 0.61
+LL1 Laitinen, Lemstrom 0.58 ¨
+LL2 Laitinen, Lemstrom 0.41 ¨
+RI1 Rizo, Inesta 0.55 ˜
+RI2 Rizo, Inesta 0.38 ˜
+RI3 Rizo, Inesta 0.47 ˜
+RI4 Rizo, Inesta 0.52 ˜
+SU1 Suyoto, Uitdenbogerd 0.54
+SU2 Suyoto, Uitdenbogerd 0.51
+Real-time Audio to Score Alignment
+SubID Participants
+Total
+Precision
+SUROS1 Suzuki, Ueda, Raczynski, Ono, ´
+Sagayama
+73.93%
+DP1 Duan, Pardo 67.14%
+RVCCR4
+Rodriguez Serrano, Vera-Candeas,
+Carabias-Orti, Cabanas-Molero, Ruiz ˜
+Reyes
+64.50%
+RVCCR3
+Rodriguez Serrano, Vera-Candeas,
+Carabias-Orti, Cabanas-Molero, Ruiz ˜
+Reyes
+62.79%
+AW1 Arzt, Widmer 50.33%
+Multi-F0 Estimation
+SubID Participants Accuracy
+AR1 Yeh, Roebel 0.65
+AR2 Yeh, Roebel 0.66
+AR3 Yeh, Roebel 0.69
+AR4 Yeh, Roebel 0.69
+BD1 Benetos, Dixon 0.47
+CRVRC1
+Canadas Quesada, Rodriguez Serrano,
+Vera-Candeas, Ruiz Reyes,
+Carabias-Orti
+0.49
+CRVRC3
+Canadas Quesada, Rodriguez Serrano,
+Vera-Candeas, Ruiz Reyes,
+Carabias-Orti
+0.46
+DCL1 Dessein, Cont, Lemaitre 0.46
+DHP1 Duan, Han, Pardo 0.55
+JW1 Wu, Ono, Sagayama 0.35
+JW2 Wu, Ono, Sagayama 0.36
+LYLC1 Lee, Yang, Lin, Chen 0.37
+NNTOS1
+Nakano, Nakamura, Tanuma, Ono,
+Sagayama
+0.06
+Multi-F0 Estimation Instrument Tracking
+SubID Participants Accuracy
+DHP1 Duan, Han, Pardo 0.21
+Audio Tempo Estimation
+SubID Participants P-Score
+BES2 Bock, Eyben, Schuller 0.74 ¨
+ES1 Eyben, Schuller 0.77
+GKC1 Gkiokas, Katsouros, Carayannis 0.81
+GT1 Tzanetakis 0.62
+NW2 Wack 0.79
+OL1 Lartillot 0.67
+TL1 Lee 0.76
+Audio Key detection
+SubID Participants
+Weighted
+Key Score
+GP8 Peeters 0.82
+PVM2 Pauwels, Varewyck, Martens 0.80
+RRH1 Rocher, Robine, Hanna 0.66
+RRH2 Rocher, Robine, Hanna 0.54
+UUOS2 Ueda, Uchiyama, Ono, Sagayama 0.76
+Audio Melody Extraction
+Overall Accuracy
+SubID Participants MIREX’05 ADC’04 INDIAN’08
+HJ1 Hsu, Jang 0.54 0.61 0.77
+JJY1 Joo, Jo, Yoo 0.62 0.70 0.80
+JJY2 Joo, Jo, Yoo 0.61 0.72 0.80
+SG1 Salamon, Gomez 0.62 0.70 0.78
+TOOS1 Tachibana, Ono, Ono, Sagayama 0.61 0.54 0.72
+Audio Melody Extraction
+Overall Accuracy
+SubID Participants MIREX’09
+0db
+MIREX’09
++5db
+MIREX’09
+-5db
+HJ1 Hsu, Jang 0.76 0.83 0.63
+JJY1 Joo, Jo, Yoo 0.63 0.79 0.47
+JJY2 Joo, Jo, Yoo 0.63 0.79 0.47
+SG1 Salamon, Gomez 0.74 0.81 0.58
+TOOS1 Tachibana, Ono, Ono, Sagayama 0.72 0.79 0.63
+Query By Tapping
+SubID Participants Task 1A
+MRR
+Task1B
+MRR
+Task 2
+MRR
+ML4 Mirel, Levy 0.80 0.71 0.78
+HRFA1 Hanna, Robine, Ferraro, Allali 0.77 0.70 0.66
+Query By Singing/Humming
+SubID Participants
+Task1A
+MRR
+Task1B
+MRR
+Task2
+HAFR1 Hanna, Allali, Ferraro, Robine 0.67 0.70 6.98
+JY1 Yang 0.95 0.42 9.13
+JY2 Yang 0.93 0.47 9.07
+YF1 Yeh, Fang 0.92 0.42 8.74
+YF2 Yeh, Fang 0.87 0.84 8.74
+Audio Beat Tracking
+F-Measure
+SubID Participants MCK MAZ
+BES3 Bock, Eyben, Schuller 53.16 68.46 ¨
+BES4 Bock, Eyben, Schuller 54.50 47.30 ¨
+GP3 Peeters 50.27 58.74
+GP4 Peeters 49.89 47.08
+GP5 Peeters 49.53 48.27
+GP6 Peeters 49.30 40.13
+LGG1 Lobato Oliveira, Gouyon, Gustavo Martins 47.86 40.98
+LGG2 Lobato Oliveira, Gouyon, Gustavo Martins 49.97 29.62
+MRVCC1
+Mata Campos, Rodriguez Serrano, Vera-Candeas, Carabias-Orti,
+Canadas Quesada
+25.70 41.48
+MRVCC2
+Mata Campos, Rodriguez Serrano, Vera-Candeas, Carabias-Orti,
+Canadas Quesada
+17.79 49.15
+NW1 Wack 35.56 49.26
+TL2 Lee 41.97 27.59
+ZTC1 Zhu, Tan, Chaisorn 24.64 1.16
+mirqex
+MIREX 2010 Evaluation Results
+J. Stephen Downie & IMIRSEL
+University of Illinois at Urbana-Champaign
+email: jdownie@illinois.edu
+Structural Segmentation
+FP clustering F-measure
+SubID Participants MIREX ’09 MIREX’10
+BV1 BIMBOT, Vincent 0.50 0.45
+BV2 BIMBOT, Vincent 0.49 0.28
+GP7 Peeters 0.54 0.34
+MHRAF2 Martin, Hanna, Robine, Allali, Ferraro 0.55 0.29
+MND1 Mauch, Noland, Dixon 0.61 0.33
+WB1 Weiss, Bello 0.54 0.31
+Multi-F0 Note Tracking - Mixed Dataset
+SubID Participants
+Avg.
+F-measure
+Onset Only
+Avg.
+Overlap
+AR5 Yeh, Roebel 0.53 0.73
+AR6 Yeh, Roebel 0.53 0.73
+CRVRC2 Canadas Quesada, Rodriguez Serrano, Vera-Candeas, Ruiz
+Reyes, Carabias-Orti 0.33 0.66
+CRVRC4 Canadas Quesada, Rodriguez Serrano, Vera-Candeas, Ruiz
+Reyes, Carabias-Orti 0.21 0.62
+DCL2 Dessein, Cont, Lemaitre 0.40 0.73
+DHP2 Duan, Han, Pardo 0.41 0.62
+JW3 Wu, Ono, Sagayama 0.28 0.48
+JW4 Wu, Ono, Sagayama 0.27 0.48
+LYLC2 Lee, Yang, Lin, Chen 0.29 0.56
+Multi-F0 Note Tracking - Piano Only
+SubID Participants
+Avg.
+F-measure
+Onset Only
+Avg.
+Overlap
+AR5 Yeh, Roebel 0.60 0.56
+AR6 Yeh, Roebel 0.60 0.56
+CRVRC2 Canadas Quesada, Rodriguez Serrano, Vera-Candeas, Ruiz
+Reyes, Carabias-Orti 0.45 0.57
+CRVRC4 Canadas Quesada, Rodriguez Serrano, Vera-Candeas, Ruiz
+Reyes, Carabias-Orti 0.24 0.55
+DCL2 Dessein, Cont, Lemaitre 0.53 0.56
+DHP2 Duan, Han, Pardo 0.34 0.52
+JW3 Wu, Ono, Sagayama 0.39 0.37
+JW4 Wu, Ono, Sagayama 0.38 0.36
+LYLC2 Lee, Yang, Lin, Chen 0.52 0.49
+Audio Tag Classification - Major Minor
+SubID Participants Class.
+F-Measure
+Affinity
+AUC-ROC
+BMPE1 Bergstra, Mandel, Pascanu, Eck 0.25 0.87
+BRPC3 Burred, Ramona, Peeters, Cornu 0.48 0.87
+BRPC4 Burred, Ramona, Peeters, Cornu 0.45 0.86
+GP2 Peeters 0.45 0.75
+HE2 Hamel, Eck 0.33 0.77
+MP1 Mandel 0.25 0.71
+MP3 Mandel, Pascanu 0.30 0.86
+SSPK3 Seyerlehner, Schedl, Pohle, Knees 0.45 0.85
+TN3 Tzanetakis, Ness 0.46 0.88
+TN5 Tzanetakis, Ness 0.46 0.88
+WLJW3 Wang, Lo, Jeng, Wang 0.38 0.86
+WLJW5 Wang, Lo, Wang 0.28 0.75
+WLJW6 Wang, Lo, Wang 0.28 0.64
+Audio Tag Classification - Mood
+SubID Participants
+Class.
+F-Measure
+Affinity
+AUC-ROC
+BMPE1 Bergstra, Mandel, Pascanu, Eck 0.25 0.86
+BRPC3 Burred, Ramona, Peeters, Cornu 0.47 0.85
+BRPC4 Burred, Ramona, Peeters, Cornu 0.46 0.85
+GP2 Peeters 0.45 0.75
+HE2 Hamel, Eck 0.15 0.65
+MP1 Mandel 0.23 0.62
+MP3 Mandel, Pascanu 0.26 0.85
+SSPK3 Seyerlehner, Schedl, Pohle, Knees 0.44 0.83
+TN3 Tzanetakis, Ness 0.37 0.86
+TN5 Tzanetakis, Ness 0.37 0.86
+WLJW3 Wang, Lo, Jeng, Wang 0.35 0.86
+WLJW5 Wang, Lo, Wang 0.45 0.84
+WLJW6 Wang, Lo, Wang 0.45 0.70
+Audio Train/Test
+Classification Accuracy
+SubID Participants Mood Composer Latin
+BMPE2 Bergstra, Mandel, Pascanu, Eck 0.55 0.47 -
+BRPC1 Burred, Ramona, Peeters, Cornu 0.59 - 0.71
+BRPC2 Burred, Ramona, Peeters, Cornu 0.59 0.55 -
+FCY1 Feng, Chen, Yang 0.60 - -
+FCY2 Feng, Chen, Yang 0.60 - -
+GP1 Peeters 0.63 0.46 0.67
+GR1 Grecu, Rauber 0.61 0.52 0.60
+HE1 Hamel, Eck 0.54 0.56 0.51
+JR1 Ren 0.46 0.36 0.56
+JR2 Ren 0.51 0.36 0.61
+JR3 Ren 0.47 0.36 0.58
+JR4 Ren 0.51 0.37 0.60
+MBP1 Mandel 0.54 0.47 0.61
+MP2 Mandel, Pascanu 0.36 0.37 0.57
+MW1 Wu, Jang, Ren 0.54 0.54 0.38
+RJ1 Ren, Jang 0.55 0.37 0.62
+RJ2 Ren, Jang 0.50 0.36 0.60
+RK1 Rao, Kini 0.55 0.54 0.51
+RK2 Rao, Kini 0.48 0.51 0.42
+RRS1 Rump, Raczynski, Sagayama 0.62 0.51 0.63 ´
+SSPK1 Seyerlehner, Schedl, Pohle, Knees 0.64 0.64 0.80
+TN1 Tzanetakis, Ness 0.56 0.42 0.37
+TN2 Tzanetakis, Ness 0.49 0.50 -
+TN4 Tzanetakis, Ness 0.58 0.44 0.49
+WLB1 Wack, Laurier, Bogdanov 0.56 0.65 0.68
+WLB2 Wack, Laurier, Bogdanov 0.58 0.25 0.35
+WLB3 Wack, Laurier, Bogdanov 0.63 0.41 0.49
+WLB4 Wack, Laurier, Bogdanov 0.63 0.40 0.47
+WLJW1 Wang, Lo, Jeng, Wang 0.54 - -
+WLJW2 Wang, Lo, Jeng, Wang 0.64 - -
