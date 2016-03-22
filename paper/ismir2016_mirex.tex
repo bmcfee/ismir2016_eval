@@ -114,7 +114,7 @@ and three, begin to make inroads toward adoption.
 \section{MIREX}
 
 % History
-The Music Information Retrieval eXcahnge is a framework for the community driven evaluation of MIR algorithms \cite{2008DownieMIREX, 2010DownieMIREX}.
+The Music Information Retrieval eXcahnge (MIREX) is a framework for the community driven evaluation of MIR algorithms \cite{2008DownieMIREX, 2010DownieMIREX}.
 The annual tradition of MIREX was established early in the lifetime of ISMIR, drawing inspiration from TREC in text IR \cite{TRECPaperQuestionmark}.
 Thanks in large part to the vision of MIR pioneers, the first official iteration took place at ISMIR 2005 after much preliminary work, including a trial run the year prior called the Audio Description Contest (ADC).
 The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the organization has successfully earned multiple grants to jumpstart the evaluation effort at ISMIR.
@@ -123,30 +123,31 @@ The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the org
 At a high level, the typical MIREX paradigm operates as follows:
 
 \begin{enumerate}
-\item Define some task of interest, such as automatic chord estimation, and arrive at a problem formulation and metrics with fellow researchers in the community.
+\item Identify some task of interest, such as automatic chord estimation.
+\item Arrive at a problem formulation and metrics, either in the due course of graduate work or with fellow researchers in the community.
 \item Build a corpus of data, with human-annotated ``ground-truth'' annotations for said task.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
 \item Invite participants to submit algorithms, which are executed on a private server. Report the results.
-\item Repeat step 4. Intermittently repeat step 2, as needed.
+\item Repeat step 5 annually. Intermittently repeat step 3, as needed.
 \end{enumerate}
 
 % Algorithm-to-data goes astray.
-Note that, as a matter of correctness, some tasks, such as audio music similarity, rely on post-hoc human assessment, by design or necessity.
-More importantly, however, MIREX differs from TREC-style evaluation in one critical way, named in (4) above:
-MIREX operates in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
+Note that, as a matter of correctness, some tasks, such as audio music similarity or user interfaces, rely on post-hoc human assessment, either by design or necessity.
+More importantly, however, MIREX differs from TREC-style evaluation by operating in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
 The rationale for this decision is understandable.
 In contrast to other machine perceptions domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
 Due to a history of litigation from the Recording Industry Artists of America (RIAA), there is a pervasive sense of fear in the MIR community that sharing audio data would almost certainly result in crippling lawsuits \cite{2008DownieMIREX}.
 
 % Deficiencies
 % Operating costs are significant
-Experience with MIREX over the last decade has more than demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
+However, experience with MIREX over the last decade has more than demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
 First, as a matter of practicality, doing so incurs remarkably steep costs the community cannot hope to support indefinitely.
 Running hundreds of research algorithms demands state of the art technology, and adequate compute cycles must either rented or purchased outright to achieve this.
 More often than not, these algorithms are research prototypes, seldom optimized for efficiency.
-While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months of compute time annually.
-Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
-The financial burden of computation amounts to a rounding error, however, when compared with the human effort involved.
+While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months to years of compute time annually.
+% EJH: I want to mention this, but it really throws off the rhythm of this passage.
+% Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
+The financial burden of computation amounts to a rounding error, though, when compared with the human effort involved.
 As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams to completion \cite{2008DownieMIREX};
 in the years since, average participation has climbed slightly ($\mu\approx145$, $\sigma \approx 14$).
 Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
@@ -189,14 +190,14 @@ And finally, there is little visibility into the evaluation machinery or its use
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 While this is certainly detrimental for system development, it is absolutely critical to routinely replace the data used for evaluation.
 Unsurprisingly, in lieu of a fresh source of annotated data, the community is beginning to over-fit MIREX datasets.
-In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission that achieved near perfect scores in chord estiamtion via fingerprinting \footnote{sneaky McVicar...}.
+In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission that achieved near perfect scores in chord estiamtion via fingerprinting\footnote{sneaky McVicar...}.
 In others, the ``hold-out'' data used for evaluation is simply being over-fit by trial and error.
-Often, when evaluation datasets are updated, algorithm scores drop precipitously.
+It is widely expected that updating evaluation datasets will cause algorithm scores to drop significantly.
 % There's no short-term plan to get new data; there's no long-term plan to get new data.
 To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
-By and large, MIREX has relied on the generosity of the community to expand the size of its evaluation datasets.
+By and large, MIREX has relied on the generosity of the community to both curate and donate data for the purposes of evaluation.
 This approach suffers from the same lack of transparency as MIREX itself, often quietly introducing issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
-Data collection is a harsh, unavoidable reality, and one that a demands a viable plan going forward.
+Data collection is a challenging, unavoidable reality, and one that a demands a viable plan going forward.
 
 % The current datasets are insufficient for benchmarking algorithms, and there is no viable plan in place to grow the size of these datasets over time.
 
