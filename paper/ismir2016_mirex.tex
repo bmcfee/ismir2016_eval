@@ -13,6 +13,7 @@
 \usepackage{ismir,amsmath,cite}
 \usepackage{graphicx}
 \usepackage{color}
+% \usepackage{hyperref}
 \graphicspath{{figs/}}
 
 % Title.
@@ -157,9 +158,7 @@ While task-dependent runtime limits are placed on algorithm execution (between 6
 % Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
 The financial burden of computation amounts to a rounding error, though, when compared with the human effort involved.
 As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams\cite{2008DownieMIREX};
-% This slide deck claims MIREX hit the 300s for years: https://www.hathitrust.org/documents/mirex_htrc_same_rda.pdf
-% Not sure what accounting went into this, but it seems to be consistent with the 122 algos from 2007, and probably the more fair comparison.
-shown in Figure \ref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.
+shown in Figure \ref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since\footnote{https://www.hathitrust.org/documents/mirex\_htrc\_same\_rda.pdf}.
 Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
 Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
@@ -191,17 +190,21 @@ Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on 
 By the same token, while $N$ varies from task to task, there is no way to gauge the distribution of the data or how representative it may or may not be.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
+% TODO: Soften, cite mir_eval
 Traditionally $\mathcal{C}^R$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
-% This is harsh conjecture. Definitely revise to something justifiable, but I've seem to hit a wall.
+% TODO: Soften
 And finally, there is little visibility into the evaluation machinery or its use, and there is ample anecdotal evidence surrounding questionable scientific practices.
 
 % Dearth Data
 % MIREX is preoccupied with just keeping the ship afloat.
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
-While this is certainly detrimental for system development, it is absolutely critical to routinely replace the data used for evaluation.
-Unsurprisingly, in lieu of a fresh source of annotated data, the community is beginning to over-fit MIREX datasets.
-In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission that achieved near perfect scores in chord estiamtion via fingerprinting\footnote{sneaky McVicar...}.
+While this is certainly detrimental to system development, it is absolutely critical to routinely replace the data used for evaluation.
+% TODO: soften or justify
+Unsurprisingly, in lieu of a fresh source of annotated data, initial concerns about the community over-fitting datasets are beginning to manifest.
+In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one infamous submission in 2011 that achieved near perfect scores in chord estiamtion having been pretrained on the same data\footnote{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}.
+% TODO: More detail, converge over multiple iterations.
 In others, the ``hold-out'' data used for evaluation is simply being over-fit by trial and error.
+% TODO: Results are misleading due to a fixed / unknown bias, which manifests when datasets expand.
 It is widely expected that updating evaluation datasets will cause algorithm scores to drop significantly.
 % There's no short-term plan to get new data; there's no long-term plan to get new data.
 To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
