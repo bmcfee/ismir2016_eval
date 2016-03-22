@@ -246,27 +246,31 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 \label{distributed}
 The primary difficulty in running an evaluation campaign is computing the outputs of all participating methods.
 This difficulty stems from two sources.
-First is the obvious computational complexity of running $m$ algorithms over $n$ inputs.
-Second is the less obvious ``human'' complexity of getting the $m$ algorithms to execute properly in a foreign environment: a task that falls on the small number of ``task captains'' each year.
+First is the obvious computational complexity of running $m$ submissions over $n$ inputs.
+Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign environment: a task that falls on the small number of task captains each year.
 While the computational issues can be ameliorated by executing algorithms in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
 
 An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
-In Kaggle challenges, all input data is made publicly available, and participants submit only the outputs of their systems.
-This paradigm effectively resolves the challenges listed above: both computation and manual effort are distributed to the participants, rather than centralized at the evaluation site and task captains, thus reducing the maintenance and administration costs.
+Kaggle competitions are conducted with all input data publicly available, and participants submit only the outputs of their systems, \eg, predictions made for each data point.
+This paradigm effectively resolves the difficulties listed above: both computation and manual effort are distributed to the participants, rather than centralized at the evaluation site and task captains.
+This dramatically reduces the cost of maintenance and administration.
 However, we note a few potential challenges to the distributed computation approach.
 
 First, the test (input) data must be made openly available to participants.
 This may increase the risk of bias if participants (unintentionally) tune their algorithms to the evaluation set.
-To mitigate bias, we propose to use a large and diverse corpus of common tracks which are shared across \emph{all tasks}, rather than a collection of small, task-specific datasets as is done in MIREX.
+To mitigate bias, we propose the use of a large and diverse corpus of common tracks which are shared across \emph{all tasks}, rather than a collection of small, task-specific datasets as is done in MIREX.
 For any given task, only a subset of examples need to be considered when comparing methods, and the evaluation set may be independently selected for each task.
 The identity of evaluation sets remains hidden from participants at submission time.
 This implies that each submission must span the entire corpus, which reduces the feasibility of participants tuning their algorithms to a specific subset of examples.
 Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
 
-The second challenge stems from reduced transparency on behalf of the participants.
-While MIREX forces some mild form of transparency by requiring that submissions execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of data transparency.
-However, since MIREX does not require participants to release the source code for their methods, this hardly amounts to a loss of transparency from the perspective of anyone but the task captains, who currently enjoy a somewhat privileged position of access.  
-We argue that this trade-off benefits the community at large, since the availability of open data will serve a broader set of interests over time than the description of methods.
+The second challenge is the potential for reduced transparency on behalf of the participants.
+While MIREX forces requires submissions to execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of data transparency.
+Consequently, restrictions on the implementation (\eg, running time) would become infeasible, and it may open the possibility of cheating by manual intervention.
+Using large test collections with opaque evaluation sets will limit the practicality of
+manual participant intervention.%
+\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}
+We argue that trading benefits the community at large, since the availability of open data will serve a broader set of interests over time than the description of methods.
 
 Finally, the proposed scheme assumes that multiple tasks operate on a common input form, \ie, recorded audio.
 While the majority of current MIREX tasks do fit into this framework, it precludes tasks requiring symbolic data (score following, symbolic similarity), user interaction (grand challenges, query-by-humming/tapping), or multi-tracks (singing voice separation).
@@ -279,24 +283,11 @@ For the distributed computation model to be practical, we first need a source of
 Luckily, a wealth of data can be obtained from Jamendo~\footnote{\url{http://jamendo.com}} and the Free Music Archive (FMA),\footnote{\url{http://freemusicarchive.org/}} both of which host a variety of music content under either public domain or Creative Commons (CC) licenses.\footnote{\url{https://creativecommons.org/licenses/}}
 Since CC-licensed music can be freely redistributed (with attribution), it is (legally) possible to create and share persistent data archives.
 
-% How are jamendo and FMA simliar, different?
-% jamendo: already in dbtune \cite{raimond2008web}
-% fma: linked via echo nest
-% both have curation
-% jamendo is about 5x larger
-% fma has public domain as well as cc
-% fma features some content by well-known commercial artists
-
 The Jamendo and FMA collections are both large and diverse, and both can be linked to meta-data: Jamendo via DBTune to MusicBrainz~\cite{raimond2008web} and FMA to Echo Nest identifiers.
 Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
 FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.  
 These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
-While there is undoubtedly a strong western bias in these corpora, this is also (almost certainly) the case in private MIREX data as well, but using open content at least permits practitioners to quantify the bias.
-
-% How do we select a representative, high-quality corpus?
-% 1. use curators
-% 2. use the charts
-% 3. spider out from pre-selected examples ala musiclef or msd
+While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's preivate data, but using open content at least permits practitioners to quantify the bias.
 
 This now leads us to the question of representation.
 A common criticism of basing research on CC-licensed music is that it is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
@@ -332,7 +323,11 @@ Billboard)~\cite{burgoyne2011expert}.
 %It might be interesting to partner with them in helping to guide the selection.
 
 This now leads us to the final point in data collection: which tracks are worth annotating?
+Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
 Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
+The intuition for this approach is two-fold.
+First, tracks for which different algorithms produce significantly different outputs are in some sense ``difficult'' and produce meaningful evaluation results.
+Second, if a goal of the evaluation campaign is to differentiate submissions according to some measure of accuracy, then there is little to be gained by spending annotator effort on tracks for which algorithms produce the same output.
 
 %In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
 %It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
