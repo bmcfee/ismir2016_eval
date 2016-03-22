@@ -1,10 +1,6 @@
-MIREX 2014 Evaluation Results
-Classical Composer Identification
-SubID Participants Accuracy
 BK1 Seung Ryoel Baek, Moo Young Kim 0.69
 SS6 Klaus Seyerlehner, Markus Schedl 0.67
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.67
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.67
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.61
 QK2 Qiuqiang Kong 0.57
 BK2 Seung Ryoel Baek, Moo Young Kim 0.52
@@ -12,14 +8,11 @@ BK3 Seung Ryoel Baek, Moo Young Kim 0.40
 BK4 Seung Ryoel Baek, Moo Young Kim 0.39
 XG2 Shumin Xu, yating gu 0.33
 XG3 Shumin Xu, yating gu 0.33
-Latin Classification - MIREX08 Dataset
-SubID Participants Accuracy
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.79
 XG2 Shumin Xu, yating gu 0.76
 XG3 Shumin Xu, yating gu 0.76
 SS6 Klaus Seyerlehner, Markus Schedl 0.76
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.76
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.76
 BK1 Seung Ryoel Baek, Moo Young Kim 0.68
 BK2 Seung Ryoel Baek, Moo Young Kim 0.63
 BK3 Seung Ryoel Baek, Moo Young Kim 0.58
@@ -27,13 +20,10 @@ QK2 Qiuqiang Kong 0.57
 AP1 Aggelos Pikrakis 0.54
 AP2 Aggelos Pikrakis 0.53
 BK4 Seung Ryoel Baek, Moo Young Kim 0.30
-Mood Classification - MIREX08 Dataset
-SubID Participants Accuracy
 PP1 Renato Panda, Rui Pedro Paiva 0.66
 BK1 Seung Ryoel Baek, Moo Young Kim 0.66
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.66
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.65
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.65
 SS6 Klaus Seyerlehner, Markus Schedl 0.65
 PRP1 Renato Panda, Bruno Rocha, Rui Pedro Paiva 0.64
 BK2 Seung Ryoel Baek, Moo Young Kim 0.63
@@ -42,11 +32,8 @@ QK2 Qiuqiang Kong 0.59
 BK4 Seung Ryoel Baek, Moo Young Kim 0.54
 XG2 Shumin Xu, yating gu 0.46
 XG3 Shumin Xu, yating gu 0.46
-Genre Classification (Mixed)- MIREX08 Dataset
-SubID Participants Accuracy
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.84
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.76
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.76
 SS6 Klaus Seyerlehner, Markus Schedl 0.75
 BK1 Seung Ryoel Baek, Moo Young Kim 0.75
 BK2 Seung Ryoel Baek, Moo Young Kim 0.70
@@ -56,11 +43,8 @@ BK4 Seung Ryoel Baek, Moo Young Kim 0.66
 BK3 Seung Ryoel Baek, Moo Young Kim 0.64
 ZL2 Xinquan Zhou, Guang Li 0.50
 ZL3 Xinquan Zhou, Guang Li 0.49
-K-POP Genre Classification (Annotated by Korean Annotators)
-SubID Participants Accuracy
 SS6 Klaus Seyerlehner, Markus Schedl 0.66
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.66
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.66
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.66
 XG2 Shumin Xu, yating gu 0.64
 XG3 Shumin Xu, yating gu 0.64
@@ -69,48 +53,36 @@ QK2 Qiuqiang Kong 0.62
 BK2 Seung Ryoel Baek, Moo Young Kim 0.61
 BK3 Seung Ryoel Baek, Moo Young Kim 0.59
 BK4 Seung Ryoel Baek, Moo Young Kim 0.57
-K-POP Genre Classification (Annotated by American Annotators)
-SubID Participants Accuracy
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.63
 XG3 Shumin Xu, yating gu 0.62
 XG2 Shumin Xu, yating gu 0.61
 BK2 Seung Ryoel Baek, Moo Young Kim 0.61
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.60
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.60
 BK1 Seung Ryoel Baek, Moo Young Kim 0.60
 QK2 Qiuqiang Kong 0.60
 BK3 Seung Ryoel Baek, Moo Young Kim 0.58
 BK4 Seung Ryoel Baek, Moo Young Kim 0.56
 SS6 Klaus Seyerlehner, Markus Schedl 0.51
-K-POP Mood Classification (Annotated by Korean Annotators)
-SubID Participants Accuracy
 XG3 Shumin Xu, yating gu 0.61
 XG2 Shumin Xu, yating gu 0.62
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.62
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.56
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.56
 SS6 Klaus Seyerlehner, Markus Schedl 0.56
 QK2 Qiuqiang Kong 0.61
 BK4 Seung Ryoel Baek, Moo Young Kim 0.58
 BK3 Seung Ryoel Baek, Moo Young Kim 0.60
 BK2 Seung Ryoel Baek, Moo Young Kim 0.60
 BK1 Seung Ryoel Baek, Moo Young Kim 0.58
-K-POP Mood Classification (Annotated by American Annotators)
-SubID Participants Accuracy
 XG2 Shumin Xu, yating gu 0.64
 XG3 Shumin Xu, yating gu 0.64
 BK1 Seung Ryoel Baek, Moo Young Kim 0.64
 WJ2 Ming-Ju Wu, Jyh-Shing Roger Jang 0.63
 BK2 Seung Ryoel Baek, Moo Young Kim 0.60
 QK2 Qiuqiang Kong 0.60
-SSKS1 Klaus Seyerlehner, Markus Schedl, Peter
-Knees, Reinhard Sonnleitner 0.60
+SSKS1 Klaus Seyerlehner, Markus Schedl, Peter Knees, Reinhard Sonnleitner 0.60
 SS6 Klaus Seyerlehner, Markus Schedl 0.60
 BK3 Seung Ryoel Baek, Moo Young Kim 0.59
 BK4 Seung Ryoel Baek, Moo Young Kim 0.57
-Audio Onset Detection
-SubID Participants Avg.
-F-measure
 SB8 Sebastian Böck 0.86
 SB4 Sebastian Böck 0.84
 SB2 Sebastian Böck 0.83
@@ -118,33 +90,21 @@ SB3 Sebastian Böck 0.83
 SB9 Sebastian Böck 0.83
 CC2 Chris Cannam 0.73
 CS1 Chris Cannam, Dan Stowell 0.66
-KSA1 Manoj Kumar, JILT SEBASTIAN, Hema
-Murthy Arunachalam 0.61
-Cover Song Identification
-Total Number of Covers in Top 10
-SubID Participants Mixed Collection Sapp's Mazuraka
- Collection
+KSA1 Manoj Kumar, JILT SEBASTIAN, Hema Murthy Arunachalam 0.61
 NC2 Ning Chen 33 592
 NC3 Ning Chen 29 674
-Audio Tempo Estimation
-SubID Participants P-Score
 SB1 Sebastian Böck 0.88
-GKC1 Aggelos Gkiokas, Vassilis Katsouros, George
-Carayannis 0.82
+GKC1 Aggelos Gkiokas, Vassilis Katsouros, George Carayannis 0.82
 FW1 Fu-Hai Frank Wu 0.82
 QHS1 Elio Quinton, Christopher Hart, Mark Sandler 0.80
 FW2 Fu-Hai Frank Wu 0.78
 MD1 Michelle Daniels 0.69
 BD1 Bruno Di Giorgi 0.54
-Audio Beat Tracking
-F-Measure
-SubID Participants SMC MAZ MCK
 BK5 Sebastian Böck, Filip Korzeniowski 0.57 0.71 0.59
 BK6 Sebastian Böck, Florian Krebs 0.57 0.52 0.61
 CD1 Chris Cannam, Matthew Davies 0.34 0.50 0.53
 CD2 Chris Cannam, Simon Dixon 0.30 0.42 0.52
-DZ1 Bruno Di Giorgi, Massimiliano
-Zanoni 0.34 0.45 0.52
+DZ1 Bruno Di Giorgi, Massimiliano Zanoni 0.34 0.45 0.52
 FW3 Fu-Hai Frank Wu 0.35 0.67 0.44
 FW4 Fu-Hai Frank Wu 0.37 0.53 0.51
 FW5 Fu-Hai Frank Wu 0.38 0.54 0.51
@@ -153,143 +113,52 @@ JZ2 Jose R. Zapata 0.36 0.49 0.54
 MD2 Michelle Daniels 0.29 0.36 0.46
 SB6 Sebastian Böck 0.56 0.58 0.61
 SB7 Sebastian Böck 0.52 0.51 0.60
-Audio Chord Estimation (MIREX 2009)
-SubID Paticipants Root MajMin MajMin
-Bass Sevenths SeventhsBass Mean directional
-Hamming measure
-Mean undersegmentation
-
-Mean oversegmentation
-
 CM3 Chris Cannam, Matthias Mauch 78.56 75.41 72.48 54.67 52.26 86.62 87.17 86.09
 JR2 Jean-Baptiste Rolland 68.00 63.31 51.11 56.42 45.39 78.43 81.59 75.51
 KO1 Maksim Khadkevich, Maurizio Omologo 82.93 82.19 79.61 76.04 73.43 88.36 85.66 91.24
-Audio Chord Estimation (Billboard 2012)
-SubID Paticipants Root MajMin MajMinBass Sevenths SeventhsBass Mean directional
-Hamming measure
-Mean undersegmentation
-
-Mean oversegmentation
-
 CM3 Chris Cannam, Matthias Mauch 74.08 72.22 70.21 55.35 53.39 84.34 85.31 83.39
 JR2 Jean-Baptiste Rolland 64.24 60.37 48.72 45.74 36.56 76.68 81.53 72.37
 KO1 Maksim Khadkevich, Maurizio Omologo 77.38 75.58 73.51 57.68 55.82 85.06 82.80 87.44
-Audio Chord Estimation (Billboard 2013)
-SubID Paticipants Root MajMin MajMinBass Sevenths SeventhsBass Mean directional
-Hamming measure
-Mean undersegmentation
-
-Mean oversegmentation
-
 CM3 Chris Cannam, Matthias Mauch 70.95 67.28 65.20 48.99 47.17 82.87 83.11 82.63
 JR2 Jean-Baptiste Rolland 62.76 57.95 47.56 43.71 35.59 76.26 80.65 72.33
 KO1 Maksim Khadkevich, Maurizio Omologo 75.12 71.39 69.43 53.57 51.78 83.48 79.61 87.75
-Audio Melody Extraction
-Overall Accuracy
-SubID Participants MIREX'05 ADC'04 INDIAN'08
-CWJ3 Yu-Ren Chien, Hsin-Min
-Wang, Shyh-Kang Jeng 0.58 0.61 0.71
+CWJ3 Yu-Ren Chien, Hsin-Min Wang, Shyh-Kang Jeng 0.58 0.61 0.71
 DD1 doreso doreso 0.64 0.70 0.78
-IYI1 Yukara Ikemiya, Kazuyoshi
-Yoshii, Katsutoshi Itoyama 0.61 0.61 0.71
+IYI1 Yukara Ikemiya, Kazuyoshi Yoshii, Katsutoshi Itoyama 0.61 0.61 0.71
 KD1 Karin Dressler 0.72 0.85 0.82
 KD3 Karin Dressler 0.75 0.86 0.81
-LPSL1 Hye In Lee, Ju Hyun Park,
-Ji Hun Seo, Seok Pil Lee 0.35 0.34 0.41
+LPSL1 Hye In Lee, Ju Hyun Park, Ji Hun Seo, Seok Pil Lee 0.35 0.34 0.41
 SL1 Liming Song, Ming Li 0.55 0.60 0.28
-YJ2 Tzu-Chun Yeh, Jyh-Shing
-Roger Jang 0.52 0.46 0.70
-Audio Melody Extraction
-Overall Accuracy
-SubID Participants MIREX
-'09 0db
-MIREX
-'09 +5db
-MIREX
-'09 -5db
-CWJ3 Yu-Ren Chien, Hsin-Min
-Wang, Shyh-Kang Jeng 0.74 0.59 0.82
+YJ2 Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.52 0.46 0.70
+CWJ3 Yu-Ren Chien, Hsin-Min Wang, Shyh-Kang Jeng 0.74 0.59 0.82
 DD1 doreso doreso 0.75 0.56 0.86
-IYI1 Yukara Ikemiya, Kazuyoshi
-Yoshii, Katsutoshi Itoyama 0.64 0.51 0.73
+IYI1 Yukara Ikemiya, Kazuyoshi Yoshii, Katsutoshi Itoyama 0.64 0.51 0.73
 KD1 Karin Dressler 0.66 0.50 0.79
 KD3 Karin Dressler 0.68 0.52 0.78
-LPSL1 Hye In Lee, Ju Hyun Park,
-Ji Hun Seo, Seok Pil Lee 0.45 0.34 0.54
+LPSL1 Hye In Lee, Ju Hyun Park, Ji Hun Seo, Seok Pil Lee 0.45 0.34 0.54
 SL1 Liming Song, Ming Li 0.69 0.52 0.78
-YJ2 Tzu-Chun Yeh, Jyh-Shing
-Roger Jang 0.54 0.44 0.58
-Audio Key detection
-SubID Participants Weighted
-Key Score
+YJ2 Tzu-Chun Yeh, Jyh-Shing Roger Jang 0.54 0.44 0.58
 CN1 Chris Cannam, Katy Noland 0.87
-Query By Tapping
-SubID Participants Task 1A
- MRR
-Task1B
-MRR
-Task 2
-MRR
 CC3 ChunTa Chen 0.828 0.733 0.813
-KKH1 Blair Kaneshiro, Hyung Suk Kim,
-Jorge Herrera 0.194 0.046 -
-MIREX 2014 Evaluation Results
-J. Stephen Downie & IMIRSEL
-University of Illinois at Urbana-Champaign
-email: jdownie@illinois.edu
-Structural Segmentation - MIREX '09
-SubID Participants MIREX ‘09
-F-measure
-MIREX 10 RWC /
-Quaero SB@3sec
-MIREX 10 RWC /
-RWC F-measure
-Salami
-F-measure
+KKH1 Blair Kaneshiro, Hyung Suk Kim, Jorge Herrera 0.194 0.046 -
 NB1 Oriol Nieto, Juan P. Bello 0.49 0.56 0.51 0.51
 NB2 Oriol Nieto, Juan P. Bello 0.52 0.70 0.56 0.50
 NB3 Oriol Nieto, Juan P. Bello 0.47 0.55 0.52 0.50
 NJ1 Oriol Nieto, Tristan Jehan 0.48 0.55 0.51 0.50
 SUG1 Jan Schlüter, Karen Ullrich, Thomas Grill 0.49 0.64 0.40 0.48
 SUG2 Jan Schlüter, Karen Ullrich, Thomas Grill 0.46 0.72 0.37 0.42
-Audio Tag Classification - Major Minor
-SubID Participants Class.
-F-Measure
-Affinity
-AUC-ROC
 SS1 Klaus Seyerlehner, Markus Schedl 0.49 0.89
-Audio Tag Classification - Mood
-SubID Participants Class.
-F-Measure
-Affinity
-AUC-ROC
 SS1 Klaus Seyerlehner, Markus Schedl 0.49 0.87
-Query By Singing/Humming
-SubID Participants Hidden Jang
-(MRR)
-Jang
-(MRR)
-ThinkIt
-(MRR)
-IOACAS
-(MRR)
-Subtask2
-(Simple Count)
 BS1 BartÅ‚omiej Stasiak 0.86 0.91 0.00 0.00 9.65
 LW1 Lei Wang 0.93 0.96 0.97 9.69
 WHLX1 Minhui Wu, yixin hou, Hailong Liu, Dadong Xie, 0.47 0.43 0.96 0.80 5.78
 WHLX2 Minhui Wu, yixin hou, Hailong Liu, Dadong Xie 0.76 0.81 0.94 0.76 9.48
 YJ1 Tzu-Chun Yeh, Jyh-Shing, Roger Jang 0.91 0.93 0.88 0.40 8.74
-Audio Downbeat Estimation
-F-measure
-SubID Participants ballroom beatles carnatic turkish cretan hjdb
 FK3 Florian Krebs 79.2* 58.8 16.9 19.7 53.5 53.5
 FK4 Florian Krebs 70.8* 63 19.4 24 51.2 51.2
 KSH1 Florian Krebs, Andre Holzapfel, Ajay Srinivasamurthy 19.4 19.4 40 77.5* 85.4* 85.4
 DBDR2 Simon Durand, Juan Bello, Bertrand David, Gael Richard 70.5 83.1* 18.4 44.8 43.5 43.5
 DBDR3 Simon Durand, Juan Bello, Bertrand David, Gael Richard 75.2* 81.6 20 44.8 41.5 41.5
-Audio Fingerprinting
-SubID Participants size of database (MB) top-1 hit rate (%)
 GY1 Antonio de_Carvalho_Junior,Leonardo Batista 2110 52.28
 WW1 Lei Wang, Runtao Wang 2151 90.71
 WW2 Lei Wang, Runtao Wang 2079 90.86
@@ -300,40 +169,22 @@ WW6 Lei Wang, Runtao Wang 2212 91.78
 WW7 Lei Wang, Runtao Wang 2013 91.64
 WW8 Lei Wang, Runtao Wang 1513 91.73
 WW9 Lei Wang, Runtao Wang 1513 91.74
-Real-time Audio to Score Alignment
-SubID Participants Total
-Precision
 CC4 ChunTa Chen, Jyh-Shing Roger Jang 0.9146
-RV3 Francisco Jose Rodriguez-Serrano,
-Pedro Vera-Candeas 0.9098
-RV2 Francisco Jose Rodriguez-Serrano,
-Pedro Vera-Candeas 0.8928
+RV3 Francisco Jose Rodriguez-Serrano, Pedro Vera-Candeas 0.9098
+RV2 Francisco Jose Rodriguez-Serrano, Pedro Vera-Candeas 0.8928
 CR1 Oriol Romaní Picas, Julio Jose Carabias-Orti 0.8217
-Audio Music Similarity
-SubID Participants Avg. Fine
-Score
-FFMD1 Peter Foster, György Fazekas, Matthias
-Mauch, Simon Dixon 38.16
-GK1 Aggelos Gkiokas, Vassilis Katsouros,
-George Carayannis 35.29
-GKC2 Aggelos Gkiokas, Vassilis Katsouros,
-George Carayannis 35.33
-GKC3 Aggelos Gkiokas, Vassilis Katsouros,
-George Carayannis 34.56
+FFMD1 Peter Foster, György Fazekas, Matthias Mauch, Simon Dixon 38.16
+GK1 Aggelos Gkiokas, Vassilis Katsouros, George Carayannis 35.29
+GKC2 Aggelos Gkiokas, Vassilis Katsouros, George Carayannis 35.33
+GKC3 Aggelos Gkiokas, Vassilis Katsouros, George Carayannis 34.56
 PS1 Dominik Schnitzer, Tim Pohle 48.88
 SS2 Klaus Seyerlehner, Markus Schedl 49.35
 SS4 Klaus Seyerlehner, Markus Schedl 49.01
 SS5 Abhinava Srivastava, Mohit Sinha 45.08
-Symbolic Music Similarity
-SubID Participants Avg. Fine
-Score (0-1)
 JU1 Julián Urbano 0.54
 JU2 Julián Urbano 0.55
 JU3 Julián Urbano 0.51
 YO1 Yoshiaki OKUBO 0.37
-Singing Voice Separation
-SubID Participants Singing Voice
-(GNSDR, dB) Music (GNSDR, dB)
 GW1 Guan-Xiang Wang, Po-Kai Yang, Chung-Chien Hsu, Jen-Tzung Chien 2.89 5.25
 HKHS1 Po-Sen Huang, Minje Kim, Mark Hasegawa-Johnson, Paris Smaragdis -1.40 0.35
 HKHS2 Po-Sen Huang, Minje Kim, Mark Hasegawa-Johnson, Paris Smaragdis -1.94 0.52
@@ -345,8 +196,6 @@ LFR1 Antoine Liutkus, Derry Fitzgerald, Zafar Rafii 0.65 3.09
 RNA1 Preeti Rao, Nagesh Nayak, Sharath Adavanne 3.69 7.32
 RP1 Zafar Rafii, Bryan Pardo 2.86 5.03
 YC1 Frederick Yen, Tai-Shih Chi -0.82 -3.12
-Multi-F0 Estimation
-SubID Participants Accuracy
 BW1 Emmanouil Benetos, Tillman Weyde 0.66
 EF1 Anders Elowsson, Anders Friberg 0.72
 KD2 Karin Dressle 0.68
@@ -354,8 +203,6 @@ RM1 Recoskie, Richard Mann 0.41
 SY1 Li Su, Yi-Hsuan Yang 0.63
 SY2 Li Su, Yi-Hsuan Yang 0.64
 SY3 Li Su, Yi-Hsuan Yang 0.61
-Multi-F0 Note Tracking - Mixed Dataset
-SubID Participants Avg. F-measure Onset Only Avg. Overlap
 BW2 Emmanouil Benetos, Tillman Weyde 0.58 0.88
 BW3 Emmanouil Benetos, Tillman Weyde 0.54 0.88
 CB1 Chris Cannam, Emmanouil Benetos 0.48 0.86
@@ -367,11 +214,6 @@ KD2 Karin Dressle 0.66 0.89
 RM1 Recoskie, Richard Mann 0.44 0.86
 SB5 Sebastian Böck 0.55 0.84
 SY4 Li Su, Yi-Hsuan Yang 0.46 0.88
-Multi-F0 Note Tracking - Piano Only
-SubID Participants Avg. F-measure
-Onset Only
-Avg.
-Overlap
 BW2 Emmanouil Benetos, Tillman Weyde 0.56 0.84
 BW3 Emmanouil Benetos, Tillman Weyde 0.63 0.84
 CB1 Chris Cannam, Emmanouil Benetos 0.66 0.81
@@ -384,8 +226,6 @@ KD2 Karin Dressle 0.68 0.84
 RM1 Recoskie, Richard Mann 0.22 0.80
 SB5 Sebastian Böck 0.68 0.77
 SY4 Li Su, Yi-Hsuan Yang 0.50 0.83
-Discovery of Repeated Themes & Sections
-SubID Participants Task Version R_est P_est R_occ P_occ Log Runtime
 NF1 Oriol Nieto, Morwaread Farbood Symbolic, Monophonic 0.54 0.50 0.33 0.60 2.68
 OL1 Olivier Lartillot Symbolic, Monophonic 0.56 0.62 0.76 0.88 4.55
 VM1 Gissel Velarde, David Meredith Symbolic, Monophonic 0.80 0.70 0.81 0.49 2.00

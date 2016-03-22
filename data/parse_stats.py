@@ -24,7 +24,10 @@ def is_teamlike(s):
     valid : bool
         True if teamlike.
     """
-    conds = [s.isupper(), s.replace("'", "").isalnum()]
+    conds = [s.isupper(),
+             s.replace("’", "").isalnum(),
+             s != "MIREX",
+             s != "IOACAS"]
     return all(conds)
 
 
@@ -42,7 +45,9 @@ def parse_line(s):
         Returns the teamname for the line, if valid, or None.
     """
     parts = s.split()
-    return parts[0] if parts and is_teamlike(parts[0]) else None
+    res = parts[0] if parts and is_teamlike(parts[0]) else None
+    print(s[:10], res)
+    return res
 
 
 def count_teams(filename):
@@ -58,10 +63,10 @@ def count_teams(filename):
     num : int
         Number of unique teams in the file.
     """
-    teams = [parse_line(l.strip()) for l in open(filename)]
-    teams = sorted(list(set(filter(None, teams))))
-    print("Counted {} submissions.\n[{}]"
-          "".format(len(teams), ", ".join(teams)))
+    runs = list(filter(None, [parse_line(l.strip()) for l in open(filename)]))
+    teams = sorted(list(set(runs)))
+    print("Counted {} runs from {} teams.\n[{}]"
+          "".format(len(runs), len(teams), ", ".join(teams)))
     return len(teams)
 
 

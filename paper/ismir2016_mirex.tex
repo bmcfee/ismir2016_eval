@@ -13,6 +13,7 @@
 \usepackage{ismir,amsmath,cite}
 \usepackage{graphicx}
 \usepackage{color}
+\graphicspath{{figs/}}
 
 % Title.
 % ------
@@ -127,60 +128,67 @@ At a high level, the typical MIREX paradigm operates as follows:
 \item Arrive at a problem formulation and metrics, either in the due course of graduate work or with fellow researchers in the community.
 \item Build a corpus of data, with human-annotated ``ground-truth'' annotations for said task.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
-\item Invite participants to submit algorithms, which are executed on a private server. Report the results.
-\item Repeat step 5 annually. Intermittently repeat step 3, as needed.
+\item Invite participants to submit algorithms, which are executed on a private server.
+\item Evaluate predicted outputs against reference annotations or human judgments.
+\item Repeat steps 5-6 annually. Intermittently repeat step 3, as needed.
 \end{enumerate}
 
 % Algorithm-to-data goes astray.
-Note that, as a matter of correctness, some tasks, such as audio music similarity or user interfaces, rely on post-hoc human assessment, either by design or necessity.
-More importantly, however, MIREX differs from TREC-style evaluation by operating in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
+Importantly, this approach differs from TREC-style evaluation by operating in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
 The rationale for this decision is understandable.
-In contrast to other machine perceptions domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
+In contrast to other machine perception domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
 Due to a history of litigation from the Recording Industry Artists of America (RIAA), there is a pervasive sense of fear in the MIR community that sharing audio data would almost certainly result in crippling lawsuits \cite{2008DownieMIREX}.
+
+\begin{figure}[!t]
+ \centerline{
+ \includegraphics[width=\columnwidth]{mirex_runs.pdf}}
+ \caption{Number of algorithms run at MIREX over the course of a almost a decade.}
+ \label{fig:system_eval}
+\end{figure}
 
 % Deficiencies
 % Operating costs are significant
-However, experience with MIREX over the last decade has more than demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
+However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
 First, as a matter of practicality, doing so incurs remarkably steep costs the community cannot hope to support indefinitely.
 Running hundreds of research algorithms demands state of the art technology, and adequate compute cycles must either rented or purchased outright to achieve this.
-More often than not, these algorithms are research prototypes, seldom optimized for efficiency.
+More often than not, these algorithms are research prototypes, and are seldom optimized for efficiency or ease-of-use.
 While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months to years of compute time annually.
 % EJH: I want to mention this, but it really throws off the rhythm of this passage.
 % Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
 The financial burden of computation amounts to a rounding error, though, when compared with the human effort involved.
-As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams to completion \cite{2008DownieMIREX};
+As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams\cite{2008DownieMIREX};
 % This slide deck claims MIREX hit the 300s for years: https://www.hathitrust.org/documents/mirex_htrc_same_rda.pdf
 % Not sure what accounting went into this, but it seems to be consistent with the 122 algos from 2007, and probably the more fair comparison.
-in the years since, average participation has climbed slightly ($\mu\approx145$, $\sigma \approx 14$).
+shown in Figure \ref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.
 Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
 Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
-
-\begin{align}
-\label{eq:systematic_eval}
-Y_i = \mathcal{A}(X_i)\\
-Z_i = \mathcal{F}(X_i)\\
-M_i^R = \mathcal{C}^R(Y_i, Z_i)
-\end{align}
 
 % Hard to do science
 % ------------------
 Operating costs aside, MIREX has indeed afforded some valuable insight into the research of MIR systems\cite{2008DownieMIREX}.
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
 To illustrate, consider the standard approach to benchmarking MIR systems,
-given in Eq \ref{eq:systematic_eval}.
-% diagrammed in Figure \ref{fig:system_eval}.
+% given in Eq \ref{eq:systematic_eval}.
+diagrammed in Figure \ref{fig:system_eval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
 Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z_i$.
 One or more comparison functions, $\mathcal{C}^R$, are applied on these two representations, yielding a number of performance measures, $M_i^R$.
-This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally, although not necessarily, increases with $N$.
+This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally, although not necessarily, increases with $N$.
+
+\begin{figure}[!t]
+ \centerline{
+ \includegraphics[width=\columnwidth]{eval_framework.pdf}}
+ \caption{System diagram of the standard approach to the benchmarking of computational models.}
+ \label{fig:system_eval}
+\end{figure}
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current formulation though, a lack of transparency renders participants scientifically blind in a number of ways.
 There is no access to any $X_i$, making it impossible to diagnose why an algorithm produced $Z_i$, or determine what should be done to make $\mathcal{F}$ better.
 Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
-By the same token, while $N$ varies from task to task, there is no way to guage the distribution of the data or how representative it may or may not be.
+By the same token, while $N$ varies from task to task, there is no way to gauge the distribution of the data or how representative it may or may not be.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
 Traditionally $\mathcal{C}^R$ are implemented with proprietary technologies, i.e. MATLAB, by a handful of individuals with minimal oversight from the community, raising concerns of technical correctness.
