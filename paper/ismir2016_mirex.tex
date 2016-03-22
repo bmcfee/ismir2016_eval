@@ -153,15 +153,25 @@ Extrapolating, the last decade has likely consumed on the order of \emph{10,000}
 Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
+
+\begin{align}
+\label{eq:systematic_eval}
+Y_i = \mathcal{A}(X_i)\\
+Z_i = \mathcal{F}(X_i)\\
+M_i = \mathcal{C}(Y_i, Z_i)
+\end{align}
+
 % Hard to do science
 % ------------------
 Operating costs aside, MIREX has afforded some valuable insight into the research of MIR systems\cite{2008DownieMIREX}.
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
-To illustrate this reality, consider the standard approach to benchmarking MIR systems, diagrammed in Figure \ref{fig:system_eval}.
-An input, $X$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y$.
-Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z$.
-One or more comparison functions, $\mathcal{C}$, are applied on these two representations, yielding a number of performance measures, $M$.
-This process is repeated over a collection of input-output pairs, $\mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally increases with $N$.
+To illustrate this reality, consider the standard approach to benchmarking MIR systems,
+given in Eq \ref{eq:systematic_eval}.
+% diagrammed in Figure \ref{fig:system_eval}.
+An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
+Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z_i$.
+One or more comparison functions, $\mathcal{C}^R$, are applied on these two representations, yielding a number of performance measures, $M_i^R$.
+This process is repeated over a collection of input-output pairs, $\mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S^R$, the reliability of which generally increases with $N$.
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 A lack of transparency renders participants blind in a number of detrimental ways.
 There is no public access to $X$, making it impossible to diagnose why an algorithm produced $Z$, or determine what should be done to make the system better.
