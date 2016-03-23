@@ -217,7 +217,7 @@ diagrammed in \Cref{fig:system_eval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
 Similarly, a proposed computational model, $\mathcal{F}$, operates on the same input, producing a prediction, $Z_i$. %JU: maybe \hat{Y}_i instead of Z_i to make it clear that this is an estimate?
 One or more comparison functions, $\mathcal{C}^R$, are applied on these two representations, yielding a number of performance measures, $M_i^R$. %JU: a bit lost here...is C a measure and M the score compute with that measure? eg. C=precision M=0.23. If so, I'd rename to measure/metric and score.
-This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally, although not necessarily, increases with $N$.
+This process is repeated over a collection of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise measures are aggregated into summary statistics, $S$, the reliability of which generally, although not necessarily, increases with $N$. %JU: not necessarily?
 
 \begin{figure}[!t]
  \centerline{
@@ -262,9 +262,9 @@ Data collection is a challenging, unavoidable reality, and one that demands a vi
 
 \section{Open Evaluation of MIR Systems}
 
-Summarizing the previous section, MIREX suffers from three deficiencies that render the situation terminal:
+Summarizing the previous section, MIREX suffers from three deficiencies that render the situation terminal: %JU: something less agressive than terminal?
 one, the financial and human cost is far too great to be sustainable indefinitely;
-two, limited transparency undermines the scientific value of the endeavor;
+two, limited transparency undermines the scientific value of the endeavor; %JU: 'lack of transparency limits the scientific..'
 and three, the unavoidable, recurring need for freshly annotated data requires a feasible, long-term strategy.
 
 
@@ -287,8 +287,8 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 \label{distributed}
 The primary difficulty in running an evaluation campaign is computing the outputs of all participating methods.
 This difficulty stems from two sources.
-First is the obvious computational complexity of running $m$ submissions over $n$ inputs.
-Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign environment: a task that falls on the small number of task captains each year.
+First is the obvious computational complexity of running $m$ submissions over $n$ inputs. %JU: was capital N above
+Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign and unknown environment: a task that recently falls on the small number of task captains each year.
 While the computational issues can be ameliorated by executing algorithms in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
 
 An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
@@ -304,18 +304,18 @@ For any given task, only a subset of examples need to be considered when compari
 The identity of evaluation sets remains hidden from participants at submission time.
 This implies that each submission must span the entire corpus, which reduces the feasibility of participants tuning their algorithms to a specific subset of examples.
 Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
+%JU: this could be a problem for certain computationally-intensive tasks, right? Also, do we tell by the end what tracks were really used to test? If not, we incur in the same limitation as MIREX, namely, we can't learn why things work or not. If we do, can we use the same test set next year and still avoid bias? Finally, some tasks have datasets with very specific content, like mono/polyphonic, vocals/nonvocals, etc. Is it realistic to ask for outputs on everything?
 
 The second challenge is the potential for reduced transparency on behalf of the participants.
-While MIREX forces requires submissions to execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of data transparency.
+While MIREX requires submissions to execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of data transparency.
 Consequently, restrictions on the implementation (\eg, running time) would become infeasible, and it may open the possibility of cheating by manual intervention.
 Using large test collections with opaque evaluation sets will limit the practicality of
 manual participant intervention.%
-\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}
+\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.} %JU: as long as we can spot the cheater
 We argue that trading benefits the community at large, since the availability of open data will serve a broader set of interests over time than the description of methods.
 
 Finally, the proposed scheme assumes that multiple tasks operate on a common input form, \ie, recorded audio.
-While the majority of current MIREX tasks do fit into this framework, it precludes tasks requiring symbolic data (score following, symbolic similarity), user interaction (grand challenges, query-by-humming/tapping), or multi-tracks (singing voice separation).
-
+While the majority of current MIREX tasks do fit into this framework, it precludes tasks requiring symbolic data (score following, symbolic similarity), user interaction (grand challenges, query-by-humming/tapping), or multi-tracks (singing voice separation). %JU: maybe drop here somewhere a 'yet' or 'in this form', meaning that we'll try to incorporate them at some point? Ohterwise it looks like we forget them for good, and a reviewer who is an expert in e.g. symbolic might dislike the whole thing just because of this
 
 \subsection{Open Content}
 \label{open}
@@ -329,7 +329,7 @@ The Jamendo and FMA collections are both large and diverse, and both can be link
 Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
 FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.  
 These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
-While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's preivate data, but using open content at least permits practitioners to quantify the bias.
+While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's private data, but using open content at least permits practitioners to quantify the bias. %JU: maybe a little out there, but isn't the whole field biased towards western anyways? I mean...it's not a problem, not because mirex is biased, but because the field is biased. Maybe the folks here at UPF will kill me lol
 
 This now leads us to the question of representation.
 A common criticism of basing research on CC-licensed music is that it is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
@@ -338,7 +338,7 @@ However, for the majority of MIREX tasks, in particular the low-level tasks such
 We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free\_Music\_Archive#Notable\_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation services, in addition to the previously mentioned genre categories.
-Taken in combination, these indices can be sampled to pre-emptively filter the source collections down to subsets of track which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
+Taken in combination, these indices can be sampled to pre-emptively filter the source collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
 This approach is similar in spirit to previous work using chart-based sampling (typically
 Billboard)~\cite{burgoyne2011expert}.
 
