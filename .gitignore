@@ -160,3 +160,6 @@ TSWLatexianTemp*
 
 # OS X cruft
 .DS_Store
+
+# The paper build
+paper/*.pdf
