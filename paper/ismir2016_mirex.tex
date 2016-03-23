@@ -1,3 +1,4 @@
+%TODO: check that we only use 'systems' (isntead of method, algorithm, comp model) and 'metrics' (instead of measures)
 % -----------------------------------------------
 % Template for ISMIR Papers
 % 2016 version, based on previous ISMIR templates
@@ -18,6 +19,10 @@
 % \usepackage{hyperref}
 \graphicspath{{figs/}}
 \usepackage{booktabs}
+\usepackage{enumitem}
+
+\setlist[itemize]{noitemsep, topsep=0ex}
+\setlist[enumerate]{noitemsep, topsep=0ex}
 
 \def\eg{\emph{e.g.\/}}
 \def\ie{\emph{i.e.\/}}
@@ -274,7 +279,7 @@ and three, the unavoidable, recurring need for freshly annotated data requires a
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
 \begin{itemize}
 \item Distributed computation reduces operating costs to a participant-invariant constant.
-\item Using freely available audio facilitates reproducibility.
+\item Freely distributable audio facilitates reproducibility.
 \item Incremental evaluation encourages that results are scientifically meaningful by
     keeping test data fresh, while steadily increasing the size of datasets available for development and evaluation.
 \end{itemize}
@@ -282,30 +287,30 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 % After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
 % To counteract this, different test collections should be introduced each year.
 % At first, this seems to get us nowhere: we still need to acquire annotated data, which is presumably expensive.
-% We argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the MIREX participants for any given year.
+%JU: I like this sentence too much to just drop it!: We argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the MIREX participants for any given year.
 
 
 \subsection{Distributed Computation}
 \label{distributed}
-The primary difficulty in running an evaluation campaign is computing the outputs of all participating methods.
+The primary difficulty in running an evaluation campaign is computing the outputs of all participating systems.
 This difficulty stems from two sources.
 First is the obvious computational complexity of running $m$ submissions over $n$ inputs. 
-Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign and unknown environment: a task that recently falls on the small number of task captains each year.
-While the computational issues can be ameliorated by executing algorithms in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
+Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign and unknown environment: a job that recently goes to the small number of task captains each year.
+While the computational issues can be ameliorated by running systems in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
 
 An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
 Kaggle competitions are conducted with all input data publicly available, and participants submit only the outputs of their systems, \eg, predictions made for each data point.
-This paradigm effectively resolves the difficulties listed above: both computation and manual effort are distributed to the participants, rather than centralized at the evaluation site and task captains.
+This paradigm effectively resolves the difficulties listed above: both computation and human effort are distributed to the participants, rather than centralized at the evaluation site and task captains.
 This dramatically reduces the cost of maintenance and administration.
 However, we note a few potential challenges to the distributed computation approach.
 
 First, the test (input) data must be made openly available to participants.
-This may increase the risk of bias if participants (unintentionally) tune their algorithms to the evaluation set.
+This may increase the risk of bias if participants (unintentionally) tune their systems to the evaluation set.
 To mitigate bias, we propose the use of a large and diverse corpus of common tracks which are shared across \emph{all tasks}, rather than a collection of small, task-specific datasets as is done in MIREX.
-For any given task, only a subset of examples need to be considered when comparing methods, and the evaluation set may be independently selected for each task.
+For any given task, only a subset of examples need to be considered when comparing systems, and the evaluation set may be independently selected for each task.
 The identity of evaluation sets remains hidden from participants at submission time.
 This implies that each submission must span the entire corpus, which reduces the feasibility of participants tuning their algorithms to a specific subset of examples.
-Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which can be a valuable data source in its own right.
+Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which is a valuable data source in its own right.
 %JU: this could be a problem for certain computationally-intensive tasks, right? Also, do we tell by the end what tracks were really used to test? If not, we incur in the same limitation as MIREX, namely, we can't learn why things work or not. If we do, can we use the same test set next year and still avoid bias? Finally, some tasks have datasets with very specific content, like mono/polyphonic, vocals/nonvocals, etc. Is it realistic to ask for outputs on everything?
 
 The second challenge is the potential for reduced transparency on behalf of the participants.
@@ -317,7 +322,8 @@ manual participant intervention.%
 We argue that trading benefits the community at large, since the availability of open data will serve a broader set of interests over time than the description of methods.
 
 Finally, the proposed scheme assumes that multiple tasks operate on a common input form, \ie, recorded audio.
-While the majority of current MIREX tasks do fit into this framework, it precludes tasks requiring symbolic data (score following, symbolic similarity), user interaction (grand challenges, query-by-humming/tapping), or multi-tracks (singing voice separation). %JU: maybe drop here somewhere a 'yet' or 'in this form', meaning that we'll try to incorporate them at some point? Ohterwise it looks like we forget them for good, and a reviewer who is an expert in e.g. symbolic might dislike the whole thing just because of this
+While the majority of current MIREX tasks do fit into this framework, at present it precludes tasks requiring symbolic data (score following, symbolic similarity), user interaction (grand challenges, query-by-humming/tapping), or multi-tracks (singing voice separation).
+Our long-term plan is to devise ways of incorporating these tasks as well, while keeping with the principles outlined above. This is of course an open question for further research.
 
 \subsection{Open Content}
 \label{open}
@@ -331,7 +337,7 @@ The Jamendo and FMA collections are both large and diverse, and both can be link
 Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
 FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.  
 These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
-While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's private data, but using open content at least permits practitioners to quantify the bias. %JU: maybe a little out there, but isn't the whole field biased towards western anyways? I mean...it's not a problem, not because mirex is biased, but because the field is biased. Maybe the folks here at UPF will kill me lol
+While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's private data and the MIR field itself, but using open content at least permits practitioners to quantify it.
 
 This now leads us to the question of representation.
 A common criticism of basing research on CC-licensed music is that it is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
@@ -340,7 +346,7 @@ However, for the majority of MIREX tasks, in particular the low-level tasks such
 We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free\_Music\_Archive#Notable\_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation services, in addition to the previously mentioned genre categories.
-Taken in combination, these indices can be sampled to pre-emptively filter the source collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
+Taken in combination, these indices can be sampled to pre-emptively filter the collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
 This approach is similar in spirit to previous work using chart-based sampling (typically
 Billboard)~\cite{burgoyne2011expert}.
 
@@ -363,6 +369,9 @@ Billboard)~\cite{burgoyne2011expert}.
 %   given task (under an appropriate definition of ``bad'')
 %   also solicit confidence ratings in the annotations
 
+\subsection{Incremental Evaluation}
+% TODO(julian-urbano)
+
 %The second point is a difficult one, though FMA does provide some curation.
 %It might be interesting to partner with them in helping to guide the selection.
 
@@ -384,10 +393,6 @@ Second, if a goal of the evaluation campaign is to differentiate submissions acc
 %By having multiple reference annotations for the ``interesting'' tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult'' tracks from ``ambiguous'' tracks.
 
 %Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
-
-
-\subsection{Incremental Evaluation}
-% TODO(julian-urbano)
 
 
 Additionally:
