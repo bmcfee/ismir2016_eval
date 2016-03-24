@@ -372,25 +372,34 @@ Billboard)~\cite{burgoyne2011expert}.
 \subsection{Incremental Evaluation}
 
 One apparent problem with the proposed framework is that it initially requires a new, unannotated corpus of audio.
-Rather than set out to annotate a test set up front, we plan to apply incremental evaluation. 
-In our setting we will have an incomplete set of reference annotations: some (most) input examples will not have corresponding annotations.
-The idea is to develop methods to estimate these missing annotations from all available sources of information, such as existing annotations, metadata, system outputs, \etc.
-Annotations will therefore be defined probabilistically, over the space of possible labels, so that missing annotations will have some degree of variance (uncertainty); existing annotations will have zero-variance.
-With an appropriate reformulation of our performance measures, we can incorporate these estimates of the annotations and produce estimates of the system performance scores.
-In the end, systems are ranked as usual, but with some degree of error which is inversely proportional to the number of available annotations.
+Rather than fully annotate the corpus up front for each task, we plan to adopt an \emph{incremental evaluation} strategy. 
 
-The plan is as follows.
-At the beginning, our confidence in the results is minimal because we start with a small number of annotations, if any at all, and thus the variance is maximal.
-Participants then submit their system's outputs, for which we can offer an estimate of performance.
-At any point during (or after) the evaluation round, we may receive new annotations, which will reduce uncertainty in the estimates of system performance.
+With incremental evaluation, the set of reference annotations need not be complete: some (most) input examples will not have corresponding annotations.
+% BM: do we have a reference for incremental evaluation?
+%The idea is to develop methods to estimate these missing annotations from all available sources of information, such as existing annotations, metadata, system outputs, \etc.
+%Annotations will therefore be defined probabilistically, over the space of possible labels, so that missing annotations will have some degree of variance (uncertainty); existing annotations will have zero-variance.
+Instead, performance measures are estimated with respect to a subset of annotated tracks, which may itself grow over time.
+%With an appropriate reformulation of performance measures, we can incorporate these estimates of the annotations and produce estimates of the system performance scores.
+In the end, systems are ranked as usual, but with some degree of uncertainty which is inversely proportional to the number of available annotations.
+
+In the first round, uncertainty in the performance estimates is maximal due to a small number of initial annotations.
+Participants then submit their system's outputs, for which we estimate performance.
+New annotations may arrive at any point during (or after) the evaluation round, which will reduce uncertainty.
 Prior research in both text and video IR has demonstrated that evaluation against incomplete reference data is feasible, even when only a very small fraction of the annotations are known~\cite{Carterette2007:robust,Yilmaz2008:simple,trecvid2014:overview}.
 
-One point to study in this framework is: which bits are worth annotating? Consider two classification systems that produce the same label for some input. Whether they are both right or wrong does not provide us with any information as to which one has higher accuracy, so there is little gain from annotating that particular example. Sure enough, with many systems and complex performance metrics, choosing what is worth annotating is not that obvious.
+One point to study in this framework is: which inputs are worth annotating?
+Consider two systems that produce the same annotation for a fixed input example.
+Whether they are both right or wrong does not provide us with any information as to which one has higher accuracy, so there is little to gain from annotating that particular example.
+With many systems and complex performance metrics, prioritizing data for annotation is by no means obvious.
 %Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
-Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}. Others have studied alternative methods for music similarity~\cite{Urbano2013:mtc}, choosing for annotation the examples that will be most informative to figure out how much different systems are from each other.
-In general, these methods allow us to minimize the required annotator effort by focusing only on the useful examples. 
+Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
+Others have studied alternative methods for music similarity~\cite{Urbano2013:mtc}, choosing for annotation the examples that will be most informative for differentiating between systems.
+In general, these methods allow us to minimize the required annotator effort by prioritizing the most informative examples. 
 
-In this collaborative framework, annotations may come from very different sources, so it is imperative that we can trust whatever information is submitted as ground truth. Another line of work is thus the development and enforcement of standards, guidelines and tools to perform annotations. This will probably involve the development of both desktop and web technologies for creating and managing annotations, as well as appropriate version and quality control mechanisms, especially if annotations are sought in crowdsourcing platforms like Amazon Mechanical Turk. 
+In the proposed framework, annotations may come from different sources, so it is imperative that we can trust whatever information is submitted as ground truth.
+Another line of work is thus the development and enforcement of standards, guidelines and tools to perform annotations.
+This will probably involve the development of both desktop and web technologies for creating and managing annotations, as well as appropriate version and quality control mechanisms.
+Quality control is particularly important if annotations are collected via crowd-sourcing platforms like Amazon Mechanical Turk. 
 %The intuition for this approach is two-fold.
 %First, tracks for which different algorithms produce significantly different outputs are in some sense ``difficult'' and produce meaningful evaluation results.
 %Second, if a goal of the evaluation campaign is to differentiate submissions according to some measure of accuracy, then there is little to be gained by spending annotator effort on tracks for which algorithms produce the same output.
