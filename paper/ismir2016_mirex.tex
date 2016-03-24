@@ -495,7 +495,7 @@ Mechanical Turk is a thing and, though rife with its own challenges, has worked 
 
 
 \subsection{Implementation details}
-
+\label{sec:implementation}
 %Hosting datasets, torrents + edu labs.
 %We'll need some infrastructure to actually run the campaign in the new setup.
 %I think CodaLab might have solved a good chunk of this problem for us.
@@ -545,29 +545,45 @@ After collecting an initial set of annotated CC-licensed music, it will be possi
 Who watches the watchmen?
 
 
-\subsection{Getting Serious about Annotation}
+\subsection{Collecting annotations}
+
+The proposed framework requires a continuous source of fresh annotations for each evaluation campaign.
+Here, we identify three potential sources for data collection.
+
+First is the traditional route of acquiring funding and paying expert annotators.
+This is the most expensive option, but also most likely to produce high-quality data, and may in fact be the only viable path for certain tasks.
+
+Second, for tasks which require minimal training, we can leverage either crowd-sourcing platforms, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
+Community sites such as Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} and Genius\footnote{\url{http://genius.com/}} demonstrate the existence of these communities, though harnessing their enthusiasm may take some effort.
+
+Finally, if no funding can be found to annotate data, we may solicit annotations
+directly from participants and the ISMIR community at large.
+This approach is effectively used for judging the Audio Music Similarity task, but we might expect greater adoption here since the resulting annotations will be released directly back to the community.
+
+In each case, we will institute a ratification system so that contributed annotations are validated by a third party before being accepted into the evaluation set.
+As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, in addition to any paid annotation labor.
 
 % We've had resources, we just invested it elsewhere.
-One, we've invested a ton of time and money into computation over the last decade.
-MIREX got a Mellon grant for \$1.2M.
-MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medleydb}.
-Where would we be if that went toward annotation?
-We've been able to procure funding in the past for projects, and can divert those resources to annotation.
+%One, we've invested a ton of time and money into computation over the last decade.
+%MIREX got a Mellon grant for \$1.2M.
+%MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medleydb}.
+%Where would we be if that went toward annotation?
+%We've been able to procure funding in the past for projects, and can divert those resources to annotation.
 
 
-Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.
-To facilitate this, we propose a data credit system.
+%Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.
+%To facilitate this, we propose a data credit system.
 
-To participate in an evaluation, each participant must ``pay''ù some nominal amount of data credits.
-In the first year, all participants start with a balance of 0, so by participating, they are now in ``data debt''ù.
-Data credits can be earned by providing annotations to be used in the following year's campaign.
-A participant is eligible for evaluation in year $X$ when their data credit reaches a non-negative value.
+%To participate in an evaluation, each participant must ``pay''ù some nominal amount of data credits.
+%In the first year, all participants start with a balance of 0, so by participating, they are now in ``data debt''ù.
+%Data credits can be earned by providing annotations to be used in the following year's campaign.
+%A participant is eligible for evaluation in year $X$ when their data credit reaches a non-negative value.
+%
+%Data credits can be retained across years, and transferred across tasks.
 
-Data credits can be retained across years, and transferred across tasks.
+%The credits earned can be task-dependent.  Chord annotations might be worth more than beat timings or tempo estimations, for instance.
 
-The credits earned can be task-dependent.  Chord annotations might be worth more than beat timings or tempo estimations, for instance.
-
-Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We'll need a system in place to authenticate annotators and force independence.
+%Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We'll need a system in place to authenticate annotators and force independence.
 
 %Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ``ill trade three beat annotations for one chord annotationù.
 
