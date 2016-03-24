@@ -161,7 +161,7 @@ Our proposal is motivated by three complementary factors.
 First, we strive to reduce the cost of running and maintaining the evaluation framework.
 Second, we hope to improve transparency and openness wherever possible.
 Third, we plan to establish a sustainable framework that will produce open, public data sets consisting of both audio and annotations.
-By producing open data, the proposed framework will be of value to the greater MIR community in perpetuity, and benefits will not be limited to participants.
+By directing the majority of resources toward the production of open data, the proposed framework will be of value to the greater MIR community in perpetuity, and benefits will not be limited to participants.
 
 We stress that this document describes not a fully implemented framework, but a specific \emph{proposal} put forward by a group of authors dedicated to seeing it put into practice.
 Our goal in writing this document at this early stage is to solicit input from the MIR community, before implementation details have been finalized.
@@ -257,7 +257,8 @@ Unsurprisingly, in lieu of a fresh source of annotated data, early concerns abou
 In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one submission in 2011 that achieved near perfect scores in chord estimation having been pretrained on the same data\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}.
 In others, participants may misunderstand the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that use annotations from previous folds in a train-test task.
 In others, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
-These results are sometimes misleading due to a fixed, unknown bias in the distribution, which becomes apparent when datasets are expanded, like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert}, or further insight is gained, as in the disclosure of the metadata in the music similarity corpus\footnote{}.
+These results can mislead due to fixed but unknown biases in the distribution, which become apparent when datasets are expanded --- like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert} --- or as further insight is gained, as in the disclosure of the metadata in the music similarity corpus\footnote{}.
+
 % There's no short-term plan to get new data; there's no long-term plan to get new data.
 To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
 By and large, MIREX has relied on the generosity of the community to both curate and donate data for the purposes of evaluation.
@@ -427,21 +428,17 @@ Quality control is particularly important if annotations are collected via crowd
 \subsection{Putting it All Together}
 
 In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proceed as follows:
-
-
 \begin{enumerate}
 \item Identify open data to include in a corpus for distribution.
-\item Define or update a number of human perception tasks, \eg chord transcription.
-\item Invest resources in human annotation; optionally, prioritize items by information gain.
-\item Release a collection of training data, with annotations, for development purposes, and an over-complete collection of unlabeled data, for evaluation.
+\item Define or update tasks, \eg, chord transcription.
+\item Release a collection of (annotated) training data for development, and an over-complete collection of unlabeled data for evaluation.
 \item Invite participants to submit \emph{predictions} over the unlabeled data.
+\item Invest resources in human annotation; prioritize items by information gain.
 \item Submissions are scored on a private server against hidden annotations or human judgments; summary results are provided at the conclusion of the submission window.
-\item Retire (witheld) annotated data, formerly used for evaluation, into the training set.
+\item Retire (withheld) annotated data, formerly used for evaluation, into the training set.
 \item Go to step 2 and repeat. Revisit step 1 if needed.
 \end{enumerate}
 
-Cold start problem.
-Talk about it.
 
 % TODO: Much of this can be consolidated, serving to support the enumerated list above, rather than conveying it. There's still some good bits here, so leaving for now. Important bits to touch on include
 %  * Spooling data collection
