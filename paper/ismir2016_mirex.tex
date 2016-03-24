@@ -429,16 +429,20 @@ Quality control is particularly important if annotations are collected via crowd
 
 In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proceed as follows:
 \begin{enumerate}
-\item Identify open data to include in a corpus for distribution.
+\item Identify and collect (open) audio data.
 \item Define or update tasks, \eg, chord transcription.
 \item Release a collection of (annotated) training data for development, and an over-complete collection of unlabeled data for evaluation.
 \item Invite participants to submit \emph{predictions} over the unlabeled data.
-\item Invest resources in human annotation; prioritize items by information gain.
-\item Submissions are scored on a private server against hidden annotations or human judgments; summary results are provided at the conclusion of the submission window.
-\item Retire (withheld) annotated data, formerly used for evaluation, into the training set.
-\item Go to step 2 and repeat. Revisit step 1 if needed.
+\item Collect reference annotations; prioritize examples by disagreement among submissions.
+\item Estimate and summarize each submission's performance against the reference annotations or judgements.
+\item Retire annotated data, and add it to the training set for the next campaign.
+\item Go to step 3 and repeat. Revisit steps 1--2 if needed.
 \end{enumerate}
 
+
+Steps 1--3 essentially constitute the startup cost, and are unavoidable for tasks which lack existing, open data sets.
+However, from the perspective of administration, only steps 3 and 5 require significant human intervention (\ie, annotation), and both steps directly result in public goods.
+In this way, the proposed system will be significantly more efficient and cost-effective than MIREX.
 
 % TODO: Much of this can be consolidated, serving to support the enumerated list above, rather than conveying it. There's still some good bits here, so leaving for now. Important bits to touch on include
 %  * Spooling data collection
@@ -470,15 +474,6 @@ In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proc
 
 No free lunch theorem holds.
 What follows are a number of topics that have cropped up in the course of writing the paper to date.
-
-\begin{itemize}
-    \item Timeliness
-    \item Implementation
-    \item On the Integrity of Data and Participants
-    \item Meta-Evaluation
-    \item Getting Serious about Annotation
-    \item An Honest Path to Adoption
-\end{itemize}
 
 \subsection{Timeliness}
 
