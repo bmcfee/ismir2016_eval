@@ -472,7 +472,8 @@ In this way, the proposed system will be significantly more efficient and cost-e
 
 \section{Discussion}
 
-What follows are a number of topics that have cropped up in the course of writing the paper to date.
+%What follows are a number of topics that have cropped up in the course of writing the paper to date.
+In this section, we elaborate on a number of issues relating to the implementation and overall goals of the proposed framework.
 
 \subsection{Timeliness}
 
@@ -495,17 +496,23 @@ Mechanical Turk is a thing and, though rife with its own challenges, has worked 
 
 \subsection{Implementation Details}
 
-Hosting datasets, torrents + edu labs.
-We'll need some infrastructure to actually run the campaign in the new setup.
-I think CodaLab might have solved a good chunk of this problem for us.
-Format standards, JAMS.
-Evaluation machinery, mir\_eval.
+%Hosting datasets, torrents + edu labs.
+%We'll need some infrastructure to actually run the campaign in the new setup.
+%I think CodaLab might have solved a good chunk of this problem for us.
+%Format standards, JAMS.
+%Evaluation machinery, mir\_eval.
 
-We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.
-This may help ease the burden of going fully open source, and encourage submissions from industry.
-I think this is a bad idea though.
-If it isn't open, it isn't science.
-(Just make it cost money then. Which would require the org to NPO-ize).
+%We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.
+%This may help ease the burden of going fully open source, and encourage submissions from industry.
+%I think this is a bad idea though.
+%If it isn't open, it isn't science.
+%(Just make it cost money then. Which would require the org to NPO-ize).
+Effectively deploying the proposed framework will require two things: infrastructure development, and hosting.
+On the infrastructure side, we can leverage several existing open source projects: \texttt{mir\_eval} for scoring~\cite{raffel2014mir_eval}, JAMS for data format standardization~\cite{humphrey2014jams}, and CodaLab for running the evaluation campaign.\footnote{\url{http://codalab.org/}}
+The last remaining software component is a platform for collecting annotations.
+
+As for hosting, since the burden of executing arbitrary (submitted) code is removed, the remaining software components can reside on either a private university server, or, more likely, cloud-based hosting such as Amazon Web Services.\footnote{\url{https://aws.amazon.com/}}
+Similarly, the audio data can be distributed via BitTorrent to participants, or hosted (at some minor cost) for traditional download.
 
 
 \subsection{Integrity}
