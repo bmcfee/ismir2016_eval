@@ -181,7 +181,7 @@ At a high level, a round of MIREX operates as follows:
 \begin{enumerate}
 \item Identify some task of interest, such as automatic chord estimation, and formulate the problem and the metrics to evaluate.
 \item Arrive at a problem formulation and metrics, either in the due course of graduate work or with fellow researchers in the community.
-\item Build a corpus of data, with human-annotated ``ground-truth'' annotations for said task. %JU: always human-annotated?
+\item Build a corpus of data, usually including reference annotations.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
 \item Invite participants to submit algorithms, which are executed on a private server.
 \item Evaluate predicted outputs against reference annotations or human judgments.
@@ -206,12 +206,12 @@ Due to a history of litigation from the recording industry, there is a pervasive
 However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
 First, as a matter of practicality, doing so incurs remarkably steep costs the community cannot hope to support indefinitely.
 Running hundreds of research algorithms demands state of the art technology, and adequate compute cycles must be either rented or purchased outright to achieve this.
-More often than not, these algorithms are research prototypes, rarely work in the first try, and are seldom optimized for efficiency or ease-of-use.
+More often than not, these algorithms are research prototypes which rarely work on the first try, and are seldom optimized for efficiency or ease-of-use.
 While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months to years of compute time annually.
 % EJH: I want to mention this, but it really throws off the rhythm of this passage.
 % Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
 The financial burden of computation amounts to a rounding error, though, when compared with the human effort involved.
-As a point of reference, MIREX 2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams~\cite{downie2008music};
+As a point of reference, MIREX~2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams~\cite{downie2008music};
 shown in \cref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.\footnote{https://www.hathitrust.org/documents/mirex\_htrc\_same\_rda.pdf}%JU: if I recall from one of stephen's slides, number of runs increases, but number of individuals decreases -> not interesting anymore
 Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
 Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
@@ -239,9 +239,9 @@ This process is repeated over a sample of input-output pairs, $\{X_i, Y_i\} \in 
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current formulation though, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
-Usually, there is no access to any $Y_i$, and in most cases there is no access to $X_i$ either, making it impossible to diagnose why an algorithm produced $\widehat{Y}_i$, or determine what should be done to make $\mathcal{F}$ better.
+Usually, there is no access to $Y_i$, and in most cases there is no access to $X_i$ either, making it impossible to diagnose why an algorithm produced $\widehat{Y}_i$, or determine what should be done to improve $\mathcal{F}$.
 Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
-By the same token, while $n$ varies from task to task, there is no way to gauge the distribution of the data or how representative it may or may not be.
+By the same token, while $n$ varies from task to task, there is no way to gauge the distribution of the data or estimate any bias in the sampling.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
 As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
 For the sake of visibility into $\mathcal{M}_j$, both the original NEMA infrastructure is
