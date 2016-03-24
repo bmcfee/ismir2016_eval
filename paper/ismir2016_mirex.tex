@@ -168,7 +168,7 @@ Our goal in writing this document at this early stage is to solicit input from t
 In collaboration with the community, we hope to develop a framework that benefits as many people as possible and requires minimal financial support for years to come.
 
 \section{MIREX}
-
+\label{sec:mirex}
 % History
 The Music Information Retrieval eXchange (MIREX) is a framework for the community driven evaluation of MIR algorithms~\cite{downie2008music, downie2010music}.
 The annual tradition of MIREX was established early in the lifetime of ISMIR, drawing inspiration from TREC in text IR~\cite{Voorhees2005:trec}.
@@ -302,7 +302,7 @@ This paradigm effectively resolves the difficulties listed above: both computati
 This dramatically reduces the cost of maintenance and administration.
 However, we note a few potential challenges inherent to bringing data to the computation.
 
-First, the input data, $X_i$, must be made openly available to participants.
+First, the input data must be made openly available to participants.
 This may increase the risk of bias if participants (unintentionally) tune their systems to the evaluation set.
 To mitigate bias, we propose the use of a large and diverse corpus of common tracks which are shared across \emph{all tasks}, rather than a collection of small, task-specific datasets as is done in MIREX.
 For any given task, only a subset of the data need to be considered when comparing systems, and the evaluation set may be independently selected for each task.
@@ -426,28 +426,47 @@ Quality control is particularly important if annotations are collected via crowd
 
 \subsection{Putting it All Together}
 
-Annually, this plan could proceed as follows, as shown in \Cref{fig:cycle}:
+In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proceed as follows:
 
-First is the \emph{Content Selection} stage.
-Here, we provide ``stale'' annotated data --that which shouldn't be used for evaluation any longer-- as training data.
-Then, to curate a test set, we combine data previously unseen by the community for which we have annotations, with new, unlabeled content.
-This unlabeled content serves to both obscure the datapoints in the test set that \emph{are} annotated, as well as solicit predictions from a large number of automatic algorithms.
 
-Next is the \emph{Competition}, a time-boxed interval spanning a few weeks or months.
-Content is made available publicly available is made at the start, such that the training set is provided with labels and the entire test set, without. Some number of submissions are accepted over this internal from registered participants.
-A standard format for predictions is defined for each task, and participants can check their submissions against a evaluator to immediately an inkling of how they perform.
-This public leaderboard gives insight on some percent of the data. e.g. Kaggle, and at the end of the competition, results are tabulated over the entire holdout set.
+\begin{enumerate}
+\item Identify open data to include in a corpus for distribution.
+\item Define or update a number of human perception tasks, \eg chord transcription.
+\item Invest resources in human annotation; optionally, prioritize items by information gain.
+\item Release a collection of training data, with annotations, for development purposes, and an over-complete collection of unlabeled data, for evaluation.
+\item Invite participants to submit \emph{predictions} over the unlabeled data.
+\item Submissions are scored on a private server against hidden annotations or human judgments; summary results are provided at the conclusion of the submission window.
+\item Retire (witheld) annotated data, formerly used for evaluation, into the training set.
+\item Go to step 2 and repeat. Revisit step 1 if needed.
+\end{enumerate}
 
-After the completion officially closes comes \emph{Incremental Evaluation}. Using the predictions submitted, identify content worth annotating.
-It is at this point we can additionally revisit questionable annotations, and perform meta-evalatuation of our common methodology.
+Cold start problem.
+Talk about it.
 
-Having identified content worthy of investing human effort, the \emph{Annotation} stage proceeds until the next competition.
-This is an important distinction, as it takes the most time consuming process --humans describing music-- and largely decouples it as an independent resources.
-Thus, annotation spools constantly as a background process, and a snapshot
+% TODO: Much of this can be consolidated, serving to support the enumerated list above, rather than conveying it. There's still some good bits here, so leaving for now. Important bits to touch on include
+%  * Spooling data collection
+%  * Any fundraising efforts can be allocated to data collection, rather than operating costs. We've had success raising money, but we could be using those funds differently.
+% ---
+% First is the \emph{Content Selection} stage.
+% Here, we provide ``stale'' annotated data --that which shouldn't be used for evaluation any longer-- as training data.
+% Then, to curate a test set, we combine data previously unseen by the community for which we have annotations, with new, unlabeled content.
+% This unlabeled content serves to both obscure the datapoints in the test set that \emph{are} annotated, as well as solicit predictions from a large number of automatic algorithms.
 
-This virtuous cycle can then repeat indefinitely.
-Some particularities are worth mentioning.
-For example, it may be necessary to include humans in the evaluation loop at the close of the competition stage, as in user-facing challenges or music similarity ranking.
+% Next is the \emph{Competition}, a time-boxed interval spanning a few weeks or months.
+% Content is made available publicly available is made at the start, such that the training set is provided with labels and the entire test set, without. Some number of submissions are accepted over this internal from registered participants.
+% A standard format for predictions is defined for each task, and participants can check their submissions against a evaluator to immediately an inkling of how they perform.
+% This public leaderboard gives insight on some percent of the data. e.g. Kaggle, and at the end of the competition, results are tabulated over the entire holdout set.
+
+% After the completion officially closes comes \emph{Incremental Evaluation}. Using the predictions submitted, identify content worth annotating.
+% It is at this point we can additionally revisit questionable annotations, and perform meta-evalatuation of our common methodology.
+
+% Having identified content worthy of investing human effort, the \emph{Annotation} stage proceeds until the next competition.
+% This is an important distinction, as it takes the most time consuming process --humans describing music-- and largely decouples it as an independent resources.
+% Thus, annotation spools constantly as a background process, and a snapshot
+
+% This virtuous cycle can then repeat indefinitely.
+% Some particularities are worth mentioning.
+% For example, it may be necessary to include humans in the evaluation loop at the close of the competition stage, as in user-facing challenges or music similarity ranking.
 
 
 \section{Discussion}
@@ -455,23 +474,41 @@ For example, it may be necessary to include humans in the evaluation loop at the
 No free lunch theorem holds.
 What follows are a number of topics that have cropped up in the course of writing the paper to date.
 
-\subsection{Human Logistics}
+\begin{itemize}
+    \item Timeliness
+    \item Implementation
+    \item On the Integrity of Data and Participants
+    \item Meta-Evaluation
+    \item Getting Serious about Annotation
+    \item An Honest Path to Adoption
+\end{itemize}}
 
-How do we get people to participate / contribute (all jump at once).
+\subsection{Timeliness}
 
-At the evaluation level, how do we prevent people from cheating, encourage integrity and the like.
-Scale is a good answer for this, but difficult (impossible) to have out of the gate.
+Folks complain about data and evaluation annually.
+Why now?
+Why is this any different?
 
-We ultimately rely on participants to be honest in their methods and reporting.  What's to prevent a participant from manually annotating all potential test tracks?
+We're in a different day and age.
+MIREX made a good deal of sense in the early 2000's.
+But we do not live in 2003, and the times have changed.
+Amazon web services is a thing that's gotten quite cost effective.
+Practically no one in industry purchases and maintains their own compute resources.
+Bandwidth is cheap and better, so transferring large datasets isn't the hurdle it once was.
+The open source audio content game has changed dramatically.
+There wasn't even data, never mind \emph{good} data.
+As discussed, there exists a large number of tracks that we \emph{can} share.
+Web technologies are light-years better, and browser-based annotation is not only feasible but inevitable.
+Mechanical Turk is a thing and, though rife with its own challenges, has worked great for a number of problems.
 
-I expect that this situation is unlikely.  (However, if people do cheat, we at least get the annotation data, so we still win.)
 
-We may also encourage (require?) participants to release source code to reproduce their methods.  This is in keeping with the spirit of open science and reproducible methods.  I doubt there will be any way to enforce this systematically, but it could be used to audit systems post-hoc.
+\subsection{Implementation Details}
 
-There's also the matter of selecting which tracks to use in each task.
-It may make sense to release a single, large dataset, and require participants to submit annotations for all tracks and for all tasks in which they wish to compete.
-If we start getting into the business of slicing down to subsets per task, it will become much easier to determine which tracks are used for which task, and we don't want that.
-This all, of course, incurs a greater computational overhead on the participants, but this is A) worth it, from a data collection perspective, and B) how these systems should be used in practice anyway.
+Hosting datasets, torrents + edu labs.
+We'll need some infrastructure to actually run the campaign in the new setup.
+I think CodaLab might have solved a good chunk of this problem for us.
+Format standards, JAMS.
+Evaluation machinery, mir\_eval.
 
 We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.
 This may help ease the burden of going fully open source, and encourage submissions from industry.
@@ -479,26 +516,43 @@ I think this is a bad idea though.
 If it isn't open, it isn't science.
 (Just make it cost money then. Which would require the org to NPO-ize).
 
-\subsection{Coverage, or ``What tasks are left out?''}
 
-The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.
-This includes basically everything except for AMS/SMS, where outputs are scored directly.
-I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
+\subsection{Integrity}
 
-Alternately, we can treat these left-out tasks as a way to pivot traditional MIREX to focus on things that require direct human evaluation, eg, annual grand challenge tasks.
-This way, the MIREX crew gets to keep their current job, and everyone else is happy.
+% Participant Honesty -- we've already harped on this twice now, so we should chose our words carefully (or succintly)
+At the evaluation level, how do we prevent people from cheating, encourage integrity and the like.
+Scale is a good answer for this, but difficult (impossible) to have out of the gate.
+We ultimately rely on participants to be honest in their methods and reporting.
+What's to prevent a participant from manually annotating all potential test tracks?
+I expect that this situation is unlikely.  (However, if people do cheat, we at least get the annotation data, so we still win.)
 
-\subsection{Content Validity}
+% System integrity
+We may also encourage (require?) participants to release source code to reproduce their methods.
+This is in keeping with the spirit of open science and reproducible methods.
+I doubt there will be any way to enforce this systematically, but it could be used to audit systems post-hoc.
+Kaggle requires prize winners to open source their systems.
 
+% Data integrity
+Data integrity, creative commons content.
 Music is a unique information signal in that its perception is impacted by cultural significance and how this influences expectation and novelty in a listener.
 Musical content from the Free Music Archive, or other creative commons sources, are likely to be outside of the gamut of commonly studied music, e.g., popular Western music, and differences in compositional style, instrumentation, or production, may lead to difficulties in validation and generalization.
 While this is unlikely to affect tasks such as onset detection or instrument identification, higher level tasks that place greater demand on cognitive aspects of music perception, such as chord estimation or structural analysis, are more sensitive to biased collections.
 
-\subsection{Hosting}
 
-We'll need some infrastructure to actually run the campaign in the new setup.  I think CodaLab might have solved a good chunk of this problem for us.
+\subsection{Meta-Evaluation}
 
-\subsection{Pay-to-Play}
+Who watches the watchmen?
+
+
+\subsection{Getting Serious about Annotation}
+
+% We've had resources, we just invested it elsewhere.
+One, we've invested a ton of time and money into computation over the last decade.
+MIREX got a Mellon grant for \$1.2M.
+MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medley}.
+Where would we be if that went toward annotation?
+We've been able to procure funding in the past for projects, and can divert those resources to annotation.
+
 
 Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.
 To facilitate this, we propose a data credit system.
@@ -516,7 +570,18 @@ Data credits may also be earned at a discounted rate by auditing or validating p
 
 %Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ``ill trade three beat annotations for one chord annotationù.
 
-\subsection{Next Steps}
+
+\subsection{An Honest Path to Adoption}
+
+How do we get people to participate / contribute (all jump at once).
+
+% The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.
+% This includes basically everything except for AMS/SMS, where outputs are scored directly.
+% I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
+
+% Alternately, we can treat these left-out tasks as a way to pivot traditional MIREX to focus on things that require direct human evaluation, eg, annual grand challenge tasks.
+% This way, the MIREX crew gets to keep their current job, and everyone else is happy.
+
 
 To get this off the ground, we'll need a few things:
 Evaluation services (already mostly provided by mir\_eval)
@@ -526,9 +591,9 @@ Infrastructure for managing the exchange
 some math / stats to determine how much data we need for each task, each year
 some way to work out the data credit rates for different tasks
 
-\section{Misc Refs}
-Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
-Previous proposals (section 8): http://julian-urbano.info/files/publications/051-evaluation-music-information-retrieval.pdf
+% \section{Misc Refs}
+% Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
+% Previous proposals (section 8): http://julian-urbano.info/files/publications/051-evaluation-music-information-retrieval.pdf
 
 
 % For bibtex users:
