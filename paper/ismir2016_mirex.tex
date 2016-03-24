@@ -226,7 +226,7 @@ To illustrate, consider the standard approach to benchmarking MIR systems,
 % given in Eq \ref{eq:systematic_eval}.
 diagrammed in \Cref{fig:system_eval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
-Similarly, a proposed system, $\mathcal{F}$, operates on the same input, producing a prediction, $\hat{Y}_i$.
+Similarly, a proposed system, $\mathcal{F}$, operates on the same input, producing a prediction, $\widehat{Y}_i$.
 Each of several performance metrics, $\mathcal{M}_j$, are applied on these two representations, yielding a number of performance scores, $S_{i,j}$
 This process is repeated over a sample of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n$.
 
@@ -239,7 +239,7 @@ This process is repeated over a sample of input-output pairs, $\{X_i, Y_i\} \in 
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current formulation though, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
-Usually, there is no access to any $Y_i$, and in most cases there is no access to $X_i$ either, making it impossible to diagnose why an algorithm produced $\hat{Y}_i$, or determine what should be done to make $\mathcal{F}$ better.
+Usually, there is no access to any $Y_i$, and in most cases there is no access to $X_i$ either, making it impossible to diagnose why an algorithm produced $\widehat{Y}_i$, or determine what should be done to make $\mathcal{F}$ better.
 Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
 By the same token, while $n$ varies from task to task, there is no way to gauge the distribution of the data or how representative it may or may not be.
 Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
@@ -370,17 +370,21 @@ Billboard)~\cite{burgoyne2011expert}.
 %   also solicit confidence ratings in the annotations
 
 \subsection{Incremental Evaluation}
-% TODO(julian-urbano)
 
-%The second point is a difficult one, though FMA does provide some curation.
-%It might be interesting to partner with them in helping to guide the selection.
+One obvious problem of our proposal is that we start off with a brand new corpus of audio for which, in principle, there are no task-specific annotations yet. Initial community-driven efforts could be set to annotate at least part of it for a first evaluation run, and then keep annotating whatever is left. But this is precisely the scenario we intend to avoid, so we plan to resort to incremental evaluation. 
+In our setting we will have an incomplete ground truth, that is, some input examples will not have associated annotations. The idea is to develop methods to estimate these missing annotations from all available sources of information, such as existing annotations, metadata, system outputs, etc. Annotations will therefore be defined probabilistically, over the space of possible labels, so that missing annotations will have some degree of variance (uncertainty); existing annotations will have zero-variance. With an appropriate reformulation of our performance measures, we can incorporate these estimates of the annotations and produce estimates of the system performance scores. In the end, systems are ranked as usual, but with some degree of error which is inversely proportional to the number of available annotations.
 
-This now leads us to the final point in data collection: which tracks are worth annotating?
-Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
-Several recent studies have investigated the use of algorithm disagreement for detecting ``hard'' examples, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
-The intuition for this approach is two-fold.
-First, tracks for which different algorithms produce significantly different outputs are in some sense ``difficult'' and produce meaningful evaluation results.
-Second, if a goal of the evaluation campaign is to differentiate submissions according to some measure of accuracy, then there is little to be gained by spending annotator effort on tracks for which algorithms produce the same output.
+The plan is as follows. At the beginning, our confidence on the results is minimal, because we start with a small number of annotations, if any at all, and thus the variance is maximal. Participants may submit their system's output, for which we can offer an estimate of performance. At any point during the evaluation round, or even months or years later, we may receive new annotations for the missing parts of the dataset, which will result in better estimates of system performance, reduce variance and provide more confidence on the results. Therefore, the dataset is built incrementally: we can estimate system performance with whatever annotations we have, and as we keep receiving new annotations, our estimates get better and better. A wealth of research has shown that, when applying appropriate methods, evaluating with an incomplete ground truth is perfectly feasible, even when only a very small fraction of the annotations are known, say, 5\%. Well known examples are the text~\cite{Carterette2007:robust,Yilmaz2008:simple} and video IR communities~\cite{trecvid2014:overview}.
+
+One point to study in this framework is: which bits are worth annotating? Consider two classification systems that produce the same label for some input. Whether they are both right or wrong does not provide us with any information as to which one has higher accuracy, so there is little gain from annotating that particular example. Sure enough, with many systems and complex performance metrics, choosing what is worth annotating is not that obvious.
+%Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
+Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}. Others have studied alternative methods for music similarity~\cite{Urbano2013:mtc}, choosing for annotation the examples that will be most informative to figure out how much different systems are from each other.
+In general, these methods allow us to minimize the required annotator effort by focusing only on the useful examples. 
+
+In this collaborative framework, annotations may come from very different sources, so it is imperative that we can trust whatever information is submitted as ground truth. Another line of work is thus the development and enforcement of standards, guidelines and tools to perform annotations. This will probably involve the development of both desktop and web technologies for creating and managing annotations, as well as appropriate version and quality control mechanisms, especially if annotations are sought in crowdsourcing platforms like Amazon Mechanical Turk. 
+%The intuition for this approach is two-fold.
+%First, tracks for which different algorithms produce significantly different outputs are in some sense ``difficult'' and produce meaningful evaluation results.
+%Second, if a goal of the evaluation campaign is to differentiate submissions according to some measure of accuracy, then there is little to be gained by spending annotator effort on tracks for which algorithms produce the same output.
 
 %In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
 %It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
@@ -394,16 +398,13 @@ Second, if a goal of the evaluation campaign is to differentiate submissions acc
 
 %Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
 
-
-Additionally:
-
-\begin{itemize}
-\item Annotation Standards and their enforcement
-\item User-facing tools for performing annotations
-\item Backend infrastructure for hosting, serving, and collecting submitted annotations (common repository)
-\item Would it be possible to leverage citizen science platforms, Mechanical Turk, etc
-\end{itemize}
-
+%Additionally:
+%\begin{itemize}
+%\item Annotation Standards and their enforcement
+%\item User-facing tools for performing annotations
+%\item Backend infrastructure for hosting, serving, and collecting submitted annotations (common repository)
+%\item Would it be possible to leverage citizen science platforms, Mechanical Turk, etc
+%\end{itemize}
 
 \subsection{Putting it All Together}
 
