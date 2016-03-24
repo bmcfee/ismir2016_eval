@@ -109,18 +109,52 @@ release of large, open datasets for improving both MIR techniques and evaluation
 
 
 \section{Introduction}
+\label{sec:intro}
 % TODO(ejhumphrey|bmcfee)
 
-MIREX has run for several years, and serves a valuable purpose for the community.
-It also has a few drawbacks and problems of sustainability.
-This document will lay out the goals, benefits, and limitations of MIREX.
-We'll then propose an alternative system which should be more sustainable.
+%MIREX has run for several years, and serves a valuable purpose for the community.
+%It also has a few drawbacks and problems of sustainability.
+%This document will lay out the goals, benefits, and limitations of MIREX.
+%We'll then propose an alternative system which should be more sustainable.
 
 % These are rough guesses. @bmcfee halp
-The goals of this proposal are threefold:
-one, to eventually achieve consensus in the community about how to best proceed with evaluation;
-two, establish a feasible plan that is maintainable with minimal resources;
-and three, begin to make inroads toward adoption.
+%The goals of this proposal are threefold:
+%one, to eventually achieve consensus in the community about how to best proceed with evaluation;
+%two, establish a feasible plan that is maintainable with minimal resources;
+%and three, begin to make inroads toward adoption.
+
+
+% Outline
+%   eval is necessary, mirex is the best we've got
+%       but mirex is expensive to operate
+%       the expense doesn't directly feed back to the community
+%       can we do better?
+%   this proposal
+%       goal 1: reduce the cost of evaluation
+%       goal 2: improve transparency wherever possible
+%       goal 3: design a pipeline that will push *annotated* data back to the community
+%   why now?
+%       1. to involve the community in planning before we run off and do it
+%       2. to have a roadmap going in
+Evaluation plays a central role in the development of music information retrieval (MIR) systems.
+In addition to empirical results reported in individual articles, community evaluation campaigns like MIREX~\cite{downie2008music} provide a mechanism to standardize methodology, datasets, and metrics to benchmark research systems.
+MIREX has earned a special role within the MIR community as the standard point of reference for evaluation.
+However, the annual operating costs incurred by MIREX are unsustainable by the MIR community.
+Much of these costs constitute one-time expenditures, which primarily benefit individual participants, but may not directly benefit the MIR community at large.
+If we, as a community, are to continue hosting regular evaluation campaigns, we will soon require a more efficient and sustainable model.
+
+This problem has lurked the MIR community for years now. The MIReS Roadmap for Music Information ReSearch identified it as one of the main technical-scientific grand challenges in MIR research~\cite{Serra2013:roadmap}, and during the ISMIR 2012 conference a discussion panel was held to explicitly address this issue~\cite{Peeters2012:latebreaking}. Previous research has discussed some limitations of MIREX-like evaluation and made general proposals to avoid them~\cite{Urbano2013:mireval,Sturm2014:state}, and other community-led platforms have been put forward to try to minimize them in practice, most notably MusiClef~\cite{orio2011musiclef} and the MSD Challenge~\cite{mcfee2012million}. However, for different reasons, they have been unable to continue operating.
+
+Reflecting upon all this work, in this article we propose a sustainable, open framework for community-driven MIR evaluation campaigns.
+Our proposal is motivated by three complementary factors.
+First, we strive to reduce the cost of running and maintaining the evaluation framework.
+Second, we hope to improve transparency and openness wherever possible.
+Third, we plan to establish a sustainable framework that will produce open, public data sets consisting of both audio and annotations.
+By producing open data, the proposed framework will be of value to the greater MIR community in perpetuity, and benefits will not be limited to participants.
+
+We stress that this document describes not a fully implemented framework, but a specific \emph{proposal} put forward by a group of authors dedicated to seeing it put into practice.
+Our goal in writing this document at this early stage is to solicit input from the MIR community, before implementation details have been finalized.
+In collaboration with the community, we hope to develop a framework that benefits as many people as possible and requires minimal financial support for years to come.
 
 \section{MIREX}
 
