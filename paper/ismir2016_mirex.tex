@@ -580,14 +580,23 @@ As mentioned in \cref{sec:implementation}, web-based annotation tools will enabl
 
 % How do we get people to participate / contribute (all jump at once).
 
-As an initial undertaking of the framework described here, we conclude our proposal wit a large-scale instrument identification task for ISMIR2017.
-Given an input observation, The formulation would be to predict instrument classes from a pre-defined taxonomy.
-Some of this can be leveraged from WordNet\cite{}, and refined by the community, starting at this year's conference.
-There are a number of advantages to this particular challenge.
-Annotation is straight-forward.
-Nearly all sound recordings, save for the most Cagean compositions, consist of sources, giving hope to a reasonbly objective ground truth.
-Parallel in spirit to ImageNet in computer vision, where algorithms predict objects found in natural images.
-The ImageNet endeavor has been hugely successful in the domain,
+As an initial undertaking of the framework described here, we conclude our proposal by advocating a large-scale instrument identification for ISMIR2017.
+% What is the task?
+In this task, one or more active instrument classes are predicted from a pre-defined taxonomy over an input audio recording.
+Some of the effort in building an instrument taxonomy can be leveraged from WordNet\cite{}, and refined by the community, starting at this year's ISMIR conference.
+% Motivations
+There are a number of strong motivations for pursuing this particular challenge.
+% Good MIR problem, let's finally solve something.
+Instrument identification is an important, classic problem in MIR, but is not currently supported by the MIREX framework explicitly.
+Researchers typically explore the topic with disparate, often unrealistic datasets, and the problem remains unsolved to some unknown degree.
+% Relatively easy / stable data collection
+Compared with other music perception tasks, annotation requires a simple, straight-forward interface, \eg ``check all that apply'', and \emph{does} maintain at least a modicum of objectivity, \ie someone either ``is'' or ``is not'' generating sound with a particular instrument\footnote{Granted, synthesizers wreak havoc on any taxonomy; computer vision faces similar issues with natural images of paintings, for example.}.
+% Content validity.
+Instrument occurrence is independent of popularity, and thus content validity is a non-issue for open source music.
+% Epic win for the community.
+And finally, computer vision found fantastic success with a parallel endeavor, known as ImageNet \cite{}, in which algorithms detect objects, \ie sources, from natural images.
+ImageNet has proven to be an unequivocal win for the field, not only advancing research methods to that specific task, but also sparking other investigations, such as Google's now-famous Deep Dream\cite{}.
+% This offers the benefit of draw other researchers into MIR, and in some ways legitimize the field.
 
 
 To get this off the ground, we'll need a few things:
