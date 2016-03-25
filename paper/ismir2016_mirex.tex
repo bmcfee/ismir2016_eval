@@ -318,8 +318,8 @@ This is of course an open question for further research.
 \subsection{Open content}
 \label{open}
 
-For the distributed computation model to be practical, we first need a source of diverse, representative, and freely distributable audio content.
-Free audio content is significantly easier to acquire now than when MIREX began in 2005, and in particular, a wealth of data can be obtained from Jamendo~\footnote{\url{http://jamendo.com}} and the Free Music Archive (FMA).\footnote{\url{http://freemusicarchive.org/}}
+For the distributed computation model to be practical, we first need a source of diverse and freely distributable audio content.
+Free audio content is significantly easier to acquire now than when MIREX began, and in particular, a wealth of data can be obtained from services like Jamendo~\footnote{\url{http://jamendo.com}} and the Free Music Archive (FMA).\footnote{\url{http://freemusicarchive.org/}}
 Both of these sites host a variety of music content under either public domain or Creative Commons (CC) licenses.\footnote{\url{https://creativecommons.org/licenses/}}
 Since CC-licensed music can be freely redistributed (with attribution), it is (legally) possible to create and share persistent data archives.
 
@@ -327,13 +327,14 @@ The Jamendo and FMA collections are both large and diverse, and both can be link
 Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
 FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.
 These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
-While there is undoubtedly a strong western bias in these corpora, the same is (almost certainly) the case in MIREX's private data and the MIR field itself, but using open content at least permits practitioners to quantify it.
+While there is undoubtedly a strong western bias in these corpora, the same can be aid of MIREX's private data and the MIR field itself.
+However, using open content at least permits practitioners to quantify this bias.
 
-This now leads us to the question of sampling bias.
+Aside from western/non-western bias, there is also the potential for free/commercial bias.
 A common criticism of basing research on CC-licensed music is that the music is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
 This point is obviously valid for high-level tasks such as recommendation, which depend on a variety of cultural, semantic, and subjective factors beyond the raw acoustic content of a track.
 However, for the majority of MIREX tasks, in particular perceptual tasks like onset detection or source identification, this is a much more tenuous case.
-We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free_Music_Archive#Notable_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
+We do, however, note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free_Music_Archive#Notable_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation, in addition to the previously mentioned genre categories.
 Taken in combination, these features can be leveraged to pre-emptively filter the collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
