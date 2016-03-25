@@ -421,9 +421,9 @@ In contrast to the outline in \Cref{sec:mirex}, our proposed strategy would proc
 \begin{enumerate}
 \item Identify and collect CC-licensed audio data.
 \item Define or update tasks, \eg, chord transcription.
-\item Release a collection of (annotated) training data for development, and an over-complete collection of unlabeled data for evaluation.
-\item Invite participants to submit \emph{predictions} over the unlabeled data.
-\item Collect reference annotations; prioritize examples by disagreement among submissions.
+\item Release a development set (with annotation), and the remaining unlabeled data for evaluation.
+\item Collect \emph{predictions} over the unlabeled data from participating systems.
+\item Collect reference annotations, prioritized by disagreement among predictions.
 \item Estimate and summarize each submission's performance against the reference annotations.
 \item Retire newly annotated evaluation data, adding it to the training set for the next campaign.
 \item Go to step 3 and repeat. Revisit steps 1--2 if needed.
@@ -463,32 +463,32 @@ In this way, the proposed system will be significantly more efficient and cost-e
 \section{Discussion}
 
 %What follows are a number of topics that have cropped up in the course of writing the paper to date.
-In this section, we elaborate on a number of facets related to the overall goals and actualization of the proposed framework.
+In this section, we elaborate on a number of points relating to the goals and implementation of the proposed framework.
 
-\subsection{Why now?}
+\subsection{Timing: why now?}
 
 The challenges described in this document, which our proposed strategy aims to address, are not news to the community.
 The operating costs of MIREX became apparent early in its lifetime, and concerns about its sustainability loom large among researchers.
-In parallel, data collection is inherently difficult;
-if it were easy, there would be less motivation to develop automatic annotation systems.
-This begs an obvious question: why \emph{now}?
+That said, little has been done to resolve the situation in the intervening years.
+%Relatedly, data collection is inherently difficult;
+%if it was easy, there would be no need for automatic annotation systems.
+This begs an obvious question: why should things change \emph{now}?
 
 % We're in a different day and age.
-The answer, of course, is that timing is everything.
+%The answer, of course, is that timing is everything.
 In many ways, the approach taken by MIREX made perfect sense in the early 2000's.
 %However, the modern era provides a far more hospitable environment than the one for which it was designed.
 However, recent infrastructural advances, coupled with growth and maturation of the MIR community, have introduced new possibilities.
-
 % The open source audio content game has changed dramatically, we can now build datasets around open content.
 First and foremost, creative commons music is now ample, bringing the dream of sharing data within grasp.
 % Operating costs are minimal.
-Cloud computing is cheap and ubiquitous, which can dramatically reduce the administrative costs of evaluation infrastructure and persistent data storage.
-Improvements in web infrastructure have made the distribution of large-scale data sets to participants is now feasible.
+Cloud computing is cheap and ubiquitous, and can dramatically reduce the administrative costs of evaluation infrastructure and persistent data storage.
+Improvements in web infrastructure have also resolved many of the challenges of large-scale data distribution.
 % Tools and technologies are better, JavaScript support, HTML5, python, etc.
-Similarly, browser support for interactive applications enables the development of web-based annotation tools, which significantly reduces the barrier to entry for annotators.
+Finally, browser support for interactive applications enables the development of web-based annotation tools, which significantly reduces the barrier to entry for annotators.
 
 % We're ready for it.
-Finally, the community has matured significantly since MIREX began in 2005.
+More broadly speaking, the community has matured significantly since MIREX began in 2005.
 Open source development and reproducible methods are now commonplace, but we remain hindered by the lack of open data for evaluation.
 Only by developing frameworks for open evaluation and data collection, can we further develop as a scientific discipline.
 
@@ -503,7 +503,7 @@ Effectively deploying the proposed framework will require two things: infrastruc
 On the infrastructure side, we can leverage several existing open source projects: \texttt{mir\_eval} for scoring~\cite{raffel2014mir_eval}, JAMS for data format standardization~\cite{humphrey2014jams}, and CodaLab for running the evaluation campaign.\footnote{\url{http://codalab.org/}}
 The last remaining software component is a platform for collecting annotations.
 % Web tools, front-end dev work.
-In addition to traditional desktop software, browser-supported annotation tools would facilitate data collection immensely, and a content management system could field annotations as they are completed.
+In addition to traditional desktop software, browser-based annotation tools would facilitate distributed data collection, and a simple content management system could collect annotations as they are completed.
 % Fortunately, as mentioned above, the tools and technologies available to achieve these goals have only gotten better in the last decade.
 
 As for hosting, since the burden of executing arbitrary (submitted) code is removed, the remaining software components can reside on either a private university server, or, more likely, cloud-based hosting such as Amazon Web Services.\footnote{\url{https://aws.amazon.com/}}
