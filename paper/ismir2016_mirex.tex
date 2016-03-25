@@ -221,11 +221,11 @@ This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} 
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current MIREX formulation, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
-First, there is usually no access to the reference annotations $Y_i$, and in most cases there is no access to the input $X_i$ either.
-Furthermore, $Y_i$ is usually meaningless without $X_i$ for context.
+First, there is no intentional access to the reference annotations $Y_i$, and, in most cases, no access to the input $X_i$ as well.
+Furthermore, $\widehat{Y}_i$ is largely meaningless without $X_i$ for context.
 This makes it exceedingly difficult to learn from the results of the evaluation.
 Without access to the underlying data, how can one diagnose the cause of an erroneous estimate, or determine ways to improve the system?
-Similarly, there is no way to gauge the distribution of the data or estimate any bias in the sampling, beyond what may be inferred from public development sets.
+Similarly, there is no way to gauge the distribution of the data or estimate any bias in the sampling, beyond what may be inferred from public development sets or system predictions.
 
 The behavior of the human annotators is also obscured, as are the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
 Consequently, the problem formulation itself is effectively hidden, and subject to drift over time.
@@ -239,7 +239,7 @@ Conducting these campaigns in the open makes it easier to detect and diagnose an
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 This is not only detrimental to system development, but also to evaluation, because it is critical to routinely refresh the evaluation data to reduce bias and prevent statistical over-fitting.
 Unsurprisingly, without a fresh source of annotated data, early concerns about the community eventually over-fitting to benchmark datasets are beginning to manifest.
-In some cases, this is because the data used for evaluation exists in the wild: one submission in 2011 that achieved nearly perfect scores in chord estimation due to being pre-trained on the test data.\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}
+In some cases, this is because the data used for evaluation exists in the wild: one submission in 2011 achieved nearly perfect scores in chord estimation due to being pre-trained on the test data.\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}
 In other cases, participants may mis-interpret the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that mistakenly use annotations from previous folds in a train-test task.
 Across the board, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
 These results can be misleading due to the fixed but unknown biases in the data distribution, which become apparent when datasets are expanded --- like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert} --- or as further insight is gained, as in the disclosure of the meta-data in the music similarity corpus.
