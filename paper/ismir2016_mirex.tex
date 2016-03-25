@@ -258,7 +258,7 @@ Unfortunately, we have also learned of the burdens entailed by such an initiativ
 \section{Open evaluation of MIR systems}
 
 Summarizing the previous section, MIREX suffers from three deficiencies that render the situation untenable:
-one, the financial and labor costs cannot be sustainable indefinitely;
+one, the financial and labor costs cannot be sustained indefinitely;
 two, the lack of data transparency limits the scientific value of the endeavor;
 and three, the lack of a strategy for obtaining and annotating new data.
 
@@ -297,16 +297,16 @@ To mitigate bias, we propose the use of a large and diverse corpus of common tra
 For any given task, only a subset of the data need to be considered when comparing systems, and the evaluation set may be independently selected for each task.
 The knowledge of which items comprise a given evaluation subset would remain hidden from participants at submission time.
 This implies that each submission must span the entire corpus, reducing the feasibility of participants tuning their algorithms to a particular subset.
-Moreover, while this requirement increases computational overhead on the participant's end, it results in a large collection of outputs for various methods on a common corpus, which is a valuable data source in its own right.
+Moreover, while this requirement increases computational overhead for the participant, it results in a large collection of outputs for various methods on a common corpus, which is a valuable data source in its own right.
 
 Second, distributed computation entails its own challenges with respect to transparency.
 While MIREX requires submissions to execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of visibility into system inputs.
-Consequently, restrictions on the implementation (\eg, running time) would become infeasible, and it may open the possibility of cheating by manual intervention.
-Using large test collections with opaque evaluation sets will limit the practicality of
-manual participant intervention.%
-\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}
+Consequently, restrictions on the implementation (\eg, running time) would become infeasible, and it may open the possibility of cheating by manual participant intervention.
+Using a large corpus with opaque evaluation sets will limit the practicality of
+this approach.%
+\footnote{Even in the unlikely event that a participant ``cheats'' by obtaining human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}
 Obscuring which items belong to the evaluation subset comes at the expense of sample-wise measures, however, as doing so would reveal the partition.
-This is not inherently problematic if done following the completion of a campaign, but would require changing the evaluation set annually.
+This is not inherently problematic if done following the completion of a campaign (instead of powering a continuous leader-board), but would require changing the evaluation set annually.
 These are minor concessions, and we argue that open data benefits the community at large, since its availability will serve a broader set of interests over time.
 
 Finally, the proposed scheme assumes that multiple tasks operate on a common input form, \ie, recorded audio.
