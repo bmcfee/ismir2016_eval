@@ -472,19 +472,13 @@ What makes this proposal any different?
 The answer, of course, is that timing is everything.
 In a lot of ways, the approach taken by MIREX made perfect sense in the early 2000's.
 However, the modern era provides a far more hospitable environment than the one for which it was designed.
-% Cheap to rent compute time
-Cloud computing is cheap and ubiquitous, to the point that practically no one in industry builds and maintains their own compute resources.
-% Web infrastructure is better
-Bandwidth is vastly improved, so bringing data to computation is feasible.
-% Bandwidth is cheap and better, so transferring large datasets isn't the hurdle it once was.
-% The open source audio content game has changed dramatically.
-Creative commons music is now ample, making the dream of sharing data a reality.
-% There wasn't even data, never mind \emph{good} data.
-% As discussed, there exists a large number of tracks that we \emph{can} share.
+% The open source audio content game has changed dramatically, we can now build datasets around open content.
+First and foremost, creative commons music is now ample, making the dream of sharing data a reality.
+% Operating costs are minimal.
+Cloud computing is cheap and ubiquitous, any infrastructe costs on the side of the eval organizers / organization are cheap, rent compute cycles (AWS) and storage (Google Drive / Box / DBox).
+Additionally, web infrastructure has only improved, such that bringing web-scale data to computation is feasible.
 % Tools and technologies are better, JavaScript support, HTML5, python, etc.
-Web technologies are light-years better, and browser-based annotation is not only feasible but inevitable.
-% Ample micro-services that are free for education or non-profits.
-% Mechanical Turk is a thing and, though rife with its own challenges, has worked great for a number of problems.
+We can now easily build annotation tools into the browser, and collect annotations from humans in the wild.
 % We're ready for it.
 The community has grown, and so have our skills, the number of labs involved, our industrial contacts, and our status.
 We are involved in more open source development, and transparency and reproducibility are becoming cornerstones of modern data science.
@@ -551,8 +545,6 @@ in the year and half since its release, the dataset has been requested nearly 20
 For reference, the ISMIR Society maintains a membership of roughly 250 individuals a year.
 Therefore, a \$5 increase in membership dues would cover the annotation cost of a new dataset like MedleyDB annually.
 Grants or partnerships with industry would only serve to make this more manageable.
-%MIREX got a Mellon grant for \$1.2M; what if more of that could have been allocated to annotation?
-%We've been able to procure funding in the past for projects, and can divert those resources to annotation.
 
 % Crowd-sourced
 Second, for tasks that require minimal annotator training, we can leverage either crowd-sourcing platforms, \eg Mechanical Turk, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
@@ -584,13 +576,19 @@ As mentioned in \cref{sec:implementation}, web-based annotation tools will enabl
 %Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ``ill trade three beat annotations for one chord annotationù.
 
 
-\subsection{An Honest Path to Adoption}
+\section{Next Steps: Toward ImageNet for Music}
 
-How do we get people to participate / contribute (all jump at once).
+% How do we get people to participate / contribute (all jump at once).
 
-% The system outlined above can apply to any task for which outputs are evaluated by comparing against a reference.
-% This includes basically everything except for AMS/SMS, where outputs are scored directly.
-% I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
+As an initial undertaking of the framework described here, we conclude our proposal wit a large-scale instrument identification task for ISMIR2017.
+Given an input observation, The formulation would be to predict instrument classes from a pre-defined taxonomy.
+Some of this can be leveraged from WordNet\cite{}, and refined by the community, starting at this year's conference.
+There are a number of advantages to this particular challenge.
+Annotation is straight-forward.
+Nearly all sound recordings, save for the most Cagean compositions, consist of sources, giving hope to a reasonbly objective ground truth.
+Parallel in spirit to ImageNet in computer vision, where algorithms predict objects found in natural images.
+The ImageNet endeavor has been hugely successful in the domain,
+
 
 To get this off the ground, we'll need a few things:
 Evaluation services (already mostly provided by mir\_eval)
@@ -599,9 +597,6 @@ A pool of candidate data for evaluation
 Infrastructure for managing the exchange
 some math / stats to determine how much data we need for each task, each year
 some way to work out the data credit rates for different tasks
-
-Pick a task, guitar chord transcription.
-
 
 % \section{Misc Refs}
 % Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
