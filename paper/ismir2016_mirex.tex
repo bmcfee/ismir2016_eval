@@ -331,7 +331,7 @@ While there is undoubtedly a strong western bias in these corpora, the same is (
 This now leads us to the question of sampling bias.
 A common criticism of basing research on CC-licensed music is that the music is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
 This point is obviously valid for high-level tasks such as recommendation, which depend on a variety of cultural, semantic, and subjective factors beyond the raw acoustic content of a track.
-However, for the majority of MIREX tasks, in particular strictly perceptual tasks like onset detection or source identification, this is a much more tenuous case.
+However, for the majority of MIREX tasks, in particular perceptual tasks like onset detection or source identification, this is a much more tenuous case.
 We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free_Music_Archive#Notable_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation, in addition to the previously mentioned genre categories.
@@ -382,11 +382,11 @@ Conversely, examples upon which multiple systems \emph{disagree} are more likely
 Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
 Others have studied alternative methods for music similarity~\cite{Urbano2013:mtc}, choosing for annotation the examples that will be most informative for differentiating between systems.
 In general, these methods allow us to minimize the required annotator effort by prioritizing the most informative examples.
-With many participating systems, and multiple complex performance metrics, prioritizing data for annotation is by no means an obvious task.
+With many participating systems, and multiple complex performance metrics, prioritizing data for annotation is by no means straightforward.
 We hope that the community will assist in specifying these procedures for each task.
 
 In the proposed framework, annotations may come from different sources, so it is imperative that we can trust or validate whatever information is submitted as reference data.
-Another line of work is thus the development and enforcement of standards, guidelines and tools to collect and manage annotations.
+Another line of work is thus the development and enforcement of standards, guidelines, and tools to collect and manage annotations.
 This will probably involve the development of both desktop and web technologies for creating and managing annotations, as well as appropriate versioning and quality control mechanisms.
 Quality control is particularly important if annotations are collected via crowd-sourcing platforms like Amazon Mechanical Turk.\footnote{\url{https://www.mturk.com/}}
 %The intuition for this approach is two-fold.
@@ -423,7 +423,7 @@ In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proc
 \item Invite participants to submit \emph{predictions} over the unlabeled data.
 \item Collect reference annotations; prioritize examples by disagreement among submissions.
 \item Estimate and summarize each submission's performance against the reference annotations.
-\item Retire annotated data, and add it to the training set for the next campaign.
+\item Retire newly annotated evaluation data, adding it to the training set for the next campaign.
 \item Go to step 3 and repeat. Revisit steps 1--2 if needed.
 \end{enumerate}
 
