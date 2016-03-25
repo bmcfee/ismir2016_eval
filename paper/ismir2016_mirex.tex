@@ -272,17 +272,17 @@ Unfortunately, we have also learned of the burdens entailed by such an initiativ
 \section{Open Evaluation of MIR Systems}
 
 Summarizing the previous section, MIREX suffers from three deficiencies that render the situation untenable:
-one, the financial and human cost is far too great to be sustainable indefinitely;
-two, the lack of transparency limits the scientific value of the endeavor;
-and three, the unavoidable, recurring need for freshly annotated data requires a feasible, long-term strategy.
-
+one, the financial and labor costs cannot be sustainable indefinitely;
+two, the lack of data transparency limits the scientific value of the endeavor;
+and three, the lack of a strategy for obtaining and annotating new data.
 
 % Here we outline the concrete details of our proposal.
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
 \begin{itemize}
-\item Distributed computation reduces operating costs to a participant-invariant constant.
-\item Freely distributable audio facilitates reproducibility.
-\item Incremental evaluation reduces bias by keeping test data fresh, and increases the amount of freely available data for development.
+\item Distributed computation reduces operating costs to scale favorably with increased
+    participation.
+\item Freely distributable audio facilitates reproducibility and benefits the entire community.
+\item Incremental evaluation reduces bias by keeping test data fresh, and provides a feasible strategy for collecting new data.
 \end{itemize}
 
 % After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
@@ -291,7 +291,7 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 %JU: I like this sentence too much to just drop it!: We argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the MIREX participants for any given year.
 
 
-\subsection{Distributed Computation}
+\subsection{Distributed computation}
 \label{distributed}
 The primary difficulty in running an evaluation campaign is computing the outputs of all participating systems.
 This difficulty stems from two sources.
@@ -316,19 +316,20 @@ Moreover, while this requirement increases computational overhead on the partici
 Second, distributed computation entails its own challenges with respect to transparency.
 While MIREX requires submissions to execute on a remote server beyond the participants' control, the scheme proposed here drops that requirement in favor of visibility into system inputs.
 Consequently, restrictions on the implementation (\eg, running time) would become infeasible, and it may open the possibility of cheating by manual intervention.
-Using large test collections with opaque evaluation sets will limit the practicality of manual participant intervention
-\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}.
+Using large test collections with opaque evaluation sets will limit the practicality of
+manual participant intervention.%
+\footnote{Even in the unlikely event that a participant ``cheats'' by submitting human-generated annotations, the results can be publicly redistributed as free training data, so the community ultimately wins out.}
 Obscuring which items belong to the evaluation subset comes at the expense of sample-wise measures, however, as doing so would reveal the partition.
 This is not inherently problematic if done following the completion of a campaign, but would require changing the evaluation set annually.
 These are minor concessions, and we argue that open data benefits the community at large, since its availability will serve a broader set of interests over time.
 
 Finally, the proposed scheme assumes that multiple tasks operate on a common input form, \ie, recorded audio.
-While the majority of current MIREX tasks do fit into this framework, at present it precludes tasks for which ample input data exists (score following, singing voice separation) or user interaction (grand challenges, query-by-humming/tapping).
+While the majority of current MIREX tasks do fit into this framework, at present it precludes which require additional input data (score following, singing voice separation) or user interaction (grand challenges, query-by-humming/tapping).
 Our long-term plan is to devise ways of incorporating these tasks as well, while keeping with the principles outlined above.
 This is of course an open question for further research.
 
 
-\subsection{Open Content}
+\subsection{Open content}
 \label{open}
 
 For the distributed computation model to be practical, we first need a source of diverse, representative, and freely distributable audio content.
