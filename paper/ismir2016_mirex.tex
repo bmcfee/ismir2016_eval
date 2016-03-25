@@ -144,7 +144,7 @@ Reflecting upon the prior work, we propose in this article a sustainable, open f
 Our proposal is motivated by three complementary factors.
 First, we strive to reduce the cost of running and maintaining the evaluation framework.
 Second, we hope to improve transparency and openness wherever possible.
-Third, we plan to establish a sustainable framework that will produce open, public data sets consisting of both audio and annotations.
+Third, we plan to establish a sustainable framework that will produce open, public data sets consisting of both inputs and reference annotations.
 By directing the majority of resources toward the production of open data, the proposed framework will be of value to the greater MIR community in perpetuity, and benefits will not be limited to participants in a particular year's campaign.
 
 We stress that this document describes not a fully implemented framework, but a specific \emph{proposal} put forward by a group of authors dedicated to seeing it put into practice.
@@ -154,6 +154,7 @@ In collaboration with the community, we hope to develop a framework that benefit
 \section{MIREX}
 \label{sec:mirex}
 % History
+% EJH: We've already acronymized MIREX by now. Which should come first?
 The Music Information Retrieval eXchange (MIREX) is a framework for the community driven evaluation of MIR algorithms~\cite{downie2008music, downie2010music}.
 The annual tradition of MIREX was established early in the lifetime of ISMIR, and drew significant inspiration from the well-established TREC framework~\cite{Voorhees2005:trec}.
 Thanks in large part to the vision of MIR pioneers, the first official iteration took place at ISMIR~2005 after much preliminary work, including a trial run the year prior called the Audio Description Contest (ADC).
@@ -166,7 +167,7 @@ At a high level, MIREX operates in the following steps:
 \item Define a problem formulation and evaluation metrics.
 \item Build a corpus of data, usually including reference annotations.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
-\item Invite participants to submit system implementations, which then are executed on a private server.
+\item Invite participants to submit system implementations, which then are executed on private servers.
 \item Evaluate predicted outputs against reference annotations or human judgments.
 \item Repeat steps 5--6 annually. Intermittently revisit step 2 if needed, and steps 3 and 4 if possible.
 \end{enumerate}
@@ -185,7 +186,7 @@ Due to a history of litigation from the recording industry, there is a pervasive
 
 % Deficiencies
 % Operating costs are significant
-However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
+However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data entails fundamental limitations.
 First, as a matter of practicality, doing so incurs remarkably steep costs that the community cannot hope to sustain indefinitely.
 Running hundreds of research systems demands significant computational resources, which must be either rented or purchased outright.
 More often than not, these systems are research prototypes which require substantial, manual intervention to get running, and are seldom optimized for efficiency or ease-of-use.
@@ -210,7 +211,7 @@ To illustrate, consider the standard approach to benchmarking MIR systems as dep
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, who produces a reference output, $Y_i$.
 Similarly, a proposed system, $\mathcal{F}$, operates on the same input, and produces an estimate $\widehat{Y}_i$.
 Each of several performance metrics, $\mathcal{M}_j$, are applied to these two representations, yielding a number of performance scores, $S_{i,j}$
-This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n$.
+This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n=|\mathcal{D}|$.
 
 \begin{figure}
  \centering
