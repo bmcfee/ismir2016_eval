@@ -280,7 +280,7 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 \begin{itemize}
 \item Distributed computation reduces operating costs to a participant-invariant constant.
 \item Freely distributable audio facilitates reproducibility.
-\item Incremental evaluation encourages that results are scientifically meaningful by keeping test data fresh, while steadily increasing the size of datasets available for development and evaluation.
+\item Incremental evaluation reduces bias by keeping test data fresh, and increases the amount of freely available data for development.
 \end{itemize}
 
 % After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
@@ -344,7 +344,7 @@ This now leads us to the question of representation.
 A common criticism of basing research on CC-licensed music is that it is of substantially lower ``quality'' --- which may refer to either artistry or production value, or both --- than commercial music.
 This point is obviously valid for high-level tasks such as recommendation, which depend on a variety of factors beyond the raw acoustic content of a track.
 However, for the majority of MIREX tasks, in particular the low-level tasks such as beat-tracking or key estimation, this is a much more tenuous case.
-We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free\_Music\_Archive#Notable\_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
+We note that FMA includes content by a variety of commercially successful artists,\footnote{\url{https://en.wikipedia.org/wiki/Free_Music_Archive#Notable_artists}} but the vast majority of content in both sources is provided by relatively unknown artists, which makes it difficult to control for ``quality''.
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation services, in addition to the previously mentioned genre categories.
 Taken in combination, these indices can be sampled to pre-emptively filter the collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
