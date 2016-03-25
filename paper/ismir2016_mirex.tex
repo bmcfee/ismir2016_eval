@@ -603,13 +603,17 @@ ImageNet has proven to be an unequivocal win for the field, not only advancing r
 % This offers the benefit of draw other researchers into MIR, and in some ways legitimize the field.
 
 
-To get this off the ground, we'll need a few things:
-Evaluation services (already mostly provided by mir\_eval)
-An initial seed pool of data (can be inherited from the existing mirex)
-A pool of candidate data for evaluation
-Infrastructure for managing the exchange
-some math / stats to determine how much data we need for each task, each year
-some way to work out the data credit rates for different tasks
+To get this up and running within the year, there are several concrete steps:
+\begin{itemize}
+\item Establish a robust instrument taxonomy as a community (this was key for ImageNet).
+\item Requisition a large plurality of audio content, \eg mirror FMA.
+\item Build a web-based annotation tool, linking content to URLs on FMA, that uploads annotations from the browser to a content management system.
+\item Consolidate existing datasets, \eg IRMAS, RWC, MedleyDB, into a common format as a development dataset.
+\item Implement or collect a few simple algorithms to prioritize content for annotation.
+\item Perform data collection, through some combination of paid annotation, crowd-sourcing, and community support.
+\item Evaluation server and leaderboard, leveraging mir\_eval and Codalab.
+\end{itemize}
+
 
 % \section{Misc Refs}
 % Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
