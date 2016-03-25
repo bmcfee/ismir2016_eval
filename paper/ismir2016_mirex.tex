@@ -171,19 +171,18 @@ In collaboration with the community, we hope to develop a framework that benefit
 \label{sec:mirex}
 % History
 The Music Information Retrieval eXchange (MIREX) is a framework for the community driven evaluation of MIR algorithms~\cite{downie2008music, downie2010music}.
-The annual tradition of MIREX was established early in the lifetime of ISMIR, drawing inspiration from TREC in text IR~\cite{Voorhees2005:trec}.
-Thanks in large part to the vision of MIR pioneers, the first official iteration took place at ISMIR 2005 after much preliminary work, including a trial run the year prior called the Audio Description Contest (ADC).
-The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the organization has successfully earned multiple grants to jumpstart the evaluation effort at ISMIR.
+The annual tradition of MIREX was established early in the lifetime of ISMIR, and drew significant inspiration from the well-established TREC framework~\cite{Voorhees2005:trec}.
+Thanks in large part to the vision of MIR pioneers, the first official iteration took place at ISMIR~2005 after much preliminary work, including a trial run the year prior called the Audio Description Contest (ADC).
+The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the organization has successfully earned multiple grants to jump-start the evaluation effort at ISMIR.
 
 % How does this work in practice
-At a high level, a round of MIREX operates as follows:
-
+At a high level, MIREX operates in the following steps:
 \begin{enumerate}
-\item Identify some task of interest, such as automatic chord estimation, and formulate the problem and the metrics to evaluate.
-\item Arrive at a problem formulation and metrics, either in the due course of graduate work or with fellow researchers in the community.
+\item Identify some task of interest, such as automatic chord estimation.
+\item Define a problem formulation and evaluation metrics.
 \item Build a corpus of data, usually including reference annotations.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
-\item Invite participants to submit algorithms, which are executed on a private server.
+\item Invite participants to submit system implementations, which then are executed on a private server.
 \item Evaluate predicted outputs against reference annotations or human judgments.
 \item Repeat steps 5-6 annually. Intermittently revisit step 2 if needed, and steps 3 and 4 if possible.
 \end{enumerate}
@@ -194,65 +193,66 @@ The rationale for this decision is understandable.
 In contrast to other machine perception domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
 Due to a history of litigation from the recording industry, there is a pervasive sense of fear in the MIR community that sharing audio data would almost certainly result in crippling lawsuits~\cite{downie2008music}.
 
-\begin{figure}[!t]
- \centerline{
- \includegraphics[width=\columnwidth]{mirex_runs.pdf}}
- \caption{Number of algorithms run at MIREX over the course of almost a decade.}
- \label{fig:system_eval}
+\begin{figure}
+\centering
+ \includegraphics[width=\columnwidth]{mirex_runs}
+ \caption{Number of algorithms run at MIREX over the course of almost a decade.\label{fig:mirex_participation}}
 \end{figure}
 
 % Deficiencies
 % Operating costs are significant
 However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data comes with fundamental limitations.
-First, as a matter of practicality, doing so incurs remarkably steep costs the community cannot hope to support indefinitely.
-Running hundreds of research algorithms demands state of the art technology, and adequate compute cycles must be either rented or purchased outright to achieve this.
-More often than not, these algorithms are research prototypes which rarely work on the first try, and are seldom optimized for efficiency or ease-of-use.
-While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX is responsible for months to years of compute time annually.
+First, as a matter of practicality, doing so incurs remarkably steep costs that the community cannot hope to sustain indefinitely.
+Running hundreds of research systems demands significant computational resources, which must be either rented or purchased outright.
+More often than not, these systems are research prototypes which require substantial, manual intervention to get running, and are seldom optimized for efficiency or ease-of-use.
+While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX requires months, if not years, of annual compute-time.
 % EJH: I want to mention this, but it really throws off the rhythm of this passage.
 % Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
-The financial burden of computation amounts to a rounding error, though, when compared with the human effort involved.
-As a point of reference, MIREX~2007 required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams~\cite{downie2008music};
-shown in \cref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.\footnote{\url{https://www.hathitrust.org/documents/mirex\_htrc\_same\_rda.pdf}}
+
+The financial burden of computation can be negligible in comparison to the requisite human effort.
+As a point of reference, MIREX~2007 alone required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams~\cite{downie2008music}.
+As illustrated in \Cref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.\footnote{\url{https://www.hathitrust.org/documents/mirex_htrc_same_rda.pdf}}
 %JU: One of stephen's slides (17), number of runs increases, but number of individuals decreases -> not interesting anymore
-Extrapolating, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
-Not only is this rate unsustainable, but the combined operating costs only \emph{increase} the more successful the endeavor becomes.
+As a rough estimate, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
+Not only is this rate unsustainable, but the combined operating costs only \emph{increase} with participation.
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
 
 % Hard to do science
 % ------------------
-Operating costs aside, MIREX has indeed afforded some valuable insight into the research of MIR systems~\cite{downie2008music}.
+Operating costs aside, MIREX has indeed produced valuable insights into the development of MIR systems~\cite{downie2008music}.
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
-To illustrate, consider the standard approach to benchmarking MIR systems,
-% given in Eq \ref{eq:systematic_eval}.
-diagrammed in \Cref{fig:system_eval}.
-An input, $X_i$, is observed by an annotator, $\mathcal{A}$, producing a ``gold-standard'' output, $Y_i$.
-Similarly, a proposed system, $\mathcal{F}$, operates on the same input, producing a prediction, $\widehat{Y}_i$.
-Each of several performance metrics, $\mathcal{M}_j$, are applied on these two representations, yielding a number of performance scores, $S_{i,j}$
-This process is repeated over a sample of input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}, |\mathcal{D}|=N$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n$.
+To illustrate, consider the standard approach to benchmarking MIR systems as depicted in \Cref{fig:systemeval}.
+An input, $X_i$, is observed by an annotator, $\mathcal{A}$, who produces a reference output, $Y_i$.
+Similarly, a proposed system, $\mathcal{F}$, operates on the same input, and produces an estimate $\widehat{Y}_i$.
+Each of several performance metrics, $\mathcal{M}_j$, are applied to these two representations, yielding a number of performance scores, $S_{i,j}$
+This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n$.
 
-\begin{figure}[!t]
- \centerline{
- \includegraphics[width=\columnwidth]{eval_framework.pdf}}
- \caption{Diagram of the standard approach to the benchmarking of MIR systems.}
- %JU: throughout, we should be consistent in calling them comp. models, systems or algorithms.
- \label{fig:system_eval}
+\begin{figure}
+ \centering
+ \includegraphics[width=\columnwidth]{eval_framework}
+ \caption{Diagram of the standard approach to the benchmarking of MIR systems.\label{fig:systemeval}}
 \end{figure}
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
-In the current formulation though, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
-Usually, there is no access to $Y_i$, and in most cases there is no access to $X_i$ either, making it impossible to diagnose why an algorithm produced $\widehat{Y}_i$, or determine what should be done to improve $\mathcal{F}$.
-Furthermore, $Y_i$ is meaningless without $X_i$, and must be trivially taken on face value.
-By the same token, while $n$ varies from task to task, there is no way to gauge the distribution of the data or estimate any bias in the sampling.
-Limited insight exists into $\mathcal{A}$, the role that subjectivity may play in a given annotation, or the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
-As such, the very problem formulation is hidden and subject to drift as it is reinterpreted annually.
-For the sake of visibility into $\mathcal{M}_j$, both the original NEMA infrastructure is
-open source, and an ongoing community-led effort continues to improve upon these implementations\cite{raffel2014mir_eval}.
-And finally, it is only fair to admit that large scale evaluation is a considerable undertaking with plenty of room for error and misinterpretations, so conducting these campaigns in the open makes it easier to detect and diagnose any missteps.
+In the current MIREX formulation, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
+First, there is usually no access to the reference annotations $Y_i$, and in most cases there is no access to the input $X_i$ either.
+Furthermore, $Y_i$ is usually meaningless without $X_i$ for context.
+This makes it exceedingly difficult to learn from the results of the evaluation.
+Without access to the underlying data, how can one diagnose the cause of an erroneous estimate, or determine ways to improve the system?
+Similarly, there is no way to gauge the distribution of the data or estimate any bias in the sampling, beyond what may be inferred from public development sets.
+
+The behavior of the human annotators is also obscured, as are the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
+Consequently, the problem formulation itself is effectively hidden, and subject to drift over time.
+For the sake of visibility into the evaluation metrics $\mathcal{M}_j$, both the original NEMA infrastructure is open source, and an ongoing community-led effort continues to standardize and improve upon these implementations~\cite{raffel2014mir_eval}.
+Still, without access to the data, it is impossible to perform \emph{meta-evaluation}, or compare new metrics on old data, without seeking privileged access to the historical records.
+
+Finally, it is only fair to admit that large scale evaluation is a considerable undertaking with plenty of room for error and misinterpretations.
+Conducting these campaigns in the open makes it easier to detect and diagnose any missteps.
 
 % Dearth Data -- MIREX is preoccupied with just keeping the ship afloat.
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
-This is not only detrimental to system development, but also to evaluation, because it is critical to routinely replace the data used for it to reduce bias and prevent statistical over-fitting.
+This is not only detrimental to system development, but also to evaluation, because it is critical to routinely refresh the evaluation data to reduce bias and prevent statistical over-fitting.
 Unsurprisingly, in lieu of a fresh source of annotated data, early concerns about the community eventually over-fitting datasets are beginning to manifest.
 In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one submission in 2011 that achieved near perfect scores in chord estimation having been pretrained on the same data\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}.
 In others, participants may misunderstand the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that use annotations from previous folds in a train-test task.
