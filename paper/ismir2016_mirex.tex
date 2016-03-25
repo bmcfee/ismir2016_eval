@@ -163,12 +163,12 @@ The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the org
 % How does this work in practice
 At a high level, MIREX operates in the following steps:
 \begin{enumerate}
-\item Identify some task of interest, such as automatic chord estimation.
-\item Define a problem formulation and evaluation metrics.
-\item Build a corpus of data, usually including reference annotations.
+\item Identify some task of interest, \eg, chord estimation.
+\item Formulate the problem and evaluation metrics.
+\item Construct (and annotate) corpus of data.
 \item Release a subset of the data for development purposes; retain the rest as private data for evaluation.
 \item Invite participants to submit system implementations, which then are executed on private servers.
-\item Evaluate predicted outputs against reference annotations or human judgments.
+\item Evaluate predicted outputs against reference annotations (or human judgments).
 \item Repeat steps 5--6 annually. Intermittently revisit step 2 if needed, and steps 3 and 4 if possible.
 \end{enumerate}
 
@@ -176,7 +176,7 @@ At a high level, MIREX operates in the following steps:
 Importantly, this approach differs from TREC-style evaluation by operating in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
 The rationale for this decision is understandable.
 In contrast to other machine perception domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
-Due to a history of litigation from the recording industry, there is a pervasive sense of fear in the MIR community that sharing audio data would almost certainly result in crippling lawsuits~\cite{downie2008music}.
+Due to a history of litigation from the recording industry, there is a pervasive sense of fear in the MIR community that sharing copyrighted audio data would invite crippling lawsuits~\cite{downie2008music}.
 
 \begin{figure}
 \centering
@@ -186,10 +186,10 @@ Due to a history of litigation from the recording industry, there is a pervasive
 
 % Deficiencies
 % Operating costs are significant
-However, experience with MIREX over the last decade has demonstrated that the decision to bring algorithms to data entails fundamental limitations.
-First, as a matter of practicality, doing so incurs remarkably steep costs that the community cannot hope to sustain indefinitely.
+However, experience with MIREX over the last decade has demonstrated that bringing algorithms to data entails fundamental limitations.
+First, as a matter of practicality, doing so incurs steep computational and financial costs that the community cannot hope to sustain indefinitely.
 Running hundreds of research systems demands significant computational resources, which must be either rented or purchased outright.
-More often than not, these systems are research prototypes which require substantial, manual intervention to get running, and are seldom optimized for efficiency or ease-of-use.
+More often than not, these systems are research prototypes which require substantial, manual intervention to operate correctly, and are seldom optimized for efficiency or ease-of-use.
 While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX requires months, if not years, of annual compute-time.
 % EJH: I want to mention this, but it really throws off the rhythm of this passage.
 % Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
@@ -209,7 +209,7 @@ Operating costs aside, MIREX has indeed produced valuable insights into the deve
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
 To illustrate, consider the standard approach to benchmarking MIR systems as depicted in \Cref{fig:systemeval}.
 An input, $X_i$, is observed by an annotator, $\mathcal{A}$, who produces a reference output, $Y_i$.
-Similarly, a proposed system, $\mathcal{F}$, operates on the same input, and produces an estimate $\widehat{Y}_i$.
+Similarly, a system $\mathcal{F}$ operates on the same input, and produces an estimate $\widehat{Y}_i$.
 Each of several performance metrics, $\mathcal{M}_j$, are applied to these two representations, yielding a number of performance scores, $S_{i,j}$
 This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} \in \mathcal{D}$, and the sample-wise scores are aggregated into summary statistics, $\mu$, the reliability of which generally increases with $n=|\mathcal{D}|$.
 
@@ -221,16 +221,16 @@ This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} 
 
 % Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current MIREX formulation, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
-First, there is no intentional access to the reference annotations $Y_i$, and, in most cases, no access to the input $X_i$ as well.
-Furthermore, $\widehat{Y}_i$ is largely meaningless without $X_i$ for context.
+First, there is no direct access to the reference annotations $Y_i$, and, in most cases, no access to the input $X_i$ as well.
+Furthermore, $\widehat{Y}_i$ is of little use without $X_i$ for context.
 This makes it exceedingly difficult to learn from the results of the evaluation.
-Without access to the underlying data, how can one diagnose the cause of an erroneous estimate, or determine ways to improve the system?
-Similarly, there is no way to gauge the distribution of the data or estimate any bias in the sampling, beyond what may be inferred from public development sets or system predictions.
+Without access to the underlying data, how can one diagnose the cause of an erroneous estimate, or discover avenues for improvement?
+Similarly, there is no way to gauge the distribution of the data or estimate any bias in the sampling, beyond what may be inferred from public development sets.
 
 The behavior of the human annotators is also obscured, as are the instructions provided when the annotation was initially performed~\cite{Peeters2012:better}.
 Consequently, the problem formulation itself is effectively hidden, and subject to drift over time.
 For the sake of visibility into the evaluation metrics $\mathcal{M}_j$, both the original NEMA infrastructure is open source, and an ongoing community-led effort continues to standardize and improve upon these implementations~\cite{raffel2014mir_eval}.
-Still, without access to the data, it is impossible to perform \emph{meta-evaluation}, or compare new metrics on old data, without seeking privileged access to the historical records.
+Still, without access to the data, it is exceedingly difficult to perform \emph{meta-evaluation}, or compare new metrics on old data, without seeking privileged access to the historical records.
 
 Finally, it is only fair to admit that large scale evaluation is a considerable undertaking with plenty of room for error and misinterpretations.
 Conducting these campaigns in the open makes it easier to detect and diagnose any missteps.
@@ -238,7 +238,8 @@ Conducting these campaigns in the open makes it easier to detect and diagnose an
 % Dearth Data -- MIREX is preoccupied with just keeping the ship afloat.
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 This is not only detrimental to system development, but also to evaluation, because it is critical to routinely refresh the evaluation data to reduce bias and prevent statistical over-fitting.
-Unsurprisingly, without a fresh source of annotated data, early concerns about the community eventually over-fitting to benchmark datasets are beginning to manifest.
+Without a fresh source of annotated data, early concerns about the community eventually over-fitting to benchmark datasets are beginning to manifest.
+
 In some cases, this is because the data used for evaluation exists in the wild: one submission in 2011 achieved nearly perfect scores in chord estimation due to being pre-trained on the test data.\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}
 In other cases, participants may mis-interpret the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that mistakenly use annotations from previous folds in a train-test task.
 Across the board, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
