@@ -418,7 +418,7 @@ In contrast to the outline in \Cref{sec:mirex}, our proposed strategy could proc
 \item Release a collection of (annotated) training data for development, and an over-complete collection of unlabeled data for evaluation.
 \item Invite participants to submit \emph{predictions} over the unlabeled data.
 \item Collect reference annotations; prioritize examples by disagreement among submissions.
-\item Estimate and summarize each submission's performance against the reference annotations or judgements.
+\item Estimate and summarize each submission's performance against the reference annotations.
 \item Retire annotated data, and add it to the training set for the next campaign.
 \item Go to step 3 and repeat. Revisit steps 1--2 if needed.
 \end{enumerate}
@@ -483,9 +483,9 @@ Improvements in web infrastructure have made the distribution of large-scale dat
 Similarly, browser support for interactive applications enables the development of web-based annotation tools, which significantly reduces the barrier to entry for annotators.
 
 % We're ready for it.
-Finally, the MIR community has grown and matured since MIREX began in 2005.
-Open source development and reproducible methods are becoming commonplace, but we remain hindered by the relative lack of open data.
-By developing methodologies for open evaluation and data collection, we will continue to develop as a scientific discipline.
+Finally, the community has matured significantly since MIREX began in 2005.
+Open source development and reproducible methods are now commonplace, but we remain hindered by the lack of open data for evaluation.
+Only by developing frameworks for open evaluation and data collection, can we further develop as a scientific discipline.
 
 
 \subsection{Implementation details}
@@ -544,17 +544,19 @@ Here, we identify three potential sources for data collection.
 First is the traditional route of raising funds and paying expert annotators.
 This option incurs both a direct financial cost and various hidden human costs, but is also the most likely to produce high-quality data, and may in fact be the only viable path for certain tasks.
 In the grand scheme of things, however, the financial burden is marginal.
-MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medleydb} (\$1240);
-in the year and half since its release, the dataset has been requested nearly 200 times and cited another 20\footnote{Figures provided via personal communication with the authors.}.
-For reference, the ISMIR Society maintains a membership of roughly 250 individuals a year.
-Therefore, a \$5 increase in membership dues would cover the annotation cost of a new dataset like MedleyDB annually.
+MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a
+track (\$1240 total)~\cite{bittner2014medleydb};
+in the year and half since its release, the dataset has been requested nearly 200 times and cited another 20.\footnote{Figures provided via personal communication with the authors.}
+For reference, the ISMIR Society maintains a membership of roughly 250 individuals each year.
+A \$5 increase in membership dues would cover the annotation cost of a new dataset like MedleyDB annually.
 Grants or partnerships with industry would only serve to make this more manageable.
 
 % Crowd-sourced
-Second, for tasks that require minimal annotator training, we can leverage either crowd-sourcing platforms, \eg Mechanical Turk, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
-Popular websites such as Genius\footnote{\url{http://genius.com/}} (6M monthly active users) and Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} (3M monthly active users) demonstrate the existence of these communities for lyrics and guitar tablature, respectively\footnote{Data gathered from \url{http://compete.com}, March 2016}.
+Second, for tasks that require minimal annotator training, we can leverage either crowd-sourcing platforms, \eg, Mechanical Turk, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
+Popular websites such as Genius\footnote{\url{http://genius.com/}} (6M monthly active users) and
+Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} (3M monthly active users) demonstrate the existence of these communities for lyrics and guitar tablature, respectively.\footnote{Data gathered from \url{http://compete.com}, March 2016}
 % Clear need and interest, hook into the community.
-As witnessed by the success of eBird\footnote{\url{http://ebird.org/}} or AcousticBrainz\footnote{\url{http://acousticbrainz.org/}}, great things happen when you empower crowds of intrinsically motivated people.
+As witnessed by the success of eBird\footnote{\url{http://ebird.org/}} or AcousticBrainz,\footnote{\url{http://acousticbrainz.org/}} great things happen when you empower crowds of intrinsically motivated people.
 % If we build it, they will almost certainly come; in some cases, they're already there.
 
 % Self-supported
@@ -562,7 +564,7 @@ Finally, if no funding can be found to annotate data, we may solicit annotations
 This approach is effectively used for judging the Audio Music Similarity task, but we might expect greater adoption here since the resulting annotations will be released directly back to the community.
 
 
-In each case, we will institute a ratification system so that contributed annotations are validated by a third party before being accepted into the evaluation set.
+In each case, we will institute a ratification system so that annotations are validated by a third party before being accepted into the evaluation set.
 As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, in addition to any paid annotator.
 
 
@@ -580,28 +582,31 @@ As mentioned in \cref{sec:implementation}, web-based annotation tools will enabl
 %Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ``ill trade three beat annotations for one chord annotationù.
 
 
-\section{Next Steps: Toward ImageNet for Music}
+\section{Next Steps: A trial run}
 
 % How do we get people to participate / contribute (all jump at once).
 
-As an initial undertaking of the framework described here, we conclude our proposal by advocating a large-scale instrument identification for ISMIR2017.
+We conclude our proposal by advocating a large-scale instrument identification task for ISMIR2017.
 % What is the task?
-In this task, one or more active instrument classes are predicted from a pre-defined taxonomy over an input audio recording.
-Some of the effort in building an instrument taxonomy can be leveraged from WordNet\cite{}, and refined by the community, starting at this year's ISMIR conference.
+In this task, one or more active instrument classes are predicted from a pre-defined taxonomy over an input recording.
+Some of the effort in building an instrument taxonomy can be leveraged from WordNet~\cite{miller1995wordnet}, and refined by the community, starting at this year's ISMIR conference.
 % Motivations
+
 There are a number of strong motivations for pursuing this particular challenge.
 % Good MIR problem, let's finally solve something.
-Instrument identification is an important, classic problem in MIR, but is not currently supported by the MIREX framework explicitly.
+Instrument identification is an important, classic problem in MIR, but is not currently included in MIREX.\@
 Researchers typically explore the topic with disparate, often unrealistic datasets, and the problem remains unsolved to some unknown degree.
 % Relatively easy / stable data collection
-Compared with other music perception tasks, annotation requires a simple, straight-forward interface, \eg ``check all that apply'', and \emph{does} maintain at least a modicum of objectivity, \ie someone either ``is'' or ``is not'' generating sound with a particular instrument\footnote{Granted, synthesizers wreak havoc on any taxonomy; computer vision faces similar issues with natural images of paintings, for example.}.
+Compared with other music perception tasks, annotation requires a simple interface, \eg, ``check all that apply''.
+The task enjoys a modicum of objectivity: a particular instrument is either present in the mix or not.%
+\footnote{Granted, synthesizers wreak havoc on any taxonomy; computer vision faces similar issues with natural images of paintings, for example.}
 % Content validity.
-Instrument occurrence is independent of popularity, and thus content validity is a non-issue for open source music.
+Instrument occurrence is largely independent of popularity, which results in a fairly minimal bias due to the
+use of CC-licensed music.
 % Epic win for the community.
-And finally, computer vision found fantastic success with a parallel endeavor, known as ImageNet \cite{}, in which algorithms detect objects, \ie sources, from natural images.
-ImageNet has proven to be an unequivocal win for the field, not only advancing research methods to that specific task, but also sparking other investigations, such as Google's now-famous Deep Dream\cite{}.
+Finally, computer vision found fantastic success with a parallel endeavor, known as ImageNet~\cite{deng2009imagenet}, in which algorithms detect objects in natural images.
+%ImageNet has proven to be an invaluable resource, not only advancing research to solve that particular task, but also sparking other investigations, such as Google's now-famous Deep Dream\cite{}.
 % This offers the benefit of draw other researchers into MIR, and in some ways legitimize the field.
-
 
 To get this up and running within the year, there are several concrete steps:
 \begin{itemize}
