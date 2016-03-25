@@ -253,19 +253,21 @@ Conducting these campaigns in the open makes it easier to detect and diagnose an
 % Dearth Data -- MIREX is preoccupied with just keeping the ship afloat.
 Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 This is not only detrimental to system development, but also to evaluation, because it is critical to routinely refresh the evaluation data to reduce bias and prevent statistical over-fitting.
-Unsurprisingly, in lieu of a fresh source of annotated data, early concerns about the community eventually over-fitting datasets are beginning to manifest.
-In some cases, this is because the data used for evaluation exists in the wild, as evidenced by one submission in 2011 that achieved near perfect scores in chord estimation having been pretrained on the same data\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}.
-In others, participants may misunderstand the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that use annotations from previous folds in a train-test task.
-In others, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
-These results can mislead due to fixed but unknown biases in the distribution, which become apparent when datasets are expanded --- like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert} --- or as further insight is gained, as in the disclosure of the metadata in the music similarity corpus\footnote{}.
+Unsurprisingly, without a fresh source of annotated data, early concerns about the community eventually over-fitting to benchmark datasets are beginning to manifest.
+In some cases, this is because the data used for evaluation exists in the wild: one submission in 2011 that achieved nearly perfect scores in chord estimation due to being pre-trained on the test data.\footnote{\url{http://nema.lis.illinois.edu/nema\_out/mirex2011/results/ace/nmsd2.html}}
+In other cases, participants may mis-interpret the task guidelines, as evidenced by submissions of offline systems for tasks that are online, or by others that mistakenly use annotations from previous folds in a train-test task.
+Across the board, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
+These results can be misleading due to the fixed but unknown biases in the data distribution, which become apparent when datasets are expanded --- like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert} --- or as further insight is gained, as in the disclosure of the metadata in the music similarity corpus.
 
 % There's no short-term plan to get new data; there's no long-term plan to get new data.
-To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, never mind a long-term plan to replace that data when it inevitably becomes stale.
-By and large, MIREX has relied on the generosity of the community to both curate and donate data for the purposes of evaluation.
+To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, nor any long-term plans to replace that data when it inevitably becomes stale.
+MIREX has primarily relied upon the generosity of the community to both curate and donate data for the purposes of evaluation.
 This approach also struggles with transparency, making it susceptible to issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
-Data collection is a challenging, unavoidable reality, and one that demands a viable plan going forward.
+Data collection is a challenging, unavoidable reality that demands a viable plan going forward.
 
-All in all, after a decade of MIREX we have learned which techniques work and which do not. But most importantly, we have learned the importance of establishing a collective endeavor to periodically and systematically evaluate MIR systems. Unfortunately, we have also learned of the burdens such an initiative entails, and the limitations of its current form.
+After a decade of MIREX, we have learned which techniques work and which do not. 
+Most importantly, we have learned the importance of establishing a collective endeavor to periodically and systematically evaluate MIR systems.
+Unfortunately, we have also learned of the burdens entailed by such an initiative, and the limitations of its current form.
 
 \section{Open Evaluation of MIR Systems}
 
