@@ -88,7 +88,7 @@
 The Music Information Retrieval Evaluation eXchange (MIREX) is a valuable community service, having established standard datasets, metrics, baselines, methodologies, and infrastructure for comparing MIR methods.
 % ...but we can't keep this up. sad!
 While MIREX has managed to successfully maintain operations for over a decade, its long-term sustainability is at risk without considerable ongoing financial support.
-% Main problem: the expenditure of effort is intrinsically unsustainable.
+% Main problem: the expenditure of effort is unsustainable.
 The imposed constraint that input data cannot be made freely available to participants
 necessitates that all algorithms run on centralized computational resources, which are
 administered by a limited number of people.
@@ -457,25 +457,37 @@ In this way, the proposed system will be significantly more efficient and cost-e
 \section{Discussion}
 
 %What follows are a number of topics that have cropped up in the course of writing the paper to date.
-In this section, we elaborate on a number of issues relating to the implementation and overall goals of the proposed framework.
+In this section, we elaborate on a number of facets related to the overall goals and actualization of the proposed framework.
 
 \subsection{Timeliness}
 
-Folks complain about data and evaluation annually.
-Why now?
-Why is this any different?
+The challenges we describe in this document, which our proposed strategy aims to address, are not news to the community.
+The operating costs of MIREX became apparent early in its lifetime, and concerns about its sustainability loom large among researchers.
+In parallel, data collection is inherently difficult;
+if it were easy, there would be less motivation to develop computational systems.
+This begs an obvious question: why \emph{now}?
+What makes this proposal any different?
 
-We're in a different day and age.
-MIREX made a good deal of sense in the early 2000's.
-But we do not live in 2003, and the times have changed.
-Amazon web services is a thing that's gotten quite cost effective.
-Practically no one in industry purchases and maintains their own compute resources.
-Bandwidth is cheap and better, so transferring large datasets isn't the hurdle it once was.
-The open source audio content game has changed dramatically.
-There wasn't even data, never mind \emph{good} data.
-As discussed, there exists a large number of tracks that we \emph{can} share.
+% We're in a different day and age.
+The answer, of course, is that timing is everything.
+In a lot of ways, the approach taken by MIREX made perfect sense in the early 2000's.
+However, the modern era provides a far more hospitable environment than the one for which it was designed.
+% Cheap to rent compute time
+Cloud computing is cheap and ubiquitous, to the point that practically no one in industry builds and maintains their own compute resources.
+% Web infrastructure is better
+Bandwidth is vastly improved, so bringing data to computation is feasible.
+% Bandwidth is cheap and better, so transferring large datasets isn't the hurdle it once was.
+% The open source audio content game has changed dramatically.
+Creative commons music is now ample, making the dream of sharing data a reality.
+% There wasn't even data, never mind \emph{good} data.
+% As discussed, there exists a large number of tracks that we \emph{can} share.
+% Tools and technologies are better, JavaScript support, HTML5, python, etc.
 Web technologies are light-years better, and browser-based annotation is not only feasible but inevitable.
-Mechanical Turk is a thing and, though rife with its own challenges, has worked great for a number of problems.
+% Ample micro-services that are free for education or non-profits.
+% Mechanical Turk is a thing and, though rife with its own challenges, has worked great for a number of problems.
+% We're ready for it.
+The community has grown, and so have our skills, the number of labs involved, our industrial contacts, and our status.
+We are involved in more open source development, and transparency and reproducibility are becoming cornerstones of modern data science.
 
 
 \subsection{Implementation details}
@@ -525,7 +537,7 @@ Relying on curation and chart popularity as a pre-filter in data selection may h
 After collecting an initial set of annotated CC-licensed music, it will be possible to quantitatively measure the differences in system performance compared to existing corpora of commercial music.
 
 
-\subsection{Collecting annotations}
+\subsection{Collecting Annotations}
 
 Regardless of approach, scientifically meaningful evaluation requires a continuous source of freshly annotated data indefinitely.
 Here, we identify three potential sources for data collection.
