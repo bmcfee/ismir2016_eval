@@ -362,23 +362,23 @@ This approach is similar in spirit to previous work using chart-based sampling (
 \subsection{Incremental evaluation}
 
 In its first cycle of operation, the proposed framework requires a new, unannotated corpus of audio.
-Rather than fully annotate the corpus up front for each task, we plan to adopt an \emph{incremental evaluation} strategy.
+Rather than fully annotate the corpus up front for each task, we plan to adopt an \emph{incremental evaluation} strategy~\cite{carterette2005incremental}.
 
 With incremental evaluation, the set of reference annotations need not be complete: some (most) input examples will not have corresponding annotations.
 % BM: do we have a reference for incremental evaluation?
 %The idea is to develop methods to estimate these missing annotations from all available sources of information, such as existing annotations, metadata, system outputs, \etc.
 %Annotations will therefore be defined probabilistically, over the space of possible labels, so that missing annotations will have some degree of variance (uncertainty); existing annotations will have zero-variance.
-Instead, performance measures are estimated with respect to a subset of annotated tracks, which may itself grow over time.
+Instead, performance measures are estimated over a subset of annotated tracks, which may itself grow over time.
 %With an appropriate reformulation of performance measures, we can incorporate these estimates of the annotations and produce estimates of the system performance scores.
-Systems are ranked as usual, but with some degree of uncertainty which is inversely proportional to the number of available annotations.
+Systems are ranked as usual, but a degree of uncertainty inversely proportional to the number of available annotations.
 
 Initially, uncertainty in the performance estimates will be maximal, due to a small number of available annotations.
-Subsequently, as reference annotations are collected and integrated to the evaluation system, they will be compared to the submissions' estimated annotations, providing incrementally better estimates of each system's performance.
+Subsequently, as reference annotations are collected and integrated to the evaluation system, they will be compared to the submissions' estimated annotations, and provide incrementally better performance estimates.
 Prior research in both text and video IR has demonstrated that evaluation against incomplete reference data is feasible, even when only a small fraction of the annotations are known~\cite{Carterette2007:robust,Yilmaz2008:simple,trecvid2014:overview}.
 
-One point to study in this framework is: which inputs are worth annotating?
+This raises the question: which inputs are worth annotating?
 Consider two systems that produce the same annotation for a fixed input example.
-Whether they are both right or wrong with respect to a reference, there is no way to distinguish between them according to that example, so there is little value in seeking its annotation.
+Whether they are both right or wrong with respect to the reference annotation, there is no way to distinguish between them according to that example, so there is little value in seeking its annotation.
 Conversely, examples upon which multiple systems \emph{disagree} are more likely to produce useful information for distinguishing among competing systems.
 %Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
 Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
