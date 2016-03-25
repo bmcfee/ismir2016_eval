@@ -265,7 +265,7 @@ MIREX has primarily relied upon the generosity of the community to both curate a
 This approach also struggles with transparency, making it susceptible to issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
 Data collection is a challenging, unavoidable reality that demands a viable plan going forward.
 
-After a decade of MIREX, we have learned which techniques work and which do not. 
+After a decade of MIREX, we have learned which techniques work and which do not.
 Most importantly, we have learned the importance of establishing a collective endeavor to periodically and systematically evaluate MIR systems.
 Unfortunately, we have also learned of the burdens entailed by such an initiative, and the limitations of its current form.
 
@@ -499,26 +499,27 @@ Mechanical Turk is a thing and, though rife with its own challenges, has worked 
 
 \subsection{Implementation details}
 \label{sec:implementation}
-%Hosting datasets, torrents + edu labs.
-%We'll need some infrastructure to actually run the campaign in the new setup.
-%I think CodaLab might have solved a good chunk of this problem for us.
-%Format standards, JAMS.
-%Evaluation machinery, mir\_eval.
+% Hosting datasets, torrents + edu labs.
+% We'll need some infrastructure to actually run the campaign in the new setup.
+% I think CodaLab might have solved a good chunk of this problem for us.
+% Evaluation machinery, mir\_eval.
+Effectively deploying the proposed framework will require two things: infrastructure development, and hosting.
+On the infrastructure side, we can leverage several existing open source projects: \texttt{mir\_eval} for scoring~\cite{raffel2014mir_eval}, JAMS for data format standardization~\cite{humphrey2014jams}, and CodaLab for running the evaluation campaign.\footnote{\url{http://codalab.org/}}
+The last remaining software component is a platform for collecting annotations.
+Web tools, front-end dev, JS.
+
+
+As for hosting, since the burden of executing arbitrary (submitted) code is removed, the remaining software components can reside on either a private university server, or, more likely, cloud-based hosting such as Amazon Web Services.\footnote{\url{https://aws.amazon.com/}}
+Similarly, the audio data can be distributed via BitTorrent to participants, or hosted (at some minor cost) for traditional download.
 
 %We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.
 %This may help ease the burden of going fully open source, and encourage submissions from industry.
 %I think this is a bad idea though.
 %If it isn't open, it isn't science.
 %(Just make it cost money then. Which would require the org to NPO-ize).
-Effectively deploying the proposed framework will require two things: infrastructure development, and hosting.
-On the infrastructure side, we can leverage several existing open source projects: \texttt{mir\_eval} for scoring~\cite{raffel2014mir_eval}, JAMS for data format standardization~\cite{humphrey2014jams}, and CodaLab for running the evaluation campaign.\footnote{\url{http://codalab.org/}}
-The last remaining software component is a platform for collecting annotations.
-
-As for hosting, since the burden of executing arbitrary (submitted) code is removed, the remaining software components can reside on either a private university server, or, more likely, cloud-based hosting such as Amazon Web Services.\footnote{\url{https://aws.amazon.com/}}
-Similarly, the audio data can be distributed via BitTorrent to participants, or hosted (at some minor cost) for traditional download.
 
 
-\subsection{Data and evaluation integrity}
+\subsection{Data and Evaluation Integrity}
 
 % Participant Honesty -- we've already harped on this twice now, so we should chose our words carefully (or succintly)
 Allowing participants to submit predictions, rather than software, may raise the issue of
@@ -550,32 +551,36 @@ Who watches the watchmen?
 
 \subsection{Collecting annotations}
 
-The proposed framework requires a continuous source of fresh annotations for each evaluation campaign.
+Regardless of approach, scientifically meaningful evaluation requires a continuous source of freshly annotated data indefinitely.
 Here, we identify three potential sources for data collection.
 
-First is the traditional route of acquiring funding and paying expert annotators.
-This is the most expensive option, but also most likely to produce high-quality data, and may in fact be the only viable path for certain tasks.
-
-Second, for tasks which require minimal training, we can leverage either crowd-sourcing platforms, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
-Community sites such as Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} and Genius\footnote{\url{http://genius.com/}} demonstrate the existence of these communities, though harnessing their enthusiasm may take some effort.
-
-Finally, if no funding can be found to annotate data, we may solicit annotations
-directly from participants and the ISMIR community at large.
-This approach is effectively used for judging the Audio Music Similarity task, but we might expect greater adoption here since the resulting annotations will be released directly back to the community.
-
-In each case, we will institute a ratification system so that contributed annotations are validated by a third party before being accepted into the evaluation set.
-As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, in addition to any paid annotation labor.
-
-% We've had resources, we just invested it elsewhere.
-%One, we've invested a ton of time and money into computation over the last decade.
-%MIREX got a Mellon grant for \$1.2M.
-%MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medleydb}.
-%Where would we be if that went toward annotation?
+% Get funding and pay for it.
+First is the traditional route of raising funds and paying expert annotators.
+This option incurs both a direct financial cost and various hidden human costs, but is also the most likely to produce high-quality data, and may in fact be the only viable path for certain tasks.
+In the grand scheme of things, however, the financial burden is marginal.
+MedleyDB, a well-curated dataset of over 100 multitracks for a number of MIR tasks, cost approximately \$12 a track \cite{bittner2014medleydb} (\$1240);
+in the year and half since its release, the dataset has been requested nearly 200 times and cited another 20\footnote{Figures provided via personal communication with the authors.}.
+For reference, the ISMIR Society maintains a membership of roughly 250 individuals a year.
+Therefore, a \$5 increase in membership dues would cover the annotation cost of a new dataset like MedleyDB annually.
+Grants or partnerships with industry would only serve to make this more manageable.
+%MIREX got a Mellon grant for \$1.2M; what if more of that could have been allocated to annotation?
 %We've been able to procure funding in the past for projects, and can divert those resources to annotation.
 
+% Crowd-sourced
+Second, for tasks that require minimal annotator training, we can leverage either crowd-sourcing platforms, \eg Mechanical Turk\footnote{\url{https://www.mturk.com/}}, or seek out enthusiastic user communities that would be willing to participate in \emph{citizen science} for music on a volunteer basis.
+Popular websites such as Genius\footnote{\url{http://genius.com/}} (6M monthly active users) and Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} (3M monthly active users) demonstrate the existence of these communities for lyrics and guitar tablature, respectively\footnote{Data gathered from \url{http://compete.com}, March 2016}.
+% Clear need and interest, hook into the community.
+As witnessed by the success of eBird\footnote{\url{http://ebird.org/}} or AcousticBrainz\footnote{\url{http://acousticbrainz.org/}}, great things happen when you empower crowds of intrinsically motivated people.
+% If we build it, they will almost certainly come; in some cases, they're already there.
 
-%Ideally, the evaluation data should grow, year upon year, with old data being released to the public either annually or biannually.
-%To facilitate this, we propose a data credit system.
+% Self-supported
+Finally, if no funding can be found to annotate data, we may solicit annotations directly from participants and the ISMIR community at large.
+This approach is effectively used for judging the Audio Music Similarity task, but we might expect greater adoption here since the resulting annotations will be released directly back to the community.
+
+
+In each case, we will institute a ratification system so that contributed annotations are validated by a third party before being accepted into the evaluation set.
+As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, in addition to any paid annotator.
+
 
 %To participate in an evaluation, each participant must ``pay''ù some nominal amount of data credits.
 %In the first year, all participants start with a balance of 0, so by participating, they are now in ``data debt''ù.
@@ -599,10 +604,6 @@ How do we get people to participate / contribute (all jump at once).
 % This includes basically everything except for AMS/SMS, where outputs are scored directly.
 % I argue that these tasks, while interesting, are different enough to fall beyond the scope of the current framework, and may best be left to a separate evaluation campaign.
 
-% Alternately, we can treat these left-out tasks as a way to pivot traditional MIREX to focus on things that require direct human evaluation, eg, annual grand challenge tasks.
-% This way, the MIREX crew gets to keep their current job, and everyone else is happy.
-
-
 To get this off the ground, we'll need a few things:
 Evaluation services (already mostly provided by mir\_eval)
 An initial seed pool of data (can be inherited from the existing mirex)
@@ -610,6 +611,9 @@ A pool of candidate data for evaluation
 Infrastructure for managing the exchange
 some math / stats to determine how much data we need for each task, each year
 some way to work out the data credit rates for different tasks
+
+Pick a task, guitar chord transcription.
+
 
 % \section{Misc Refs}
 % Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
