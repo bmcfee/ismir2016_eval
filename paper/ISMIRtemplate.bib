@@ -13,9 +13,9 @@
   author    = {Eric J. Humphrey and
                Juan Pablo Bello},
   title     = {Four Timely Insights on Automatic Chord Estimation},
-  booktitle = {Proceedings of the 16th International Society for Music Information
-               Retrieval Conference, {ISMIR} 2015, M{\'{a}}laga, Spain, October
-               26-30, 2015},
+  booktitle = {International Society for Music Information
+               Retrieval Conference},
+  series    = {ISMIR},
   pages     = {673--679},
   year      = {2015},
   url       = {http://ismir2015.uma.es/articles/294_Paper.pdf},
@@ -43,7 +43,8 @@
 @inproceedings{bertin2011million,
   title={The million song dataset},
   author={Bertin-Mahieux, Thierry and Ellis, Daniel PW and Whitman, Brian and Lamere, Paul},
-  booktitle={ISMIR 2011: Proceedings of the 12th International Society for Music Information Retrieval Conference, October 24-28, 2011, Miami, Florida},
+  booktitle={International Society for Music Information Retrieval Conference},
+  series={ISMIR},
   pages={591--596},
   year={2011},
 }
@@ -51,7 +52,8 @@
 @inproceedings{burgoyne2011expert,
   title={An Expert Ground Truth Set for Audio Chord Recognition and Music Analysis.},
   author={Burgoyne, John Ashley and Wild, Jonathan and Fujinaga, Ichiro},
-  booktitle={ISMIR 2011: Proceedings of the 12th International Society for Music Information Retrieval Conference, October 24-28, 2011, Miami, Florida},
+  booktitle={International Society for Music Information Retrieval Conference},
+  series={ISMIR},
   year={2011}
 }
 
@@ -75,33 +77,36 @@
   publisher={Springer}
 }
 
-@article{raffel2014mir_eval,
+@inproceedings{raffel2014mir_eval,
   title={mir\_eval: A transparent implementation of common MIR metrics},
-  author={Raffel, Colin and McFee, Brian and Humphrey, Eric J and Salamon, Justin and Nieto, Oriol and Liang, Dawen and Ellis, Daniel PW and Raffel, C Colin},
+  author={Raffel, Colin and McFee, Brian and Humphrey, Eric J and Salamon, Justin and Nieto, Oriol and Liang, Dawen and Ellis, Daniel PW},
   year={2014},
   booktitle={International Society for Music Information Retrieval Conference},
   series={ISMIR}
 }
-<<<<<<< e37687af4a4ad92fe89c6ec09b2497d94caee74f
 
 @inproceedings{orio2011musiclef,
   title={MusiCLEF: a Benchmark Activity in Multimodal Music Information Retrieval.},
-  author={Orio, Nicola and Rizo, David and Miotto, Riccardo and Schedl, Markus and Montecchio, Nicola and Lartillot, Olivier},
-  booktitle={ISMIR},
+  author={Orio, N. and Rizo, D. and Miotto, R. and Schedl, M. and Montecchio, N. and Lartillot, O.},
+  booktitle={International Society for Music Information Retrieval Conference},
+  series={ISMIR},
   pages={603--608},
   year={2011}
 }
 
 @inproceedings{mcfee2012million,
-  title={The million song dataset challenge},
-  author={McFee, Brian and Bertin-Mahieux, Thierry and Ellis, Daniel PW and Lanckriet, Gert RG},
-  booktitle={Proceedings of the 21st international conference companion on World Wide Web},
-  pages={909--916},
-  year={2012},
-  organization={ACM}
+  author = {McFee, B. and Bertin-Mahieux, T. and Ellis, D. and Lanckriet, G.},
+  title = {The million song dataset challenge},
+  booktitle = {4th International Workshop on Advances in Music Information Research},
+  series = {AdMIRe},
+  year = {2012},
+  month = {April},
 }
-@techreport{Serra2013:roadmap,
-author = {Serra, Xavier and Magas, Michaela and Benetos, Emmanouil and Chudy, Magdalena and Dixon, Simon and Flexer, Arthur and G\'{o}mez, Emilia and Gouyon, Fabien and Herrera, Perfecto and Jorda, Sergi and Paytuvi, Oscar and Peeters, Geoffroy and Schl\"{u}ter, Jan and Vinet, Hugues and Widmer, Gerhard},
+
+@misc{Serra2013:roadmap,
+author = {Serra, X. and Magas, M. and Benetos, E. and Chudy, M. and Dixon, S. and Flexer,
+    A. and G\'{o}mez, E. and Gouyon, F. and Herrera, P. and Jorda, S. and Paytuvi, O. and
+        Peeters, G. and Schl\"{u}ter, J. and Vinet, H. and Widmer, G.},
 institution = {MIReS Consortium},
 title = {{Roadmap for Music Information ReSearch}},
 url = {http://mires.eecs.qmul.ac.uk},
@@ -163,22 +168,21 @@ year = {2013}
 }
 @inproceedings{Carterette2007:robust,
 author = {Carterette, Ben},
-booktitle = {International ACM SIGIR Conference on Research and Development in Information Retrieval},
+booktitle = {SIGIR},
 pages = {55--62},
 title = {{Robust Test Collections for Retrieval Evaluation}},
 year = {2007}
 }
 @inproceedings{Yilmaz2008:simple,
 author = {Yilmaz, Emine and Kanoulas, Evangelos and Aslam, Javed A.},
-booktitle = {International ACM SIGIR Conference on Research and Development in Information Retrieval},
+booktitle={SIGIR},
 pages = {603--610},
 title = {{A Simple and Efficient Sampling Method for Estimating AP and NDCG}},
 year = {2008}
 }
 @inproceedings{trecvid2014:overview,
-author = {Over, Paul and Fiscus, Jon and Sanders, Gregory and Joy, David and Michel, Martial and Awad, George and Smeaton, Alan F. and Kraaij, Wessel and Quenot, Georges},
+author = {Over, P. and Fiscus, J. and Sanders, G. and Joy, D. and Michel, M. and Awad, G.  and Smeaton, A.F. and Kraaij, W. and Quenot, G.},
 booktitle = {TREC Video Retrieval Evaluation Conference},
-pages = {1--52},
 title = {{TRECVID 2014--An Overview of the Goals, Tasks, Data, Evaluation Mechanisms, and Metrics}},
 year = {2014}
 }
@@ -186,7 +190,46 @@ year = {2014}
 @inproceedings{bittner2014medleydb,
   title={MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research.},
   author={Bittner, Rachel M and Salamon, Justin and Tierney, Mike and Mauch, Matthias and Cannam, Chris and Bello, Juan Pablo},
-  booktitle={ISMIR},
+  booktitle={International Society for Music Information Retrieval Conference},
+  series={ISMIR},
   pages={155--160},
   year={2014}
+}
+
+@inproceedings{humphrey2014jams,
+  title={{JAMS}: A {JSON} Annotated Music Specification for Reproducible {MIR} Research.},
+  author={Humphrey, Eric J and Salamon, Justin and Nieto, Oriol and Forsyth, Jon and Bittner, Rachel M and Bello, Juan Pablo},
+  booktitle={ISMIR},
+  pages={591--596},
+  year={2014}
+}
+
+@article{miller1995wordnet,
+  title={WordNet: a lexical database for English},
+  author={Miller, G.A.},
+  journal={Communications of the ACM},
+  volume={38},
+  number={11},
+  pages={39--41},
+  year={1995},
+  publisher={ACM}
+}
+
+@inproceedings{deng2009imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle={Computer Vision and Pattern Recognition},
+  series={CVPR},
+  pages={248--255},
+  year={2009},
+  organization={IEEE}
+}
+
+@inproceedings{carterette2005incremental,
+  title={Incremental test collections},
+  author={Carterette, Ben and Allan, James},
+  booktitle={ACM International conference on Information and Knowledge Management},
+  pages={680--687},
+  year={2005},
+  organization={ACM}
 }
