@@ -1,4 +1,3 @@
-%TODO: check that we only use 'systems' (isntead of method, algorithm, comp model) and 'metrics' (instead of measures)
 % -----------------------------------------------
 % Template for ISMIR Papers
 % 2016 version, based on previous ISMIR templates
@@ -16,7 +15,6 @@
 \usepackage{cleveref}
 \usepackage{graphicx}
 \usepackage{color}
-%\usepackage{hyperref}
 \graphicspath{{figs/}}
 \usepackage{booktabs}
 \usepackage[inline]{enumitem}
@@ -84,28 +82,17 @@
 \maketitle
 %
 \begin{abstract}
-% MIREX is great!
 The Music Information Retrieval Evaluation eXchange (MIREX) is a valuable community service, having established standard datasets, metrics, baselines, methodologies, and infrastructure for comparing MIR methods.
-% ...but we can't keep this up. sad!
 While MIREX has managed to successfully maintain operations for over a decade, its long-term sustainability is at risk.
-% without considerable ongoing financial support.
-% Main problem: the expenditure of effort is unsustainable.
 The imposed constraint that input data cannot be made freely available to participants
 necessitates that all algorithms run on centralized computational resources, which are
 administered by a limited number of people.
 This incurs an approximately linear cost with the number of submissions, exacting
 significant tolls on both human and financial resources, such that the current paradigm
 becomes \emph{less} tenable as participation increases.
-% what's worse, data depletion is unavoidable.
-%Meanwhile, successive benchmarking iterations unavoidably deplete the value of annotated data for evaluation purposes, and is a resource that requires constant replenishing. % replacement?
-% Main idea: Use one problem to solve the other.
 To alleviate the recurring costs of future evaluation campaigns, we propose a distributed,
 community-centric paradigm for system evaluation, built upon the principles of openness,
 transparency, reproducibility, and incremental evaluation.
-%where users contribute annotations over publicly available audio content in order to participate.
-% Benefits: sustainability, scalability,
-%In this document, we outline the goals, benefits, and limitations of such an approach.
-%describe an alternative framework
 We argue that this proposal has the potential to reduce operating costs to sustainable
 levels.
 Moreover, the proposed paradigm would improve scalability, and eventually result in the
@@ -117,18 +104,6 @@ release of large, open datasets for improving both MIR techniques and evaluation
 \section{Introduction}
 \label{sec:intro}
 
-% Outline
-%   eval is necessary, mirex is the best we've got
-%       but mirex is expensive to operate
-%       the expense doesn't directly feed back to the community
-%       can we do better?
-%   this proposal
-%       goal 1: reduce the cost of evaluation
-%       goal 2: improve transparency wherever possible
-%       goal 3: design a pipeline that will push *annotated* data back to the community
-%   why now?
-%       1. to involve the community in planning before we run off and do it
-%       2. to have a roadmap going in
 Evaluation plays a central role in the development of music information retrieval (MIR) systems.
 In addition to empirical results reported in individual articles, community evaluation campaigns like MIREX~\cite{downie2008music} provide a mechanism to standardize methodology, datasets, and metrics to benchmark research systems.
 MIREX has earned a special role within the MIR community as the central forum for system benchmarking.
@@ -154,14 +129,11 @@ In collaboration with the community, we hope to develop a framework that benefit
 
 \section{MIREX}
 \label{sec:mirex}
-% History
-% EJH: We've already acronymized MIREX by now. Which should come first?
 The Music Information Retrieval Evaluation eXchange is a framework for the community driven evaluation of MIR algorithms~\cite{downie2008music, downie2010music}.
 The annual tradition of MIREX was established early in the lifetime of ISMIR, and drew significant inspiration from the well-established TREC framework~\cite{Voorhees2005:trec}.
 Thanks in large part to the vision of MIR pioneers, the first official iteration took place at ISMIR~2005 after much preliminary work, including a trial run the year prior called the Audio Description Contest (ADC).
 The practicalities of MIREX are hosted by the IMIRSEL group at UIUC, and the organization has successfully earned multiple grants to jump-start the evaluation effort at ISMIR.\@
 
-% How does this work in practice
 At a high level, MIREX operates in the following steps:
 \begin{enumerate}
 \item Identify some task of interest, \eg, chord estimation.
@@ -173,7 +145,6 @@ At a high level, MIREX operates in the following steps:
 \item Repeat steps 5--6 annually. Intermittently revisit step 2 if needed, and steps 3 and 4 if possible.
 \end{enumerate}
 
-% Algorithm-to-data goes astray.
 Importantly, this approach differs from TREC-style evaluation by operating in an ``algorithm-to-data'' model, where facilitators oversee the application of code submissions to privately held data, rather than participants submitting predictions over a freely available dataset.
 The rationale for this decision is understandable.
 In contrast to other machine perception domains, such as natural language processing, speech recognition, or computer vision, intellectual property and copyright law imposes stiff penalties on the illegal distribution of recorded music.
@@ -185,28 +156,20 @@ Due to a history of litigation from the recording industry, there is a pervasive
  \caption{Number of algorithms run at MIREX over the course of almost a decade.\label{fig:mirex_participation}}
 \end{figure}
 
-% Deficiencies
-% Operating costs are significant
 However, experience with MIREX over the last decade has demonstrated that bringing algorithms to data entails fundamental limitations.
 First, as a matter of practicality, doing so incurs steep computational and financial costs that the community cannot hope to sustain indefinitely.
 Running hundreds of research systems demands significant computational resources, which must be either rented or purchased outright.
 More often than not, these systems are research prototypes which require substantial, manual intervention to operate correctly, and are seldom optimized for efficiency or ease-of-use.
 While task-dependent runtime limits are placed on algorithm execution (between 6 and 72 hours), MIREX requires months, if not years, of annual compute-time.
-% EJH: I want to mention this, but it really throws off the rhythm of this passage.
-% Note that these relatively low ceilings indicate how small the datasets used in evaluation are, and more data --a universally accepted ``good thing''-- would require an increase in execution time.
 
 The financial burden of computation can be negligible in comparison to the requisite human effort.
 As a point of reference, MIREX~2007 alone required ``nearly 1000 person-hours'' to supervise the execution of 122 algorithms from 40 teams~\cite{downie2008music}.
 As illustrated in \Cref{fig:mirex_participation}, the number of algorithm runs at MIREX has nearly tripled in the years since.\footnote{\url{https://www.hathitrust.org/documents/mirex_htrc_same_rda.pdf}}
-%JU: One of stephen's slides (17), number of runs increases, but number of individuals decreases -> not interesting anymore
-%JU: English thing...so footnote numbers go after the sentence's period? I always put them before; have I been doing it wrong?
 As a rough estimate, the last decade has likely consumed on the order of \emph{10,000} person-hours just bringing algorithms to data.
 Not only is this rate unsustainable, but the combined operating costs only \emph{increase} with participation.
 Said differently, the worst thing that could happen to MIREX in its current form is growth.
 
 
-% Hard to do science
-% ------------------
 Operating costs aside, MIREX has indeed produced valuable insights into the development of MIR systems~\cite{downie2008music}.
 Unfortunately, many scientific endeavors are largely impeded or, at worst, wholly obfuscated in the current paradigm.
 To illustrate, consider the standard approach to benchmarking MIR systems as depicted in \Cref{fig:systemeval}.
@@ -221,7 +184,6 @@ This process is repeated over a sample of $n$ input-output pairs, $\{X_i, Y_i\} 
  \caption{Diagram of the standard approach to the benchmarking of MIR systems.\label{fig:systemeval}}
 \end{figure}
 
-% Transparency and oversight are necessary, this stuff is hard and warrants independent corroboration.
 In the current MIREX formulation, a lack of transparency renders participants scientifically blind in a number of ways~\cite{Urbano2013:mireval}.
 First, there is no direct access to the reference annotations $Y_i$, and, in most cases, no access to the input $X_i$ either.
 Furthermore, $\widehat{Y}_i$ is of little use without $X_i$ for context.
@@ -237,8 +199,6 @@ Still, without access to the data, it is exceedingly difficult to perform \emph{
 Finally, it is only fair to admit that large scale evaluation is a considerable undertaking with plenty of room for error and misinterpretations.
 Conducting these campaigns in the open makes it easier to detect and diagnose any missteps.
 
-% Dearth Data -- MIREX is preoccupied with just keeping the ship afloat.
-%Somewhat ironically, due to the daunting financial and human costs of the current paradigm, the MIR community, and thus MIREX, suffers from a lack of annotated data.
 Due to the issues highlighted above, resources that could have been devoted to constructing and enlarging open data sets have instead been absorbed by irrecoverable operating costs.
 This is not only detrimental to system development, but also to evaluation, because it is critical to routinely refresh the evaluation data to reduce bias and prevent statistical over-fitting.
 Without a fresh source of annotated data, early concerns about the community eventually over-fitting to benchmark datasets are beginning to manifest.
@@ -248,7 +208,6 @@ In other cases, participants may mis-interpret the task guidelines, as evidenced
 Across the board, hidden evaluation data is slowly being over-fit by trial and error, as teams implicitly leverage the weak error signal across campaigns to ``improve'' systems.
 These results can be misleading due to the fixed but unknown biases in the data distribution, which become apparent when datasets are expanded --- like the introduction of the Billboard dataset to the chord estimation task in 2012~\cite{burgoyne2011expert} --- or as further insight is gained, as in the disclosure of the meta-data in the music similarity corpus.
 
-% There's no short-term plan to get new data; there's no long-term plan to get new data.
 To make matters worse, there is no feasible plan in place to replenish the evaluation datasets currently used by MIREX, nor any long-term plans to replace that data when it inevitably becomes stale.
 MIREX has primarily relied upon the generosity of the community to both curate and donate data for the purposes of evaluation.
 This approach also struggles with transparency, making it susceptible to issues of methodology and problem formulation, and can hardly be relied upon as a regular resource.
@@ -267,7 +226,6 @@ Summarizing the previous section, MIREX suffers from three deficiencies that ren
     \item the lack of a strategy for obtaining and annotating new data.
 \end{enumerate*}
 
-% Here we outline the concrete details of our proposal.
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
 \begin{enumerate}[label=(\roman*)]
 \item Distributed computation reduces operating costs to scale favorably with increased
@@ -276,10 +234,6 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 \item Incremental evaluation reduces bias by keeping test data fresh, and provides a feasible strategy for collecting new data.
 \end{enumerate} %JU: it's a bit weird that we first itemize as i)ii)iii) and then use bullets.
 
-% After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
-% To counteract this, different test collections should be introduced each year.
-% At first, this seems to get us nowhere: we still need to acquire annotated data, which is presumably expensive.
-%JU: I like this sentence too much to just drop it!: We argue that collecting annotations is a better use of resources (both time and funding) than maintaining server execution, as publicly available data benefits many more people than the MIREX participants for any given year.
 
 
 \subsection{Distributed computation}
@@ -345,24 +299,6 @@ To help users navigate the collections, both Jamendo and FMA provide popularity-
 Taken in combination, these features can be leveraged to pre-emptively filter the collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
 This approach is similar in spirit to previous work using chart-based sampling, \eg~Billboard~\cite{burgoyne2011expert}.
 
-% provide a snapshot torrent for each year's data set
-% including for each track:
-%   audio
-%   metadata (via musicbrainz ids)
-%   cc attribution
-
-% what can we say about quality control?
-%   maybe do something similar to how MSD was constructed
-%       1/3 popular stuff (by play count)
-%       1/3 uniform sampling by genre
-%       1/3 some random dregs
-%   each year, add a sampling of tracks added within the last year
-
-% QC can also happen in evaluation set selection
-%   look for disagreements per method
-%   when soliciting annotations, allow annotators to flag tracks which are bad for the
-%   given task (under an appropriate definition of ``bad'')
-%   also solicit confidence ratings in the annotations
 
 \subsection{Incremental evaluation}
 
@@ -370,11 +306,7 @@ In its first cycle of operation, the proposed framework requires a new, unannota
 Rather than fully annotating the corpus up front for each task, we plan to adopt an \emph{incremental evaluation} strategy~\cite{carterette2005incremental}.
 
 With incremental evaluation, the set of reference annotations need not be complete: some (most) input examples will not have corresponding annotations.
-% BM: do we have a reference for incremental evaluation?
-%The idea is to develop methods to estimate these missing annotations from all available sources of information, such as existing annotations, metadata, system outputs, \etc.
-%Annotations will therefore be defined probabilistically, over the space of possible labels, so that missing annotations will have some degree of variance (uncertainty); existing annotations will have zero-variance.
 Consequently, performance scores are estimated over a subset of annotated tracks, which may itself grow over time.
-%With an appropriate reformulation of performance measures, we can incorporate these estimates of the annotations and produce estimates of the system performance scores.
 Systems are ranked as usual, but with a degree of uncertainty inversely proportional to the number of available annotations.
 
 Initially, uncertainty in the performance estimates will be maximal, due to a small number of available annotations.
@@ -385,7 +317,6 @@ This raises the question: which inputs are worth annotating?
 Consider two systems that produce the same annotation for a fixed input example.
 Whether they are both right or wrong with respect to the reference annotation, there is no way to distinguish between them according to that example, so there is little value in seeking its annotation.
 Conversely, examples upon which multiple systems \emph{disagree} are more likely to produce useful information for distinguishing among competing systems.
-%Annotating every track for every task would be a monumental undertaking, and an inefficient use of resources.
 Several recent studies have investigated the use of algorithm disagreement for this issue, be it for beat tracking~\cite{holzapfel2012selective}, structural analysis~\cite[chapter 4]{nieto2015discovering}, or chord recognition~\cite{humphrey2015fourtimely}.
 Others have studied alternative methods for music similarity~\cite{Urbano2013:mtc}, choosing for annotation the examples that will be most informative for differentiating between systems.
 In general, these methods allow us to minimize the required annotator effort by prioritizing the most informative examples.
@@ -396,29 +327,7 @@ In the proposed framework, annotations may come from different sources, so it is
 Another line of work is thus the development and enforcement of standards, guidelines, and tools to collect and manage annotations.
 This will require developing web services for music annotation, as well as appropriate versioning and quality control mechanisms.
 Quality control is particularly important if annotations are collected via crowd-sourcing platforms like Amazon Mechanical Turk.\footnote{\url{https://www.mturk.com/}}
-%The intuition for this approach is two-fold.
-%First, tracks for which different algorithms produce significantly different outputs are in some sense ``difficult'' and produce meaningful evaluation results.
-%Second, if a goal of the evaluation campaign is to differentiate submissions according to some measure of accuracy, then there is little to be gained by spending annotator effort on tracks for which algorithms produce the same output.
 
-%In the proposed framework, we are in a fortunate position of having exactly this type of functionality available to us: participants are submitting system outputs for evaluation!
-%It need not be the case that all of the data is being used for evaluation: in fact, Kaggle shows that it is helpful to cloud the space with data that are not included in testing.
-%If we are careful about selecting these data, we can then compare the outputs across the participating systems to see which ones are ``interesting'': if the systems generally agree, the example is likely to be easy; at the very least, annotating this track will not help distinguish between these systems.
-%If the systems disagree, then we should definitely solicit a strong annotation for the track.
-%This is essentially the point made by Urbano et al. %\cite{2012UrbanoXYZ}.
-
-%Each track marked as ``interesting'' should be annotated by at least two humans to determine whether there is actual disagreement.
-%It can then be annotated in year 2, and enter the evaluation in year 3.
-%By having multiple reference annotations for the ``interesting'' tracks, we can compare algorithm agreement to annotator agreement, and distinguish ``difficult'' tracks from ``ambiguous'' tracks.
-
-%Finally, the fourth point above can be integrated into point 2 by soliciting recommendations from the community.
-
-%Additionally:
-%\begin{itemize}
-%\item Annotation Standards and their enforcement
-%\item User-facing tools for performing annotations
-%\item Backend infrastructure for hosting, serving, and collecting submitted annotations (common repository)
-%\item Would it be possible to leverage citizen science platforms, Mechanical Turk, etc
-%\end{itemize}
 
 \subsection{Putting it all together}
 
@@ -467,7 +376,6 @@ In this way, the proposed system will be significantly more efficient and cost-e
 
 \section{Discussion}
 
-%What follows are a number of topics that have cropped up in the course of writing the paper to date.
 In this section, we enumerate the goals and implementation of the proposed framework. %JU: can we get rid of this para to gain 2 lines?
 
 \subsection{Timing: why now?}
@@ -475,24 +383,15 @@ In this section, we enumerate the goals and implementation of the proposed frame
 The challenges described in this document, which our proposed strategy aims to address, are not news to the community.
 The operating costs of MIREX became apparent early in its lifetime, and concerns about its sustainability loom large among researchers.
 That said, little has been done to resolve the situation in the intervening years.
-%Relatedly, data collection is inherently difficult;
-%if it was easy, there would be no need for automatic annotation systems.
 This raises an obvious question: why will things change \emph{now}?
 
-% We're in a different day and age.
-%The answer, of course, is that timing is everything.
 In many ways, the approach taken by MIREX made perfect sense in the early 2000's.
-%However, the modern era provides a far more hospitable environment than the one for which it was designed.
 However, recent infrastructural advances, coupled with growth and maturation of the MIR community, have introduced new possibilities.
-% The open source audio content game has changed dramatically, we can now build datasets around open content.
 First and foremost, creative commons music is now ample, bringing the dream of sharing data within grasp.
-% Operating costs are minimal.
 Cloud computing is cheap and ubiquitous, and can dramatically reduce the administrative costs of evaluation infrastructure and persistent data storage.
 Improvements in web infrastructure have also resolved many of the challenges of large-scale data distribution.
-% Tools and technologies are better, JavaScript support, HTML5, python, etc.
 Finally, browser support for interactive applications enables the development of web-based annotation tools, which significantly reduces the barrier to entry for annotators.
 
-% We're ready for it.
 More broadly speaking, the community has matured significantly since MIREX began in 2005.
 Open source development and reproducible methods are now commonplace, but we remain hindered by the lack of open data for evaluation.
 Only by developing frameworks for open evaluation and data collection, can we further develop as a scientific discipline.
@@ -500,44 +399,25 @@ Only by developing frameworks for open evaluation and data collection, can we fu
 
 \subsection{Implementation details}
 \label{sec:implementation}
-% Hosting datasets, torrents + edu labs.
-% We'll need some infrastructure to actually run the campaign in the new setup.
-% I think CodaLab might have solved a good chunk of this problem for us.
-% Evaluation machinery, mir\_eval.
 Effectively deploying the proposed framework will require two things: infrastructure development, and hosting.
 On the infrastructure side, we can leverage several existing open source projects: \texttt{mir\_eval} for scoring~\cite{raffel2014mir_eval}, JAMS for data format standardization~\cite{humphrey2014jams}, and CodaLab for running the evaluation campaign.\footnote{\url{http://codalab.org/}}
 The last remaining software component is a platform for collecting annotations.
-% Web tools, front-end dev work.
 In addition to traditional desktop software, browser-based annotation tools would facilitate distributed data collection, and a simple content management system could collect annotations as they are completed.
-% Fortunately, as mentioned above, the tools and technologies available to achieve these goals have only gotten better in the last decade.
 
 As for hosting, since the burden of executing arbitrary (submitted) code is removed, the remaining software components can reside on either a private university server, or, more likely, cloud-based hosting such as Amazon Web Services.\footnote{\url{https://aws.amazon.com/}} %JU: I'm a bit lost here. Why would we need AWS? It's ridiculously expensive, and as I understand we would just need kaggle and the desktop computer of the organizers?
 Similarly, the audio data can be distributed via BitTorrent to participants, or hosted (at some minor cost) for traditional download. %JU: hosted at ismir.net?
 
-%We may also consider a two-tiered system, in which closed systems are ranked separately from open systems, which provide voluntary source code.
-%This may help ease the burden of going fully open source, and encourage submissions from industry.
-%I think this is a bad idea though.
-%If it isn't open, it isn't science.
-%(Just make it cost money then. Which would require the org to NPO-ize).
 
 
 \subsection{Data and evaluation integrity}
 
-% Participant Honesty -- we've already harped on this twice now, so we should chose our words carefully (or succinctly)
 Allowing participants to submit predictions, rather than software, may raise questions about integrity:
 how can we verify the process which generated the predictions?
 Ultimately, we must rely on participants to be honest in describing their methods.
 Although it is \emph{possible} for a participant to manually annotate each track and achieve high scores, we hope that the scale of the dataset will make this approach fundamentally impractical.
 Additionally, in keeping with the spirit of open science and reproducible methods, we will encourage participants to link to a repository containing their software implementation, which can be used to independently verify the predictions.
 
-% System integrity
-%We may also encourage (require?) participants to release source code to reproduce their methods.
-%This is in keeping with the spirit of open science and reproducible methods.
-%I doubt there will be any way to enforce this systematically, but it could be used to audit systems post-hoc.
-%Kaggle requires prize winners to open source their systems.
 
-% Data integrity
-% Data integrity, creative commons content.
 When it comes to data integrity, we acknowledge that music is unique in that its perception is impacted by a plethora of cultural and experiential factors.
 In particular, CC-licensed music may lie outside of the gamut of commonly studied music, and differences in compositional style, instrumentation, or production, may lead to difficulties in validation and generalization.
 While this is unlikely to impact low-level tasks such as onset detection or instrument identification, more abstract tasks, such as chord estimation or structural analysis, may be more sensitive to selection bias.
@@ -549,7 +429,6 @@ After collecting an initial set of annotated CC-licensed music, it will be possi
 
 Statistically valid evaluation requires a continuous source of freshly annotated data. At present, we see three potential sources to satisfy this need.
 
-% Get funding and pay for it.
 First is the traditional route of raising funds and paying expert annotators.
 This option incurs both a direct financial cost and various hidden human costs, but is also the most likely to produce high-quality data, and may in fact be the only viable path for certain tasks.
 In the grand scheme of things, however, the financial burden may not be so severe.
@@ -558,16 +437,12 @@ The ISMIR Society maintains a membership of roughly 250 individuals each year:
 a \$5 increase in membership dues would cover the annotation cost of a new dataset like MedleyDB annually.
 Grants or industrial partnerships could also subsidize annotation costs.
 
-% Crowd-sourced
 Second, for tasks that require minimal annotator training, we can leverage either crowd-sourcing platforms, \eg, Mechanical Turk, or seek out enthusiastic communities interested in voluntary \emph{citizen science} for music.
 Websites such as Genius\footnote{\url{http://genius.com/}} (6M monthly active users) and
 Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} (3M monthly active users) demonstrate the existence of these communities for lyrics and guitar tablature.\footnote{Data gathered from \url{http://compete.com}, March 2016}
-% Clear need and interest, hook into the community.
 As witnessed by the success of eBird\footnote{\url{http://ebird.org/}} or
 AcousticBrainz,\footnote{\url{http://acousticbrainz.org/}} motivated people with the right tools can play a substantial role in scientific endeavors.
-% If we build it, they will almost certainly come; in some cases, they're already there.
 
-% Self-supported
 Finally, if no funding can be found to annotate data, we may solicit annotations directly from participants and the ISMIR community at large.
 This approach has been effectively used to collect judgements for the audio and symbolic music similarity tasks.
 
@@ -576,43 +451,19 @@ inclusion in the evaluation set.
 As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, which can supplement paid annotations.
 
 
-%To participate in an evaluation, each participant must ``pay''ù some nominal amount of data credits.
-%In the first year, all participants start with a balance of 0, so by participating, they are now in ``data debt''ù.
-%Data credits can be earned by providing annotations to be used in the following year's campaign.
-%A participant is eligible for evaluation in year $X$ when their data credit reaches a non-negative value.
-%
-%Data credits can be retained across years, and transferred across tasks.
-
-%The credits earned can be task-dependent.  Chord annotations might be worth more than beat timings or tempo estimations, for instance.
-
-%Data credits may also be earned at a discounted rate by auditing or validating previously provided annotations?  We'll need a system in place to authenticate annotators and force independence.
-
-%Potentially, we may institute a cap-and-trade system to exchange data credits for money which can be used to pay for expert annotations.  Not sure about the legal ramifications of implementing this, or how to organize efforts.  Aside from cash exchange, there might be a benefit to having a task exchange: eg, ``ill trade three beat annotations for one chord annotationù.
-
-
 \section{Next steps: A trial run}
 
-% How do we get people to participate / contribute (all jump at once).
 
 We conclude by advocating a large-scale instrument identification task for ISMIR2017.
-% What is the task?
 In this task, the presence of active instruments (under a pre-defined taxonomy) are estimated over an entire recording.
 The taxonomy may be readily adapted from WordNet~\cite{miller1995wordnet}, and refined by the community, starting at this year's ISMIR conference.
-% Motivations
 There are a number of strong motivations for pursuing instrument identification.
-% Good MIR problem, let's finally solve something.
 It is an important, classic problem in MIR, but is currently absent from MIREX.\@
 Researchers typically explore the topic with disparate datasets, and the problem remains unsolved to an unknown degree.
-% Relatively easy / stable data collection
 Compared with other music perception tasks, annotation requires a simple interface, \eg, ``check all that
 apply'', and the task definition itself is relatively unambiguous: a particular instrument is either present in the mix or not.
-%\footnote{Granted, synthesizers wreak havoc on any taxonomy; computer vision faces similar issues with natural images of paintings, for example.}
-% Content validity.
 Instrument occurrence is largely independent of popularity, which results in a fairly minimal bias due to the use of CC-licensed music.
-% Epic win for the community.
 Finally, computer vision found fantastic success with a similar endeavor, known as ImageNet~\cite{deng2009imagenet}, in which algorithms detect objects in natural images.
-%ImageNet has proven to be an invaluable resource, not only advancing research to solve that particular task, but also sparking other investigations, such as Google's now-famous Deep Dream\cite{}.
-% This offers the benefit of draw other researchers into MIR, and in some ways legitimize the field.
 
 The following steps are necessary to realize this goal within the coming year:
 \begin{enumerate*}[label=(\roman*)]
