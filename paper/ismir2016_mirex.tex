@@ -269,12 +269,12 @@ Summarizing the previous section, MIREX suffers from three deficiencies that ren
 
 % Here we outline the concrete details of our proposal.
 Thus, to address these deficiencies, our proposed plan has three key differentiators from the MIREX model:
-\begin{itemize}
+\begin{enumerate}[label=(\roman*)]
 \item Distributed computation reduces operating costs to scale favorably with increased
     participation.
 \item Freely distributable audio facilitates reproducibility and benefits the entire community.
 \item Incremental evaluation reduces bias by keeping test data fresh, and provides a feasible strategy for collecting new data.
-\end{itemize} %JU: it's a bit weird that we first itemize as i)ii)iii) and then use bullets.
+\end{enumerate} %JU: it's a bit weird that we first itemize as i)ii)iii) and then use bullets.
 
 % After scores are released from an evaluation campaign, there is still the possibility of long-range over-fit through the feedback loop of score reporting, from which MIREX already suffers.
 % To counteract this, different test collections should be introduced each year.
@@ -287,7 +287,7 @@ Thus, to address these deficiencies, our proposed plan has three key differentia
 The primary difficulty in running an evaluation campaign is computing the outputs of all participating systems.
 This difficulty stems from two sources.
 First is the obvious computational complexity of running $m$ submissions over $n$ inputs.
-Second is the less obvious ``human'' complexity of getting the submitted programs to execute properly in a foreign and unknown environment, a job that recently goes to the small number of task captains each year.
+Second is the less obvious ``human'' complexity entailed in the task captains successfully executing the submitted programs in a foreign environment.
 While the computational issues can be ameliorated by running systems in parallel over multiple machines, the cost in human effort has no easy solution in the MIREX framework.
 
 An alternative to this framework is exemplified by Kaggle.\footnote{\url{http://kaggle.com}}
@@ -424,7 +424,7 @@ Quality control is particularly important if annotations are collected via crowd
 
 In contrast to the outline in \Cref{sec:mirex}, our proposed strategy would proceed as follows:
 \begin{enumerate}
-\item Identify and collect unrestricted audio data.
+\item Identify and collect freely distributable audio.
 \item Define or update tasks, \eg, chord transcription.
 \item Release a development set (with annotation), and the remaining unlabeled data for evaluation.
 \item Collect \emph{predictions} over the unlabeled data from participating systems.
@@ -468,7 +468,7 @@ In this way, the proposed system will be significantly more efficient and cost-e
 \section{Discussion}
 
 %What follows are a number of topics that have cropped up in the course of writing the paper to date.
-In this section, we elaborate on several points relating to the goals and implementation of the proposed framework. %JU: can we get rid of this para to gain 2 lines?
+In this section, we elaborate the goals and implementation of the proposed framework. %JU: can we get rid of this para to gain 2 lines?
 
 \subsection{Timing: why now?}
 
@@ -571,8 +571,9 @@ AcousticBrainz,\footnote{\url{http://acousticbrainz.org/}} motivated people with
 Finally, if no funding can be found to annotate data, we may solicit annotations directly from participants and the ISMIR community at large.
 This approach has been effectively used to collect judgements for the audio and symbolic music similarity tasks.
 
-In each case, we will institute a ratification system so that annotations are validated by an independent annotator before being accepted into the evaluation set.
-As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, which we will welcome in addition to paid annotations.
+In each case, we will institute a ratification system so that annotations are independently validated before
+inclusion in the evaluation set.
+As mentioned in \cref{sec:implementation}, web-based annotation tools will enable volunteer contribution, which can supplement paid annotations.
 
 
 %To participate in an evaluation, each participant must ``pay''ù some nominal amount of data credits.
@@ -593,15 +594,15 @@ As mentioned in \cref{sec:implementation}, web-based annotation tools will enabl
 
 % How do we get people to participate / contribute (all jump at once).
 
-We conclude this proposal by advocating a large-scale instrument identification task for ISMIR2017.
+We conclude by advocating a large-scale instrument identification task for ISMIR2017.
 % What is the task?
 In this task, the presence of active instruments (under a pre-defined taxonomy) are estimated over an entire recording.
 The taxonomy may be readily adapted from WordNet~\cite{miller1995wordnet}, and refined by the community, starting at this year's ISMIR conference.
 % Motivations
 There are a number of strong motivations for pursuing instrument identification.
 % Good MIR problem, let's finally solve something.
-It is an important, classic problem in MIR, but one currently missing from MIREX.\@
-Researchers typically explore the topic with disparate, often unrealistic datasets, and the problem remains unsolved to some unknown degree.
+It is an important, classic problem in MIR, but is currently absent from MIREX.\@
+Researchers typically explore the topic with disparate datasets, and the problem remains unsolved to an unknown degree.
 % Relatively easy / stable data collection
 Compared with other music perception tasks, annotation requires a simple interface, \eg, ``check all that
 apply'', and the task definition itself is relatively unambiguous: a particular instrument is either present in the mix or not.
@@ -613,9 +614,9 @@ Finally, computer vision found fantastic success with a similar endeavor, known 
 %ImageNet has proven to be an invaluable resource, not only advancing research to solve that particular task, but also sparking other investigations, such as Google's now-famous Deep Dream\cite{}.
 % This offers the benefit of draw other researchers into MIR, and in some ways legitimize the field.
 
-There are several prerequisite steps to realize this goal within the coming year:
+The following steps are necessary to realize this goal within the coming year:
 \begin{enumerate*}[label=(\roman*)]
-\item establish, as a community, a robust instrument taxonomy;
+\item establish a robust instrument taxonomy;
 \item acquire a large sample of audio content;
 \item build a web-based annotation tool and storage system;
 \item construct a development set;
@@ -626,7 +627,9 @@ There are several prerequisite steps to realize this goal within the coming year
 
 Each of these components, while requiring some engineering and organizational efforts, are achievable goals with the help of the ISMIR community.
 
-\vspace{1ex}\noindent\textbf{Acknowledgments.} J.U. is supported by the Spanish Government: JdC postdoctoral fellowship, and projects TIN2015-70816-R and MDM-2015-0502.
+\vspace{1ex}\noindent\textbf{Acknowledgments.} 
+B.M. is supported by the Moore-Sloan Data Science Environment at NYU.
+J.U. is supported by the Spanish Government: JdC postdoctoral fellowship, and projects TIN2015-70816-R and MDM-2015-0502.
 
 % \section{Misc Refs}
 % Separate ``labelsù'' for systems depending on what they do (eg. close/open, full/subset of dataset): http://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf
