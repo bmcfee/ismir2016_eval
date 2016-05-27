@@ -57,7 +57,7 @@
 % --------------
 \threeauthors%
   {Brian McFee} {Center for Data Science / MARL\\ New York University \\ {\normalsize\tt brian.mcfee@nyu.edu}}
-  {Eric J. Humphrey} {Spotify, Inc. \\ ~\\ {\normalsize\tt ejhumphrey@spotify.com}}
+  {Eric J. Humphrey} {Spotify, Ltd. \\ ~\\ {\normalsize\tt ejhumphrey@spotify.com}}
   {Juli\'{a}n Urbano} {Music Technology Group \\ Universitat Pompeu Fabra \\ {\normalsize\tt urbano.julian@gmail.com}}
 
 %% To make customize author list in Creative Common license, uncomment and customize the next line
@@ -87,7 +87,8 @@
 % MIREX is great!
 The Music Information Retrieval Evaluation eXchange (MIREX) is a valuable community service, having established standard datasets, metrics, baselines, methodologies, and infrastructure for comparing MIR methods.
 % ...but we can't keep this up. sad!
-While MIREX has managed to successfully maintain operations for over a decade, its long-term sustainability is at risk without considerable ongoing financial support.
+While MIREX has managed to successfully maintain operations for over a decade, its long-term sustainability is at risk.
+% without considerable ongoing financial support.
 % Main problem: the expenditure of effort is unsustainable.
 The imposed constraint that input data cannot be made freely available to participants
 necessitates that all algorithms run on centralized computational resources, which are
@@ -327,7 +328,7 @@ This is significantly easier to acquire now than when MIREX began, and in partic
 Both of these sites host a variety of music content under either public domain or Creative Commons (CC) licenses.\footnote{\url{https://creativecommons.org/licenses/}}
 Since CC-licensed music can be freely redistributed (with attribution), it is (legally) possible to create and share persistent data archives.
 
-The Jamendo and FMA collections are both large and diverse, and both can be linked to meta-data: Jamendo via DBTune to MusicBrainz~\cite{raimond2008web} and FMA to Echo Nest identifiers.
+The Jamendo and FMA collections are both large and diverse, and both can be linked to meta-data: Jamendo via DBTune to MusicBrainz~\cite{raimond2008web} and FMA to Echo Nest/Spotify identifiers.
 Jamendo claims over 500,000 tracks charted under six major categories: \emph{classical}, \emph{electronic}, \emph{hip-hop}, \emph{jazz}, \emph{pop}, and \emph{rock}.
 FMA houses approximately 90,000 tracks which are charted under fifteen categories: \emph{blues}, \emph{classical}, \emph{country}, \emph{electronic}, \emph{experimental}, \emph{folk}, \emph{hip-hop}, \emph{instrumental}, \emph{international}, \emph{jazz}, \emph{old-time/historic}, \emph{pop}, \emph{rock}, \emph{soul/rnb}, and \emph{spoken}.
 These categories should not necessarily be taken as ground truth annotations, but they reflect the tastes and priorities of their respective user communities.
@@ -342,7 +343,7 @@ We do, however, note that FMA includes content by a variety of commercially succ
 
 To help users navigate the collections, both Jamendo and FMA provide popularity-based charts and community-based curation, in addition to the previously mentioned genre categories.
 Taken in combination, these features can be leveraged to pre-emptively filter the collections down to subsets of tracks which are either of interest to a large number of listeners, of interest to a small number of listeners with specific tastes, or representative of particular styles.
-This approach is similar in spirit to previous work using chart-based sampling (typically Billboard)~\cite{burgoyne2011expert}.
+This approach is similar in spirit to previous work using chart-based sampling, \eg~Billboard~\cite{burgoyne2011expert}.
 
 % provide a snapshot torrent for each year's data set
 % including for each track:
@@ -423,7 +424,7 @@ Quality control is particularly important if annotations are collected via crowd
 
 In contrast to the outline in \Cref{sec:mirex}, our proposed strategy would proceed as follows:
 \begin{enumerate}
-\item Identify and collect CC-licensed audio data.
+\item Identify and collect unrestricted audio data.
 \item Define or update tasks, \eg, chord transcription.
 \item Release a development set (with annotation), and the remaining unlabeled data for evaluation.
 \item Collect \emph{predictions} over the unlabeled data from participating systems.
@@ -520,7 +521,7 @@ Similarly, the audio data can be distributed via BitTorrent to participants, or 
 %(Just make it cost money then. Which would require the org to NPO-ize).
 
 
-\subsection{Data and evaluation Integrity}
+\subsection{Data and evaluation integrity}
 
 % Participant Honesty -- we've already harped on this twice now, so we should chose our words carefully (or succinctly)
 Allowing participants to submit predictions, rather than software, may raise questions about integrity:
@@ -546,8 +547,7 @@ After collecting an initial set of annotated CC-licensed music, it will be possi
 
 \subsection{Collecting annotations}
 
-Statistically valid evaluation requires a continuous source of freshly annotated data.
-Here, we identify three potential annotation sources.
+Statistically valid evaluation requires a continuous source of freshly annotated data. At present, we see three potential sources to satisfy this need.
 
 % Get funding and pay for it.
 First is the traditional route of raising funds and paying expert annotators.
@@ -564,7 +564,7 @@ Websites such as Genius\footnote{\url{http://genius.com/}} (6M monthly active us
 Ultimate~Guitar\footnote{\url{http://www.ultimate-guitar.com/}} (3M monthly active users) demonstrate the existence of these communities for lyrics and guitar tablature.\footnote{Data gathered from \url{http://compete.com}, March 2016}
 % Clear need and interest, hook into the community.
 As witnessed by the success of eBird\footnote{\url{http://ebird.org/}} or
-AcousticBrainz,\footnote{\url{http://acousticbrainz.org/}} motivated people with the right tools can play a substantial role in scientific endeavors. 
+AcousticBrainz,\footnote{\url{http://acousticbrainz.org/}} motivated people with the right tools can play a substantial role in scientific endeavors.
 % If we build it, they will almost certainly come; in some cases, they're already there.
 
 % Self-supported
